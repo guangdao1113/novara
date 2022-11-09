@@ -286,7 +286,7 @@ export default function Home() {
       <Heading />
       <Project />
       <Info />
-      <Contact imageSrc={homeContact} linkText="View Residences" />
+      <Contact />
     </div>
   );
 }
