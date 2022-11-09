@@ -65,6 +65,9 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
         button.navbar-toggler.collapsed {
         }
         @media (max-width: 992px) {
+          .hero-container {
+            height: calc(100vh - 100px);
+          }
           .hero-text {
             font-size: 25px;
             width: 100%;

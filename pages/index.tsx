@@ -209,7 +209,7 @@ function Info(): JSX.Element {
             layout="fill"
             objectFit="cover"
             alt="home-info"
-            data-aos="fade-left"
+            data-aos="fade-right"
             data-aos-delay="550"
           />
         </Col>
@@ -230,32 +230,34 @@ function Info(): JSX.Element {
           md="12"
           lg="12"
           xl="6"
-          data-aos="fade-left"
-          data-aos-delay="550"
         >
           <div className={styles.infoRightBox}>
-            <div
-              className={`${styles.projectTextHeading} ${styles.infoTextHeading}`}
-            >
-              COMMUNITY
+            <div 
+            data-aos="fade-right"
+            data-aos-delay="550">
+              <div
+                className={`${styles.projectTextHeading} ${styles.infoTextHeading}`}
+              >
+                COMMUNITY
+              </div>
+              <div className={styles.projectTextBoxParagh}>
+                People are at the heart of our business. Whether a client, a team
+                member, or another professional in our network, we strive to
+                uphold and enrich our local community every step of the way.
+              </div>
+              <Link href="/community">
+                <button className={styles.infoBtn}>
+                  <div className={styles.projectImageText}>Read more</div>
+                  <Image
+                    src="/images/btn-arrow.svg"
+                    alt="arrow"
+                    width={25.19}
+                    height={12.87}
+                    layout="fixed"
+                  />
+                </button>
+              </Link>
             </div>
-            <div className={styles.projectTextBoxParagh}>
-              People are at the heart of our business. Whether a client, a team
-              member, or another professional in our network, we strive to
-              uphold and enrich our local community every step of the way.
-            </div>
-            <Link href="/community">
-              <button className={styles.infoBtn}>
-                <div className={styles.projectImageText}>Read more</div>
-                <Image
-                  src="/images/btn-arrow.svg"
-                  alt="arrow"
-                  width={25.19}
-                  height={12.87}
-                  layout="fixed"
-                />
-              </button>
-            </Link>
           </div>
         </Col>
       </Row>
