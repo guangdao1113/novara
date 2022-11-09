@@ -85,7 +85,7 @@
 
 @media (max-width:550px) {
   .headerContainer {
-    padding-top: 25px;
+    padding-top: 6vw;
   }
   .headerActiveContainer {
     padding: 26px 4vw 25px 4vw;

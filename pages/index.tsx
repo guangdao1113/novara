@@ -225,12 +225,15 @@ function Info(): JSX.Element {
             data-aos-delay="50"
           />
         </Col>
-        <Col className={styles.infoRightContainer} md="12" lg="12" xl="6">
-          <div
-            className={styles.infoRightBox}
-            data-aos="fade-left"
-            data-aos-delay="550"
-          >
+        <Col
+          className={styles.infoRightContainer}
+          md="12"
+          lg="12"
+          xl="6"
+          data-aos="fade-left"
+          data-aos-delay="550"
+        >
+          <div className={styles.infoRightBox}>
             <div
               className={`${styles.projectTextHeading} ${styles.infoTextHeading}`}
             >
