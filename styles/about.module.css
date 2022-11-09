@@ -1,0 +1,263 @@
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 97px 4vw 149px 4vw;
+}
+.headingText {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #9b5d26;
+  font-weight: 500;
+  padding-bottom: 83px;
+}
+.headingPara {
+  font-family: "PPEiko-Thin";
+  width: 90%;
+  font-size: 32px;
+  line-height: 50px;
+  color: #59493b;
+  font-weight: 100;
+  padding-bottom: 200px;
+  text-align: center;
+}
+/* .headingBtnBox {
+  display: flex;
+  align-items: center;
+}
+.headingBtn {
+  font-family: "Gotham-Light";
+  font-size: 22px;
+  line-height: 26px;
+  color: #9b5d26;
+  font-weight: 300;
+  text-align: center;
+  padding-right: 10.5px;
+} */
+.headingRow {
+  width: 77%;
+}
+.headingQuoteTxt {
+  font-family: "PPEiko-Thin";
+  font-size: 28px;
+  color: #9b5d26;
+  padding-top: 83px;
+  width: 79%;
+}
+.headingQuoteName {
+  padding-top: 22px;
+  font-family: "Gotham-book";
+  font-size: 18px;
+  color: #59493b;
+}
+.headingQuoteTitle {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  color: #9b5d26;
+  font-weight: 500;
+  line-height: 22px;
+  word-spacing: 1px;
+  padding-bottom: 50px;
+  padding-left: 30%;
+}
+.headingQuotePara {
+  font-family: "Gotham-book";
+  font-size: 18px;
+  line-height: 32px;
+  color: #59493b;
+  padding-left: 30%;
+}
+/* project section */
+.projectContainer {
+  position: relative;
+  padding: 150px 4vw 162px 4vw;
+  /* background-color: #fbefe1; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.projectContainer:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #FBEFE1;
+  z-index: -1;
+  opacity: 0.5;
+}
+.projectRowBox {
+  width: 80%;
+}
+.projectLeftBox {
+  padding-left: 135px;
+}
+.projectSpeImgBox {
+  padding-top: 245px;
+}
+.projectImgBox {
+  padding-top: 200px;
+}
+.leftVerImg {
+  width: 80%;
+}
+.rightVerImg {
+  width: 80%;
+}
+.projectRightBox {
+  padding-left: 295px;
+}
+.projectRightBox:nth-child(2) {
+  padding-left:166px;
+}
+.projectTitle {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  word-spacing: 1px;
+  color: #9b5d26;
+  padding-top: 77px;
+  padding-bottom: 47px;
+}
+.projectTitle:first-child {
+  padding-top:0px;
+}
+.projectTxt {
+  font-family: "Gotham-Book";
+  font-size: 18px;
+  line-height: 32px;
+  color: #59493b;
+  width: 84%;
+}
+.projectLeftBox .projectTxt {
+  width: 80%;
+}
+.projectRightBox .projectTxt {
+  width:100%;
+}
+.projectRightBox:nth-child(2) .projectTxt {
+  width:85%;
+}
+.infoContainer {
+  padding-bottom: 200px;
+}
+.infoBox {
+  display: flex;
+  justify-content: center;
+}
+.infoRow {
+  padding-top: 150px;
+  width: 80%;
+}
+.infoQuoteTitle {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  color: #9b5d26;
+  font-weight: 500;
+  line-height: 22px;
+  word-spacing: 1px;
+  padding-bottom: 50px;
+}
+.infoQuotePara {
+  font-family: "Gotham-book";
+  font-size: 18px;
+  line-height: 32px;
+  color: #59493b;
+  width: 61%;
+}
+.infoTextHeading {
+  padding-top: 150px;
+}
+.infoLeftBox {
+  padding-bottom: 200px;
+  padding-left: 4vw;
+}
+
+@media (max-width: 768px) {
+  .projectRowBox {
+    width: 100%;
+  }
+  .projectTxt {
+    width: 100%;
+  }
+  .projectImageLeft {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .projectImageRight {
+    padding-left: 0;
+  }
+  .projectImageRightImg {
+    text-align: center;
+  }
+  .projectTextBox {
+    padding: 63px 0 0 0;
+  }
+  .headingQuoteTxt {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  .headingPara {
+    width: 100%;
+  }
+  .headingRow {
+    width: 100%;
+  }
+  .infoRow {
+    padding-right: 4vw;
+    padding-left: 4vw;
+    width: 100%;
+  }
+  .infoQuotePara {
+    width: 100%;
+  }
+  .projectTextBox {
+    padding: 63px 12px 0 12px;
+  }
+  /* .infoContainer {
+    padding: 0 4vw 0 4vw;
+  } */
+  .infoLeftBox {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .projectLeftBox {
+    padding-left: 0;
+    padding-top: 80px;
+  }
+  .projectRightBox {
+    padding-top: 80px;
+    padding-left: 0px;
+  }
+  .projectImgBox {
+    padding-top: 80px;
+  }
+  .projectSpeImgBox {
+    padding-top: 0px;
+  }
+  .infoContainer {
+    padding-bottom: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .projectSpace {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 1400px) {
+  .headingQuoteTitle {
+    padding-left: 0;
+    padding-top: 50px;
+  }
+  .headingQuotePara {
+    padding-left: 0;
+  }
+}

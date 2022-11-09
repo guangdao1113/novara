@@ -1,0 +1,236 @@
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 4vw 149px 4vw;
+}
+.headingText {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #9b5d26;
+  font-weight: 500;
+  padding-bottom: 83px;
+}
+.headingPara {
+  font-family: "PPEiko-Thin";
+  width: 69%;
+  font-size: 32px;
+  line-height: 50px;
+  color: #59493b;
+  font-weight: 100;
+  padding-bottom: 200px;
+  text-align: center;
+}
+.headingTxt {
+  font-family: "PPEiko-LightItalic";
+  font-size: 18px;
+  line-height: 32px;
+  color: #9b5d26;
+}
+.headingSpeTxt {
+  font-family: "Gotham-Light";
+  font-size: 18px;
+  line-height: 32px;
+  color: #9b5d26;
+}
+.headingRow {
+  width: 77%;
+}
+.headingQuoteTxt {
+  font-family: "Gotham-Light";
+  font-size: 24px;
+  color: #9b5d26;
+  padding-top: 83px;
+  width: 80%;
+}
+.headingQuoteName {
+  padding-top: 22px;
+  font-family: "Gotham-book";
+  font-size: 18px;
+  color: #59493b;
+}
+.headingQuoteTitle {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  color: #9b5d26;
+  font-weight: 500;
+  line-height: 22px;
+  word-spacing: 1px;
+  padding-bottom: 50px;
+  padding-right: 35%;
+}
+.headingQuotePara {
+  font-family: "Gotham-book";
+  font-size: 18px;
+  line-height: 32px;
+  color: #59493b;
+  padding-right: 33%;
+}
+/* project section */
+.projectContainer {
+  padding: 150px 4vw 162px 4vw;
+  background-color: #fbefe1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.projectRowBox {
+  width: 80%;
+}
+.projectRowBox:nth-child(2) {
+  margin-right: 150px;
+}
+.projectRowBox:nth-child(2) .projectTxt{
+  width: 74%;
+}
+.projectLeftBox {
+  padding-left: 135px;
+}
+.projectSpeImgBox {
+  padding-top: 155px;
+}
+.projectImgBox {
+  padding-top: 80px;
+}
+.leftVerImg {
+  width: 80%;
+}
+.rightVerImg {
+  width: 80%;
+  text-align: right;
+}
+.projectRightBox {
+  padding-left: 166px;
+}
+.projectSpeRightBox {
+  padding-left: 100px;
+}
+.projectTitle {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  word-spacing: 1px;
+  color: #9b5d26;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.projectSpeRightBox .projectTitle {
+  padding-top: 150px;
+}
+.projectTxt {
+  font-family: "Gotham-Book";
+  font-size: 18px;
+  line-height: 32px;
+  color: #59493b;
+  width: 85%;
+}
+.projectSubTxt {
+  padding-top: 52px;
+}
+@media (max-width: 768px) {
+  .projectRowBox {
+    width: 100%;
+  }
+  .projectTxt {
+    width: 100%;
+  }
+  .projectImageLeft {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .projectImageRight {
+    padding-left: 0;
+  }
+  .projectImageRightImg {
+    text-align: center;
+  }
+  .projectTextBox {
+    padding: 63px 0 0 0;
+  }
+  .headingQuoteTxt {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  .headingPara {
+    width: 100%;
+  }
+  .headingRow {
+    width: 100%;
+  }
+  .infoRow {
+    padding-right: 4vw;
+    padding-left: 4vw;
+    width: 100%;
+  }
+  .infoQuotePara {
+    width: 100%;
+  }
+  .projectTextBox {
+    padding: 63px 12px 0 12px;
+  }
+  /* .infoContainer {
+    padding: 0 4vw 0 4vw;
+  } */
+  .infoLeftBox {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .projectLeftBox {
+    padding-left: 0;
+    padding-top: 80px;
+  }
+  .projectRightBox {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .projectRightBox > .projectImgBox {
+    order: 1;
+  }
+  .projectRightBox > .projectTitle {
+    order: 2;
+  }
+  .projectRightBox > .projectTxt {
+    order: 3;
+  }
+  .projectRightBox > .projectSubTxt {
+    order: 4;
+  }
+  .projectSpeRightBox {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .projectImgBox {
+    padding-top: 80px;
+  }
+  .projectSpeImgBox {
+    padding-top: 80px;
+  }
+  .infoContainer {
+    padding-bottom: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .projectSpace {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 1400px) {
+  .headingSpeTxt {
+    padding-bottom: 50px;
+  }
+  .headingQuoteTitle {
+    padding-left: 0;
+    padding-top: 50px;
+  }
+  .headingQuotePara {
+    padding-right: 0;
+  }
+}

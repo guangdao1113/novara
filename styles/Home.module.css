@@ -1,0 +1,283 @@
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 4vw 149px 4vw;
+}
+.headingText {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #9b5d26;
+  font-weight: 500;
+  padding-bottom: 83px;
+}
+.headingPara {
+  font-family: "PPEiko-Thin";
+  width: 66%;
+  max-width: 1156px;
+  font-size: 32px;
+  line-height: 50px;
+  color: #59493b;
+  font-weight: 100;
+  padding-bottom: 115px;
+  text-align: center;
+}
+/* .headingBtnLink:hover {
+  cursor: pointer;
+} */
+.headingBtnBox {
+  display: flex;
+  align-items: center;
+  border: unset;
+  background-color: transparent;
+}
+.headingBtn {
+  font-family: "PPEiko-LightItalic";
+  font-size: 22px;
+  line-height: 26px;
+  color: #9b5d26;
+  font-weight: 300;
+  text-align: center;
+  padding-right: 10.5px;
+}
+
+/* project section */
+.projectContainer {
+  padding: 150px 4vw 162px 4vw;
+  background-color: #fbefe1;
+}
+.projectImageBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projectImageLeft {
+  padding-right: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.projectImageRight {
+  padding-left: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.projectImageTextBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 23px;
+}
+.projectImageText {
+  font-family: "PPEiko-LightItalic";
+  font-size: 16px;
+  line-height: 19px;
+  color: #9B5D26;
+  font-weight: 300;
+  padding-right: 10.5px;
+}
+.projectImageBox .projectImageText,
+.projectImageTextBox .projectImageText {
+  color:#59493B;
+}
+.projectImageBoxTwo {
+  display: flex;
+  padding-top: 63px;
+}
+.projectImageRightImg {
+  text-align: right;
+}
+.projectTextHeading {
+  font-family: "Gotham-Medium";
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #9b5d26;
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+.projectTextBoxParagh {
+  font-family: "Gotham-Book";
+  font-size: 18px;
+  line-height: 32px;
+  color: #59493b;
+  font-weight: 500;
+  padding-bottom: 80px;
+}
+.projectTextBox {
+  padding-right: 30px;
+  padding-left: 90px;
+}
+.projectTextBoxBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  padding: 18px 44px 18px 44px;
+  border: solid 1px #9b5d26;
+  background-color: transparent;
+}
+/* .infoContainer {
+  padding: 0 0 0 4vw;
+} */
+.infoTextHeading {
+  padding-top: 150px;
+}
+.infoLeftBox {
+  padding-bottom: 200px;
+  padding-left: 4vw;
+}
+.infoRightBox {
+  padding-bottom: 200px;
+  padding-right: 4vw;
+}
+.infoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  padding: 18px 34px 18px 34px;
+  border: solid 1px #9b5d26;
+  background-color: transparent;
+}
+.infoLeftImg {
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+  /* min-height: 50vh; */
+  height: 900px;
+}
+.infoRightImg {
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+  /* min-height: 50vh; */
+  height: 900px;
+}
+@media (max-width: 768px) {
+  .projectImageLeft {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .projectImageRight {
+    padding-left: 0;
+  }
+  .projectImageRightImg {
+    text-align: center;
+  }
+  .projectTextBox {
+    padding: 63px 0 0 0;
+  }
+}
+@media (max-width: 992px) {
+  .headingPara {
+    width: 100%;
+  }
+  .headingRow {
+    width: 100%;
+  }
+  .projectTextBox {
+    padding: 63px 12px 0 12px;
+  }
+  .infoContainer {
+    padding: 0 4vw 0 4vw;
+  }
+  .infoLeftBox {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .infoContainer {
+    padding: 0 4vw 0 4vw;
+  }
+  .infoLeftBox {
+    padding-bottom: 100px;
+    padding-left: 0;
+  }
+  .infoLeftImg {
+    order: 2;
+  }
+  .infoRightContainer {
+    order: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .infoLeftBox {
+    width: 54.5%;
+  }
+  .infoRightContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .infoRightBox {
+    width: 55%;
+  }
+
+  .infoRightImg {
+    padding-left: 0;
+  }
+}
+
+
+
+
+@media (max-width: 550px) {
+  /* heading container */
+  .headingContainer {
+    padding: 45px 12vw 60px 12vw;
+  }
+  .headingText {
+    font-size: 12px;
+  }
+  .headingText,
+  .projectTextHeading {
+    padding-bottom: 20px;
+  }
+  .headingPara {
+    font-size: 21px;
+    line-height: 1.6;
+    padding-bottom:25px;
+  }
+  .headingBtn {
+    font-size: 18px;
+  }
+  /* projects */
+  .projectContainer {
+    padding: 60px 4vw 60px 4vw;
+    
+  }
+  .projectImageLeft {
+    padding-bottom: 25px;
+  }
+  .projectImageBoxTwo {
+    padding-top: 25px;
+  }
+  .projectTextBoxParagh {
+    font-size: 13px;
+    line-height: 26px;
+    padding-bottom:25px;
+  }
+  .projectImageText {
+    font-size: 12px;
+  }
+  .projectImageTextBox > span {
+    width: 15px!important;
+  }
+  /* info container */
+  .infoTextHeading {
+    padding-top: 60px;
+  }
+  .infoLeftBox,
+  .infoRightBox {
+    padding-bottom: 80px;
+  }
+  .infoRightImg,
+  .infoLeftImg {
+    height: 400px;
+  }
+  
+}
+

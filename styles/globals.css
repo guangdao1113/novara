@@ -1,0 +1,44 @@
+@import "./fonts.styles.css";
+
+:root {
+  /* heading text theme style */
+  --heading-text-font: "PPEiko-LightItalic", sans-serif;
+  --heading-text-size: 50px;
+  --heading-text-color: #ffffff;
+  --heading-text-border-color: #707070;
+  --heading-text-line-height: 60px;
+  --heading-text-font-weight: 300;
+  /* banner title text theme style */
+  --title-text-font: "Gotham-Medium";
+  --title-text-color: #9b5d26;
+  --title-text-size: 18px;
+  --title-text-line-height: 22px;
+  --title-text-word-spacing: 50px;
+  /* banner subtitle text theme style */
+  --subtitle-text-font: "PPEiko-Thin";
+  --subtitle-text-color: #59493b;
+  --subtitle-text-size: 32px;
+  --subtitle-text-line-height: 38px;
+  --heading-text-font-weight: 350;
+  /* normal text theme style */
+  --normal-text-font: "Gotham-Book", sans-serif;
+  --normal-text-color: #59493b;
+  --normal-text-size: 18px;
+  --normal-text-line-height: 32px;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

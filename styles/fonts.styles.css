@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("/font/Gotham-Book.otf") format("otf"),
+    url("/font/Gotham-Book.woff") format("woff"),
+    url("/font/Gotham-Book.woff2") format("woff2");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url("/font/Gotham-Medium.otf") format("otf"),
+    url("/font/Gotham-Medium.woff") format("woff"),
+    url("/font/Gotham-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("/font/Gotham-Light.otf") format("otf"),
+    url("/font/Gotham-Light.woff") format("woff"),
+    url("/font/Gotham-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham-Thin";
+  src: url("/font/Gotham-Thin.otf") format("otf"),
+    url("/font/Gotham-Thin.woff") format("woff"),
+    url("/font/Gotham-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PPEiko-LightItalic";
+  src: url("/font/PPEiko-LightItalic.otf") format("otf"),
+    url("/font/PPEiko-LightItalic.woff") format("woff"),
+    url("/font/PPEiko-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PPEiko-Thin";
+  src: url("/font/PPEiko-Thin.otf") format("otf"),
+    url("/font/PPEiko-Thin.woff") format("woff"),
+    url("/font/PPEiko-Thin.woff2") format("woff2");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}

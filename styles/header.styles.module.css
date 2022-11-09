@@ -1,0 +1,96 @@
+.headerContainer {
+  position: fixed;
+  z-index: 11;
+  padding: 60px 80px 0 80px;
+  max-width: 100%;
+}
+.headerLogoBtn {
+  border: unset;
+  background-color: transparent;
+}
+.headerContainer .headerLogoBtn > span > img {
+  filter: drop-shadow(1px 1px 3px rgb(0 0 0 / 51%));
+}
+.headerActiveContainer {
+  position: fixed;
+  z-index: 12;
+  padding: 21px 80px 19px 80px;
+  max-width: 100%;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px 0px rgb(114 82 54 / 15%);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.navLinkBox {
+  justify-content: flex-end;
+}
+.navbarToggler {
+  border: unset;
+}
+.navbarToggler > span {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(251,239,225, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+.navbarActiveToggler {
+  border: unset;
+}
+.navbarActiveToggler > span {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(89,73,59, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.navbarLink {
+  font-family: "Gotham-Book";
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #fbefe1 !important;
+  padding-right:25px !important;
+  padding-left:25px !important;
+}
+.navbarLink:last-child,
+.navbarActiveLink:last-child{
+  padding-right:0px!important;
+}
+.navbarActiveLink {
+  font-family: "Gotham-Book";
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #59493b !important;
+  padding-right:25px !important;
+  padding-left:25px !important;
+}
+@media (max-width: 992px) {
+  .headerContainer {
+    padding: 60px 4vw 0 4vw;
+  }
+  .headerActiveContainer {
+    padding: 43px 4vw 42px 4vw;
+  }
+  .navCollapse {
+    padding: 15px;
+    border: solid 2px #59493b;
+    background-color: #ffffff;
+    position: absolute;
+    top: 55px;
+  }
+  .navbarLink {
+    color: #59493b !important;
+  }
+}
+
+
+
+@media (max-width:550px) {
+  .headerContainer {
+    padding-top: 25px;
+  }
+  .headerActiveContainer {
+    padding: 26px 4vw 25px 4vw;
+  }
+  .headerLogoBtn > span {
+    width: 183.98px!important;
+  }
+}
