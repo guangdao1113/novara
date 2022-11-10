@@ -5,13 +5,23 @@ import aboutImage from "@/about-img.svg";
 import aboutContact from "@/about-contact-img.svg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
-import Contact from "../components/contact";
+import FootBnr from "../components/footBnr";
 
 function Heading(): JSX.Element {
   return (
     <div id="content" className={styles.headingContainer}>
-      <div className={styles.headingText}>NOVARA PROPERTIES</div>
-      <div className={styles.headingPara}>
+      <div
+        className={styles.headingText}
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
+        NOVARA PROPERTIES
+      </div>
+      <div
+        className={styles.headingPara}
+        data-aos="fade-up"
+        data-aos-delay="550"
+      >
         We seek out locales with a lower supply of real estate and a high
         potential for growth.
         <br />
@@ -19,7 +29,7 @@ function Heading(): JSX.Element {
         risks.
       </div>
       <Row className={styles.headingRow}>
-        <Col xl="12" xxl="6">
+        <Col xl="12" xxl="6" data-aos="fade-right" data-aos-delay="50">
           <Image
             src="/images/about-heading-img.svg"
             width={720}
@@ -37,7 +47,7 @@ function Heading(): JSX.Element {
             — Micheal Jin, Co-Founder
           </div>
         </Col>
-        <Col xl="12" xxl="6">
+        <Col xl="12" xxl="6" data-aos="fade-right" data-aos-delay="550">
           <div className={styles.headingQuoteTitle}>ABOUT US</div>
           <div
             style={{ paddingBottom: "50px" }}
@@ -67,14 +77,28 @@ function Project(): JSX.Element {
     <div className={styles.projectContainer}>
       <Row className={styles.projectRowBox}>
         <Col lg="12" xl="6">
-          <div className={styles.projectTitle}>VALUES</div>
-          <div className={styles.projectTxt}>
+          <div
+            className={styles.projectTitle}
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            VALUES
+          </div>
+          <div
+            className={styles.projectTxt}
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
             We value our process just as much as our results. Our work ethic,
             relationships, and results are based on a set of values that our
             entire organization embodies from the inside out.
           </div>
           <div className={styles.projectLeftBox}>
-            <div className={styles.projectSpeImgBox}>
+            <div
+              className={styles.projectSpeImgBox}
+              data-aos="fade-up"
+              data-aos-delay="750"
+            >
               <Image
                 src="/images/about-project-img.svg"
                 width={585}
@@ -83,15 +107,29 @@ function Project(): JSX.Element {
                 priority={true}
               />
             </div>
-            <div className={styles.projectTitle}>VISION</div>
-            <div className={styles.projectTxt}>
+            <div
+              className={styles.projectTitle}
+              data-aos="fade-up"
+              data-aos-delay="750"
+            >
+              VISION
+            </div>
+            <div
+              className={styles.projectTxt}
+              data-aos="fade-up"
+              data-aos-delay="750"
+            >
               As a family business, we understand that a home is more than a
               physical building; it’s a vibrant environment, full of life. The
               space we live in influences our well-being, which is why we are
               passionate about designing functional, yet intimate spaces that
               evolve as your family’s lifestyle and needs change.
             </div>
-            <div className={`${styles.projectImgBox} ${styles.leftVerImg}`}>
+            <div
+              className={`${styles.projectImgBox} ${styles.leftVerImg}`}
+              data-aos="fade-up"
+              data-aos-delay="1250"
+            >
               <Image
                 src="/images/about-project-img3.svg"
                 width={456}
@@ -100,15 +138,29 @@ function Project(): JSX.Element {
                 priority={true}
               />
             </div>
-            <div className={styles.projectTitle}>PARTNERSHIP</div>
-            <div className={styles.projectTxt}>
+            <div
+              className={styles.projectTitle}
+              data-aos="fade-up"
+              data-aos-delay="1250"
+            >
+              PARTNERSHIP
+            </div>
+            <div
+              className={styles.projectTxt}
+              data-aos="fade-up"
+              data-aos-delay="1250"
+            >
               Cooperation is an integral factor in the success of our projects.
               We build our relationships on a solid foundation of trust,
               respect, and collaboration in order to forge authentic, enduring
               connections.
             </div>
           </div>
-          <div className={styles.projectLeftBox}>
+          <div
+            className={styles.projectLeftBox}
+            data-aos="fade-up"
+            data-aos-delay="1750"
+          >
             <div className={styles.projectImgBox}>
               <Image
                 src="/images/about-project-img5.png"
@@ -129,7 +181,11 @@ function Project(): JSX.Element {
           </div>
         </Col>
         <Col lg="12" xl="6">
-          <div className={styles.projectRightBox}>
+          <div
+            className={styles.projectRightBox}
+            data-aos="fade-up"
+            data-aos-delay="550"
+          >
             <div>
               <Image
                 src="/images/about-project-img2.png"
@@ -149,7 +205,11 @@ function Project(): JSX.Element {
               process.
             </div>
           </div>
-          <div className={styles.projectRightBox}>
+          <div
+            className={styles.projectRightBox}
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
             <div className={styles.projectImgBox}>
               <Image
                 src="/images/about-project-img4.svg"
@@ -170,7 +230,11 @@ function Project(): JSX.Element {
               organization.
             </div>
           </div>
-          <div className={styles.projectRightBox}>
+          <div
+            className={styles.projectRightBox}
+            data-aos="fade-up"
+            data-aos-delay="1500"
+          >
             <div className={styles.projectImgBox}>
               <Image
                 src="/images/about-project-img6.png"
@@ -207,7 +271,7 @@ function Info(): JSX.Element {
       />
       <div className={styles.infoBox}>
         <Row className={styles.infoRow}>
-          <Col md="12" lg="12" xl="6">
+          <Col md="12" lg="12" xl="6" data-aos="fade-right" data-aos-delay="50">
             <div className={styles.infoQuoteTitle}>OUR TEAM</div>
             <div
               style={{ paddingBottom: "50px" }}
@@ -221,7 +285,14 @@ function Info(): JSX.Element {
               developments and other creative projects to fruition.
             </div>
           </Col>
-          <Col className={styles.infoRightImg} md="12" lg="12" xl="6">
+          <Col
+            className={styles.infoRightImg}
+            md="12"
+            lg="12"
+            xl="6"
+            data-aos="fade-right"
+            data-aos-delay="550"
+          >
             <Image
               src="/images/about-info-img2.svg"
               width={736}
@@ -249,13 +320,13 @@ export default function About() {
     <div>
       <HeroBanner
         imageSrc={aboutImage}
-        overlayOpa={0.3}
+        overlayOpa={0.1}
         headingText="About Novara"
       />
       <Heading />
       <Project />
       <Info />
-      <Contact imageSrc={aboutContact} linkText="Approach" url="approach" />
+      <FootBnr imageSrc={aboutContact} linkText="Approach" url="approach" />
     </div>
   );
 }

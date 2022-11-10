@@ -5,13 +5,23 @@ import approachImg from "@/approach-img.svg";
 import aboutContact from "@/approach-contact-img.png";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
-import Contact from "../components/contact";
+import FootBnr from "../components/footBnr";
 
 function Heading(): JSX.Element {
   return (
     <div id="content" className={styles.headingContainer}>
-      <div className={styles.headingText}>HOLISTIC PHILOSOPHY & APPROACH</div>
-      <div className={styles.headingPara}>
+      <div
+        className={styles.headingText}
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
+        HOLISTIC PHILOSOPHY & APPROACH
+      </div>
+      <div
+        className={styles.headingPara}
+        data-aos="fade-up"
+        data-aos-delay="550"
+      >
         We remain deeply committed to our environmental and social
         responsibilities as home designers. Being a family-run business, Novara
         invests in sustainable projects that prioritize quality of life for
@@ -19,7 +29,7 @@ function Heading(): JSX.Element {
         for the homeowner every step of the way, even after completion.
       </div>
       <Row className={styles.headingRow}>
-        <Col xl="12" xxl="6">
+        <Col xl="12" xxl="6" data-aos="fade-right" data-aos-delay="50">
           <div className={styles.headingQuoteTitle}>OUR APPROACH</div>
           <div
             style={{ paddingBottom: "50px" }}
@@ -35,7 +45,7 @@ function Heading(): JSX.Element {
           <div className={styles.headingTxt}>3. The Handover Guarantee</div>
           <div className={styles.headingSpeTxt}>4. Our Guarantee</div>
         </Col>
-        <Col xl="12" xxl="6">
+        <Col xl="12" xxl="6" data-aos="fade-right" data-aos-delay="550">
           <Image
             src="/images/approach-heading-img.svg"
             width={720}
@@ -53,7 +63,11 @@ function Project(): JSX.Element {
     <div className={styles.projectContainer}>
       <Row className={styles.projectRowBox}>
         <Col lg="12" xl="6">
-          <div className={styles.projectLeftBox}>
+          <div
+            className={styles.projectLeftBox}
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
             <div className={`${styles.projectSepImgBox} ${styles.leftVerImg}`}>
               <Image
                 src="/images/approach-project-img.png"
@@ -72,8 +86,14 @@ function Project(): JSX.Element {
             </div>
           </div>
         </Col>
-        <Col className={styles.projectRightBox} lg="12" xl="6">
-          <div style={{ paddingTop: "320px" }} className={styles.projectTitle}>
+        <Col
+          className={styles.projectRightBox}
+          lg="12"
+          xl="6"
+          data-aos="fade-up"
+          data-aos-delay="550"
+        >
+          <div style={{ paddingTop: "270px" }} className={styles.projectTitle}>
             FINISHING
           </div>
           <div className={styles.projectTxt}>
@@ -93,7 +113,7 @@ function Project(): JSX.Element {
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="6">
+        <Col lg="12" xl="6" data-aos="fade-up" data-aos-delay="50">
           <div className={styles.projectSpeImgBox}>
             <Image
               src="/images/approach-project-img2.png"
@@ -103,7 +123,13 @@ function Project(): JSX.Element {
             />
           </div>
         </Col>
-        <Col className={styles.projectSpeRightBox} lg="12" xl="6">
+        <Col
+          className={styles.projectSpeRightBox}
+          lg="12"
+          xl="6"
+          data-aos="fade-up"
+          data-aos-delay="550"
+        >
           <div className={`${styles.projectTitle} ${styles.projectSpeTitle}`}>
             THE HANDOVER
           </div>
@@ -119,7 +145,13 @@ function Project(): JSX.Element {
       </Row>
       <Row className={styles.projectRowBox}>
         <Col lg="12" xl="6"></Col>
-        <Col className={styles.projectRightBox} lg="12" xl="6">
+        <Col
+          className={styles.projectRightBox}
+          lg="12"
+          xl="6"
+          data-aos="fade-up"
+          data-aos-delay="50"
+        >
           <div className={styles.projectImgBox}>
             <Image
               src="/images/approach-project-img4.png"
@@ -178,7 +210,7 @@ export default function About() {
       <Heading />
       <Project />
       <Info />
-      <Contact imageSrc={aboutContact} linkText="Community" url="community" />
+      <FootBnr imageSrc={aboutContact} linkText="Community" url="community" />
     </div>
   );
 }

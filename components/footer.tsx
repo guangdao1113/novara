@@ -62,6 +62,9 @@ export default function Footer(): JSX.Element {
           padding: 0 5px 0 5px;
         }
         @media (max-width: 992px) {
+          .footer-container {
+            padding: 80px 4vw;
+          }
           .footer-logo {
             text-align: center;
           }
@@ -76,6 +79,7 @@ export default function Footer(): JSX.Element {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding-top: 35px;
           }
           .footer-text {
             padding-bottom: 15px;

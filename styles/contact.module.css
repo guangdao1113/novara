@@ -169,7 +169,13 @@
   padding-bottom: 200px;
   padding-left: 4vw;
 }
-
+@media (max-width: 1600px) {
+  .headingPara,
+  .headingSubTxt {
+    font-size: clamp(13px,1.5vw,18px);
+    line-height: clamp(26px,2vw,32px);
+  }
+}
 @media (max-width: 768px) {
   .projectRowBox {
     width: 100%;
@@ -273,5 +279,16 @@
   }
   .headingQuotePara {
     padding-left: 0;
+  }
+}
+
+
+/* p */
+@media (max-width: 550px) {
+  /* heading container */
+  .headingPara,
+  .headingSubTxt {  
+    font-size: 13px;
+    line-height: 26px;
   }
 }

@@ -79,6 +79,7 @@
 }
 .projectRowBox {
   width: 80%;
+  max-width: 1336px;
 }
 .projectRowBox:nth-child(2) {
   margin-right: 150px;
@@ -130,6 +131,67 @@
 }
 .projectSubTxt {
   padding-top: 52px;
+}
+@media (max-width: 1800px) {
+  .projectRowBox {
+    width: 85%;
+  }
+}
+@media (max-width: 1700px) {
+  .projectRowBox {
+    width: 89%;
+  }
+}
+@media (max-width: 1600px) {
+  .headingText {
+    font-size: clamp(12px,1.5vw,18px);
+    padding-bottom: clamp(20px,5vw,83px);
+  }
+  .headingPara {
+    font-size: clamp(21px,2vw,32px);
+    line-height: clamp(31px,4vw,50px);
+    padding-bottom: clamp(25px,7vw,200px);
+  }
+  /* about */
+  .headingQuotePara {
+    font-size: clamp(13px,1vw,18px);
+    line-height: clamp(26px,2vw,32px);
+  }
+  /* project */
+  .projectTxt {
+    font-size: clamp(13px,1.5vw,18px);
+  }
+  .projectRowBox {
+    width: 95%;
+  }
+}
+@media (max-width: 1500px) {
+  .projectRowBox {
+    width: 100%;
+  }
+  .projectRowBox:nth-child(2) {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 1400px) {
+  .headingSpeTxt {
+    padding-bottom: 50px;
+  }
+  .headingQuoteTitle {
+    padding-left: 0;
+    padding-top: 50px;
+  }
+  .headingQuotePara {
+    padding-right: 0;
+  }
+  .projectRowBox {
+    width: 105%;
+  }
+}
+@media (max-width: 1300px) {
+.projectRightBox .projectTitle {
+  padding-top: 155px;
+}
 }
 @media (max-width: 768px) {
   .projectRowBox {
@@ -208,13 +270,20 @@
     padding-left: calc(var(--bs-gutter-x) * 0.5);
   }
   .projectImgBox {
-    padding-top: 80px;
+    padding-top: 0px;
   }
   .projectSpeImgBox {
     padding-top: 80px;
   }
   .infoContainer {
-    padding-bottom: 200px;
+    padding-bottom: 0px;
+  }
+  .projectContainer {
+    padding: 60px 4vw 80px;
+  }
+  .projectRightBox > .projectTitle,
+  .projectSpeRightBox .projectTitle {
+    padding-top: 80px!important;
   }
 }
 @media (min-width: 1200px) {
@@ -222,15 +291,50 @@
     padding-top: 50px;
   }
 }
-@media (max-width: 1400px) {
+
+/* p */
+@media (max-width: 550px) {
+  /* heading container */
+  .headingContainer {
+    padding: 60px 4vw 80px 4vw;
+  }
+  .headingText {
+    font-size: 12px;
+  }
+  .headingText,
+  .projectTextHeading {
+    padding-bottom: 20px;
+  }
+  .headingPara {
+    font-size: 21px;
+    line-height: 1.6;
+    padding-bottom:25px;
+  }
+  .headingBtn {
+    font-size: 18px;
+  }
+  /* about */
+  .headingQuoteTxt {
+    padding-top: 25px;;
+  }
+  .headingQuotePara,
+  .headingTxt,
   .headingSpeTxt {
-    padding-bottom: 50px;
+    font-size: 13px;
+    line-height: 26px;
   }
-  .headingQuoteTitle {
-    padding-left: 0;
-    padding-top: 50px;
+  .headingQuoteName {
+    font-size: 13px;
   }
-  .headingQuotePara {
-    padding-right: 0;
+  .projectTxt {
+    font-size: 13px;
+    line-height: 26px;
+  }
+  /* project */
+  .projectRowBox:nth-child(2) {
+    margin-right: 0px;
+  }
+  .projectRowBox:nth-child(2) .projectTxt{
+    width: 100%;
   }
 }

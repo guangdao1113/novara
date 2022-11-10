@@ -178,6 +178,64 @@
   padding-left: 4vw;
 }
 
+
+/* p */
+@media (max-width: 1600px) {
+  .headingText {
+    font-size: clamp(12px,1.5vw,18px);
+    padding-bottom: clamp(20px,5vw,83px);
+  }
+  .headingPara {
+    font-size: clamp(21px,2vw,32px);
+    line-height: clamp(31px,4vw,50px);
+    padding-bottom: clamp(25px,7vw,200px);
+  }
+  /* about */
+  .headingQuotePara {
+    font-size: clamp(13px,1vw,18px);
+    line-height: clamp(26px,2vw,32px);
+  }
+  /* about */
+  .headingContainer {
+    padding: clamp(45px,7vw,97px) 4vw clamp(60px,8vw,149px) 4vw;
+  }
+  .headingQuoteTxt {
+    font-size:clamp(18px,2.5vw,28px);
+    padding-top: 25px;;
+  }
+  .headingQuotePara {
+    font-size: clamp(13px,1.5vw,18px);
+  }
+  .headingQuoteName {
+    font-size: 13px;
+  }
+  /* project */
+  .projectTxt {
+    font-size: clamp(13px,1.5vw,18px);
+  }
+  .projectRightBox {
+    padding-left: clamp(115px,12vw,295px);
+  }
+  .projectLeftBox {
+    padding-left: clamp(79px,7vw,135px);
+  }
+  .projectSpeImgBox,
+  .projectImgBox {
+    padding-top: clamp(82px,6vw,245px);
+  }
+  .projectRightBox:nth-child(2) {
+    padding-left:clamp(70px,5vw,166px);
+  }
+  /* team */
+  .infoRow {
+    padding-top: clamp(60px,5vw,150px);
+  }
+  .infoContainer {
+    padding-bottom: clamp(80px,8vw,200px);
+  }
+}
+/* --p-- */
+
 @media (max-width: 768px) {
   .projectRowBox {
     width: 100%;
@@ -243,8 +301,29 @@
   .projectSpeImgBox {
     padding-top: 0px;
   }
-  .infoContainer {
+  /* .infoContainer {
     padding-bottom: 200px;
+  } */
+  /* project */
+  .projectContainer {
+    padding: 60px 4vw 80px 4vw;
+  }
+  .projectLeftBox .projectTxt {
+    width: 100%;
+  }
+  /* .leftVerImg {
+    width: 100%;
+  } */
+  .projectRightBox:nth-child(2) {
+    padding-left:0px;
+  }
+  .projectRightBox:nth-child(2) .projectTxt {
+    width:100%;
+  }
+  .projectLeftBox,
+  .projectImgBox,
+  .projectRightBox {
+    padding-top: 40px;
   }
 }
 @media (min-width: 1200px) {
@@ -261,3 +340,74 @@
     padding-left: 0;
   }
 }
+/* p */
+@media (max-width: 550px) {
+  /* heading container */
+  .headingContainer {
+    padding: 45px 4vw 60px 4vw;
+  }
+  .headingText {
+    font-size: 12px;
+  }
+  .headingText,
+  .projectTextHeading {
+    padding-bottom: 20px;
+  }
+  .headingPara {
+    font-size: 21px;
+    line-height: 1.6;
+    padding-bottom:50px;
+  }
+  .headingBtn {
+    font-size: 18px;
+  }
+  /* about */
+  .headingQuoteTxt {
+    padding-top: 25px;;
+  }
+  .headingQuotePara {
+    font-size: 13px;
+    line-height: 26px;
+  }
+  .headingQuoteName {
+    font-size: 13px;
+  }
+  .projectTxt {
+    font-size: 13px;
+    line-height: 26px;
+  }
+  /* project */
+  /* .projectContainer {
+    padding: 60px 4vw 80px 4vw;
+  } */
+  /* .projectLeftBox,
+  .projectImgBox,
+  .projectRightBox {
+    padding-top: 40px;
+  } */
+  /* .projectLeftBox .projectTxt {
+    width: 100%;
+  }
+  .leftVerImg {
+    width: 100%;
+  }
+  .projectRightBox:nth-child(2) {
+    padding-left:0px;
+  }
+  .projectRightBox:nth-child(2) .projectTxt {
+    width:100%;
+  } */
+  /* team */
+  .infoQuotePara {
+    font-size: 13px;
+    line-height: 26px;
+
+  }
+  .infoRow {
+    padding-top: 60px;
+  }
+  .infoContainer {
+    padding-bottom: 80px;
+  }
+}
+

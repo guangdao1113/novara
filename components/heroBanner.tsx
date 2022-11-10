@@ -64,22 +64,22 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
         }
         button.navbar-toggler.collapsed {
         }
+        @media (max-width: 1600px) {
+          .hero-text {
+            font-size: clamp(30px, 3.5vw, 50px);
+          }
+        }
         @media (max-width: 992px) {
+          .hero-text {
+            width: 100%;
+          }
+        }
+        @media (max-width: 550px) {
           .hero-container {
             height: calc(100vh - 100px);
           }
           .hero-text {
             font-size: 25px;
-            width: 100%;
-          }
-          .scroll {
-            height: 50px;
-          }
-        }
-        @media (max-wdith: 550px) {
-          .hero-text {
-            font-size: 40px;
-            width: 100%;
           }
           .scroll {
             height: 50px;

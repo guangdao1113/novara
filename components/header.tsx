@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/header.styles.module.css";
 import whiteLogo from "@/white_logo.svg";
-import logo from "@/logo.png";
+import logo from "@/Novara-Properties_LOGO_Metallic.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -38,17 +38,15 @@ export default function Header(): JSX.Element {
       className={
         isScroll ? styles.headerActiveContainer : styles.headerContainer
       }
-      data-aos="fade-down"
-      data-aos-delay="50"
     >
-      <Row>
+      <Row data-aos="fade-down" data-aos-delay="50">
         <Col xs="9">
           <Link href="/">
             <button className={styles.headerLogoBtn}>
               <Image
                 src={isScroll ? logo : whiteLogo}
-                width={isScroll ? 183.99 : 234.94}
-                height={isScroll ? 50 : 64}
+                width={isScroll ? 234.94 : 234.94}
+                height={isScroll ? 64 : 64}
                 alt="novara-logo"
               />
             </button>

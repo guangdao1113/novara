@@ -144,10 +144,10 @@ function CustomForm({
   return (
     <div>
       <Row data-aos="fade-up" data-aos-delay="50">
-        <Col className={styles.cusFormHeading} sm="12" md="4">
+        <Col className={styles.cusFormHeading} xl="12" xxl="4">
           Register Your Interest
         </Col>
-        <Col sm="12" md="8">
+        <Col xl="12" xxl="8">
           <form id="contact-form" onSubmit={handleSubmit}>
             <Row>
               <Col md="12" lg="6">

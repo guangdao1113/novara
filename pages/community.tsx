@@ -5,13 +5,23 @@ import communityImage from "@/community-img.svg";
 import communityContact from "@/community-contact-img.png";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
-import Contact from "../components/contact";
+import FootBnr from "../components/footBnr";
 
 function Heading(): JSX.Element {
   return (
     <div id="content" className={styles.headingContainer}>
-      <div className={styles.headingText}>HAND IN HAND</div>
-      <div className={styles.headingPara}>
+      <div
+        className={styles.headingText}
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
+        HAND IN HAND
+      </div>
+      <div
+        className={styles.headingPara}
+        data-aos="fade-up"
+        data-aos-delay="550"
+      >
         We strive to treat all of our relationships as if they were family; we
         see our people (team members, builders, homeowners, and investors) as
         equals and stand alongside them.
@@ -22,7 +32,11 @@ function Heading(): JSX.Element {
 function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
-      <Row className={styles.projectRowBox}>
+      <Row
+        className={styles.projectRowBox}
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
         <Col lg="12" xl="6">
           <div
             style={{ paddingTop: "0" }}
@@ -53,7 +67,11 @@ function Project(): JSX.Element {
       </Row>
       <Row className={styles.projectRowBox}>
         <Col lg="12" xl="7">
-          <div className={styles.projectLeftBox}>
+          <div
+            className={styles.projectLeftBox}
+            data-aos="fade-up"
+            data-aos-delay="550"
+          >
             <div className={styles.projectTitle}>BUILDING COMMUNITY</div>
             <div className={styles.projectTxt}>
               We believe that a community is at its healthiest when its people
@@ -73,7 +91,7 @@ function Project(): JSX.Element {
             </div>
           </div>
         </Col>
-        <Col lg="12" xl="5">
+        <Col lg="12" xl="5" data-aos="fade-up" data-aos-delay="1050">
           <div className={styles.projectRightBox}>
             <div>
               <Image
@@ -124,7 +142,7 @@ export default function About() {
       <Heading />
       <Project />
       <Info />
-      <Contact
+      <FootBnr
         imageSrc={communityContact}
         linkText="Contact Us"
         url="contact"

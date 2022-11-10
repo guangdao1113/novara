@@ -124,19 +124,7 @@
   word-spacing: 1px;
   color: #9b5d26;
 }
-@media (max-width: 768px) {
-  .contactBtnContainer {
-    padding-top: 100px;
-  }
-}
-
-@media (max-width: 550px) {
-  .contactBtnText {
-    font-size: 25px;
-  }
-  .bannerContainer {
-    padding-bottom: 60px;
-  }
+@media (max-width: 1400px) {
   .cusFormHeading {
     font-size:22px;
     margin-bottom: 35px;
@@ -151,6 +139,38 @@
   .cusFormContainer {
     padding-bottom: 60px;
   }
+}
+@media (max-width: 992px) {
+  .contactBtnText {
+    font-size: 25px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .contactBtnContainer {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 550px) {
+  .bannerContainer {
+    padding-bottom: 60px;
+  }
+  /* .cusFormHeading {
+    font-size:22px;
+    margin-bottom: 35px;
+  }
+  .cusFormSubtitle {
+    padding-top: 35px;
+    font-size: 16px;
+  }
+  .allowContactBox {
+    padding-top: 45px;
+  } 
+  .cusFormContainer {
+    padding-bottom: 60px;
+  } */
   .footer-container {
     padding: 60px 4vw 60px 4vw;
   }

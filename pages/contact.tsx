@@ -8,7 +8,12 @@ import Contact from "../components/contact";
 
 function Heading(): JSX.Element {
   return (
-    <Row id="content" className={styles.headingContainer}>
+    <Row
+      id="content"
+      className={styles.headingContainer}
+      data-aos="fade-up"
+      data-aos-delay="50"
+    >
       <Col md="12" lg="4">
         <div className={styles.headingText}>GET IN TOUCH</div>
       </Col>

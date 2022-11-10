@@ -225,25 +225,18 @@ function Info(): JSX.Element {
             data-aos-delay="50"
           />
         </Col>
-        <Col
-          className={styles.infoRightContainer}
-          md="12"
-          lg="12"
-          xl="6"
-        >
+        <Col className={styles.infoRightContainer} md="12" lg="12" xl="6">
           <div className={styles.infoRightBox}>
-            <div 
-            data-aos="fade-right"
-            data-aos-delay="550">
+            <div data-aos="fade-right" data-aos-delay="550">
               <div
                 className={`${styles.projectTextHeading} ${styles.infoTextHeading}`}
               >
                 COMMUNITY
               </div>
               <div className={styles.projectTextBoxParagh}>
-                People are at the heart of our business. Whether a client, a team
-                member, or another professional in our network, we strive to
-                uphold and enrich our local community every step of the way.
+                People are at the heart of our business. Whether a client, a
+                team member, or another professional in our network, we strive
+                to uphold and enrich our local community every step of the way.
               </div>
               <Link href="/community">
                 <button className={styles.infoBtn}>
@@ -280,13 +273,12 @@ export default function Home() {
     <div>
       <HeroBanner
         imageSrc={homeImage}
-        overlayOpa={0.5}
+        overlayOpa={0.1}
         headingText="Where dreams come home."
       />
       <Heading />
       <Project />
       <Info />
-      <Contact />
     </div>
   );
 }
