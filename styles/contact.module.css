@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: flex-start;
   padding: 100px 4vw 149px 4vw;
+  overflow: hidden;
+  width: 100%;
 }
 .headingText {
   font-family: "Gotham-Medium";
