@@ -43,7 +43,7 @@ function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
       <Image
-        src="/images/contact-map.svg"
+        src="/images/Novara-website-map-icon.png"
         width={1920}
         height={900}
         layout="responsive"

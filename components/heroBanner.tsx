@@ -37,6 +37,7 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           background-color: rgba(37, 33, 31);
           opacity: ${props.overlayOpa};
           height: 100%;
+          mix-blend-mode: multiply;
         }
         .hero-text {
           position: absolute;
