@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/about.module.css";
 import HeroBanner from "components/heroBanner";
-import aboutImage from "@/about-img.svg";
+import homeImage from "@/HOME-page-ps.jpg";
 import aboutContact from "@/about-contact-img.svg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
@@ -319,7 +319,7 @@ export default function About() {
   return (
     <div>
       <HeroBanner
-        imageSrc={aboutImage}
+        imageSrc={homeImage}
         overlayOpa={0.1}
         headingText="About Novara"
       />

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import HeroBanner from "components/heroBanner";
 // import overlay from "@/index-overlay.svg";
-import homeImage from "@/HOME-page-ps.jpg";
+import aboutImage from "@/about-img.svg";
 import homeContact from "@/home-contact.svg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
@@ -272,8 +272,8 @@ export default function Home() {
   return (
     <div>
       <HeroBanner
-        imageSrc={homeImage}
-        overlayOpa={0.1}
+        imageSrc={aboutImage}
+        overlayOpa={0.2}
         headingText="Where dreams come home."
       />
       <Heading />
@@ -282,3 +282,4 @@ export default function Home() {
     </div>
   );
 }
+ 
