@@ -77,6 +77,23 @@ export function RealtorCheckbox(props: RealtorCheckboxPropsType): JSX.Element {
           padding-left: 15px;
           color: #59493b;
         }
+        @media (max-width: 1700px) {
+          .headingBox {
+            padding-top: clamp(40px,3.5vw,58px);
+          }
+          .heading {
+            font-size: clamp(12px,0.7vw,18px);
+            line-height: clamp(25px,2vw,32px);
+          }
+          .label {
+            font-size: clamp(12px,0.7vw,18px);
+            line-height: clamp(25px,2vw,32px);
+          }
+          .inputStyle {
+            height: clamp(20px,1vw,25px);
+            width: clamp(20px,1vw,25px);
+          }
+        }
         @media (max-width: 550px) {
           .headingBox {
             padding-top: 35px;

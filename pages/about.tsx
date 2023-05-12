@@ -28,7 +28,7 @@ function Heading(): JSX.Element {
         that bring you peace and joy.
       </div>
       <Row className={styles.headingRow}>
-        <Col style={{ paddingLeft: "0px" }} xl="12" xxl="6">
+        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
           <Image
             src="/images/about-heading-img.jpg"
             width={720}
@@ -40,8 +40,9 @@ function Heading(): JSX.Element {
         </Col>
         <Col
           style={{ paddingRight: "0px" }}
-          xl="12"
-          xxl="4"
+          className={styles.headingRight}
+          md="12"
+          lg="6"
           data-aos="fade-left"
           data-aos-delay="150"
         >
@@ -80,7 +81,7 @@ function Project(): JSX.Element {
         — Michael Jin, Cofounder Director Operations
       </div>
       <Row className={styles.projectRowBox}>
-        <Col style={{ padding: "0px" }} lg="12" xl="5">
+        <Col style={{ padding: "0px" }} md="12" lg="5">
           <div className={styles.projectLeftBox}>
             <div className={styles.projectSpeImgBox}>
               <Image
@@ -111,7 +112,7 @@ function Project(): JSX.Element {
             </div>
           </div>
         </Col>
-        <Col style={{ padding: "0px" }} lg="12" xl="5">
+        <Col style={{ padding: "0px" }} md="12" lg="5">
           <div className={styles.projectRightBox}>
             <div
               className={styles.projectTitle}
@@ -143,7 +144,7 @@ function Project(): JSX.Element {
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col style={{ padding: "0px" }} lg="12" xl="4">
+        <Col style={{ padding: "0px" }} md="12" lg="4">
           <div className={`${styles.projectImgBox} ${styles.leftVerImg}`}>
             <Image
               src="/images/about-project-img3.svg"
@@ -156,8 +157,8 @@ function Project(): JSX.Element {
         </Col>
         <Col
           style={{ padding: "0px" }}
-          lg="12"
-          xl="7"
+          md="12"
+          lg="7"
           data-aos="fade-up"
           data-aos-delay="150"
         >
@@ -192,13 +193,7 @@ function Info(): JSX.Element {
       </div>
       <div className={styles.infoBox}>
         <Row className={styles.infoRow}>
-          <Col
-            md="12"
-            lg="12"
-            xl="4"
-            data-aos="fade-right"
-            data-aos-delay="150"
-          >
+          <Col md="12" lg="4" data-aos="fade-right" data-aos-delay="150">
             <div className={styles.infoQuoteTitle}>OUR TEAM</div>
             <div className={styles.infoQuotePara}>
               We are an eclectic family from all different walks of life and
@@ -209,7 +204,7 @@ function Info(): JSX.Element {
               developments and other creative projects to fruition.
             </div>
           </Col>
-          <Col className={styles.infoRightImg} md="12" lg="12" xl="6">
+          <Col className={styles.infoRightImg} md="12" lg="6">
             <Image
               src="/images/about-info-img2.jpg"
               width={736}

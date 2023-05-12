@@ -58,7 +58,7 @@ function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
       <Row className={styles.row}>
-        <Col md="12" lg="6">
+        <Col md="12" lg="7">
           <div className={styles.projectImageLeft}>
             <Image
               src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
@@ -166,7 +166,7 @@ function Project(): JSX.Element {
         <Col
           className={styles.projectTextBox}
           md="12"
-          lg="4"
+          lg="5"
           data-aos="fade-left"
           data-aos-delay="150"
         >
@@ -197,7 +197,7 @@ function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
       <Row>
-        <Col md="12" lg="12" xl="6">
+        <Col md="12" lg="6">
           <div
             className={styles.infoLeftBox}
             data-aos="fade-right"
@@ -229,7 +229,7 @@ function Info(): JSX.Element {
             </Link>
           </div>
         </Col>
-        <Col className={styles.infoRightImg} md="12" lg="12" xl="6">
+        <Col className={styles.infoRightImg} md="12" lg="6">
           <Image
             src="/images/home-info1.jpg"
             layout="fill"
@@ -239,7 +239,7 @@ function Info(): JSX.Element {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.infoLeftImg} md="12" lg="12" xl="6">
+        <Col className={styles.infoLeftImg} md="12" lg="6">
           <Image
             src="/images/home-info2.jpg"
             layout="fill"
@@ -247,7 +247,7 @@ function Info(): JSX.Element {
             alt="home-info2"
           />
         </Col>
-        <Col className={styles.infoRightContainer} md="12" lg="12" xl="6">
+        <Col className={styles.infoRightContainer} md="12" lg="6">
           <div className={styles.infoRightBox}>
             <div data-aos="fade-right" data-aos-delay="150">
               <div

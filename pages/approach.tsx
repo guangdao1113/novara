@@ -30,7 +30,7 @@ function Heading(): JSX.Element {
         step of the way, even after completion.
       </div>
       <Row className={styles.headingRow}>
-        <Col xl="12" xxl="4" data-aos="fade-right" data-aos-delay="150">
+        <Col md="12" lg="6" data-aos="fade-right" data-aos-delay="150">
           <div className={styles.headingQuoteTitle}>OUR APPROACH</div>
           <div className={styles.headingQuotePara}>
             We ensure quality, transparency, and excellent communication
@@ -43,7 +43,7 @@ function Heading(): JSX.Element {
           <div className={styles.headingTxt}>3. The Handover Guarantee</div>
           <div className={styles.headingSpeTxt}>4. Our Guarantee</div>
         </Col>
-        <Col xl="12" xxl="6">
+        <Col md="12" lg="6">
           <Image
             src="/images/approach-heading-img.svg"
             width={720}
@@ -92,7 +92,6 @@ function Project(): JSX.Element {
         </Col>
         <Col className={styles.projectRightBox} lg="12" xl="5">
           <div
-            style={{ paddingTop: "270px" }}
             className={styles.projectTitle}
             data-aos="fade-up"
             data-aos-delay="150"

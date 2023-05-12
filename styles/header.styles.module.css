@@ -24,7 +24,7 @@
 .headerActiveContainer {
   position: fixed;
   z-index: 12;
-  padding: 30px 80px 19px 80px;
+  padding: 30px 3.8vw 19px 4vw;
   max-width: 100%;
   /* background-color: #ffffff; */
   box-shadow: 5px 5px 10px 0px rgb(114 82 54 / 15%);
@@ -98,11 +98,28 @@
   padding-right:25px !important;
   padding-left:25px !important;
 }
+@media (max-width: 1700px) {
+  .headerContainer {
+    padding-top:clamp(40px,3vw,60px);
+  }
+  .headerLogoBtn {
+    width: clamp(183.98px,14vw,234.94px)!important;
+  }
+  .homeNavbarLink,
+  .navbarActiveLink,
+  .navbarLink{
+    font-size: clamp(12px,0.9vw,15px);
+    line-height: 18px;
+  }
+  .headerActiveContainer {
+    padding: clamp(20px,1.5vw,30px) 3.8vw clamp(10px,0.7vw,19px) 4vw;
+  }
+}
 @media (max-width: 1024px) {
   .headerContainer {
     position: fixed;
     z-index: 11;
-    padding: 60px 40px 0 40px;
+    /* padding: 60px 40px 0 40px; */
   }
 }
 @media (max-width: 992px) {

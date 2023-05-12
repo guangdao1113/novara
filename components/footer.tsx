@@ -22,7 +22,7 @@ export default function Footer(): JSX.Element {
     <div className="footer-container">
       <style jsx>{`
         .footer-container {
-          padding: 100px 80px 99px 80px;
+          padding: 100px 4vw 99px 4vw;
           background-color: #483525;
         }
         .footer-heading {
@@ -63,6 +63,30 @@ export default function Footer(): JSX.Element {
         .footer-spacer {
           padding: 0 5px 0 5px;
         }
+        
+        @media (max-width: 1700px) {
+          .footer-container {
+            padding: clamp(60px,5vw,100px) 4vw;
+          }
+          .footer-logo {
+            width: clamp(173.98px,14vw,220.79px)!important;
+          }
+          .footer-heading {
+            font-size: clamp(12px,0.7vw,18px);
+          }
+          .footer-link {
+            font-size: clamp(10px,0.6vw,15px);
+            line-height: clamp(9px,0.5vw,18px);
+          }
+          .footer-text {
+            font-size: clamp(8px,0.5vw,12px);
+            line-height: clamp(9px,0.5vw,15px);
+          }
+          .footer-text-box {
+            // padding-top: clamp(30px,80.7px);
+          }
+          
+        }
         @media (max-width: 992px) {
           .footer-container {
             padding: 80px 4vw;
@@ -95,12 +119,14 @@ export default function Footer(): JSX.Element {
       <Row>
         <Col md="12" lg="4">
           <div className="footer-logo" data-aos="fade-up-right" data-aos-delay="150">
-            <Image
-              src="/images/footer-logo.png"
-              width={220.79}
-              height={60}
-              alt="footer-logo"
-            />
+            <Link href="/">
+              <Image
+                src="/images/footer-logo.png"
+                width={220.79}
+                height={60}
+                alt="footer-logo"
+              />
+            </Link>
           </div>
         </Col>
         <Col md="12" lg="8">
@@ -123,7 +149,7 @@ export default function Footer(): JSX.Element {
                 <a href="/contact">CONTACT</a>
               </div>
             </Col>
-            <Col md="12" lg="4">
+            <Col md="12" lg="5" xl="4">
               <div className="footer-heading">INFORMATION</div>
               <div
                 style={{ paddingBottom: "5px", textTransform: "uppercase" }}
@@ -150,7 +176,7 @@ export default function Footer(): JSX.Element {
                 info@novaraproperties.ca
               </div>
             </Col>
-            <Col md="12" lg="4">
+            <Col md="12" lg="3" xl="4">
               <div className="footer-heading">SOCIAL</div>
               <div className="footer-link">
                 <a href="/">FACEBOOK</a>

@@ -1,7 +1,8 @@
 .bannerContainer {
   position:relative;
-  padding: 120px 80px 125px 80px;
+  padding: 120px 4vw 125px;
   /* background-color: #FBEFE1; */
+  
 }
 .bannerContainer:before,
 .cusFormContainer:before {
@@ -121,7 +122,8 @@
 }
 .allowContactText {
   text-align: justify;
-  width: 60%;
+  width: 75%;
+  /* margin-right: 290px; */
   font-family: "Gotham-Book";
   font-size: 12px;
   line-height: 18px;
@@ -145,17 +147,71 @@
   word-spacing: 1px;
   color: #9b5d26;
 }
-@media (max-width: 1400px) {
-  .cusFormHeading {
-    font-size:22px;
-    margin-bottom: 35px;
+@media (max-width: 1700px) {
+  .cusFormContainer {
+    padding: clamp(40px,6.3vw,146px) 12vw clamp(60px,4.5vw,116px);
+
   }
+  .cusFormHeading {
+    font-size: clamp(19px,1.7vw,26px);
+    line-height: clamp(24px,2vw,31px);
+  }
+  .cusInput,
   .cusFormSubtitle {
-    padding-top: 35px;
-    font-size: 16px;
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(25px,2vw,32px);
+  }
+  .cusInput {
+    margin-top: clamp(15px,2vw,28.5px);
+
   }
   .allowContactBox {
-    padding-top: 45px;
+    padding-top: clamp(45px,5vw,100px);
+  }
+  .allowContactInput {
+    height: clamp(20px,1vw,25px);
+    width: clamp(20px,1vw,25px);
+  }
+  .allowContactText {
+    font-size: clamp(10px, 0.5vw, 12px);
+    line-height: clamp(15px, 0.6vw, 18px);
+    /* margin-right: clamp(0px,18vw,377px); */
+
+  }
+
+  .contactBtnBoxTwo{
+    padding: clamp(10px,1vw,18px) clamp(30px,2vw,43px);
+  }
+  .contactBtnTextTwo {
+    font-size: clamp(11px,1vw,16px);
+    line-height: clamp(17px,1.1vw,19px);
+  }
+  .contactBtnBoxTwo > span{
+    width: clamp(20px,1.3vw,25.19px)!important;
+    height: clamp(10px,0.5vw,12.86px)!important;
+  }
+
+
+
+
+  .bannerContainer {
+    padding: clamp(50px,6vw,120px) 4vw clamp(52px,6vw,125px) 4vw;
+  }
+  .contactBtnText {
+    font-size: clamp(30px, 3vw, 50px);
+  }
+}
+@media (max-width: 1400px) {
+  .cusFormHeading {
+    /* font-size:22px;
+    margin-bottom: 35px; */
+  }
+  .cusFormSubtitle {
+    /* padding-top: 35px;
+    font-size: 16px; */
+  }
+  .allowContactBox {
+    /* padding-top: 45px; */
   } 
   .cusFormContainer {
     padding-bottom: 60px;

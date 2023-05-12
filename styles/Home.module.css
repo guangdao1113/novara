@@ -46,7 +46,7 @@
 
 /* project section */
 .projectContainer {
-  padding: 150px 4vw 147px 4vw;
+  padding: 150px 6vw 147px 12vw;
   background-color: rgba(251,239,225,0.5);
 }
 .projectContainer .row {
@@ -57,10 +57,11 @@
   flex-wrap: wrap;
 }
 .projectImageLeft {
-  padding-left: 8vw;
+  /* padding-left: 8vw; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 88%;
 }
 .projectImageRight {
   padding-left: 38px;
@@ -110,11 +111,11 @@
   color: #59493b;
   font-weight: 500;
   padding-bottom: 70px;
-  width: 86%;
+  /* width: 86%; */
 }
 .projectTextBox {
-  padding-right: 30px;
-  padding-left: 90px;
+  /* padding-right: 30px; */
+  padding-left: 283px;
 }
 .projectTextBoxBtn {
   display: flex;
@@ -133,11 +134,17 @@
 }
 .infoLeftBox {
   /* padding-bottom: 200px; */
-  padding-left: 80px;
+  padding-left: 4vw;
+  /* margin-right: 18.7vw; */
+  margin-right: 430px;
+}
+.infoRightContainer {
+  display: flex;
+  /* justify-content: flex-end; */
 }
 .infoRightBox {
-  padding-bottom: 200px;
-  padding-right: 80px;
+  padding-left: 427px;
+  padding-right: 4vw;
 }
 .infoBtn {
   display: flex;
@@ -188,37 +195,33 @@
     padding: 63px 12px 0 12px;
   }
   .infoContainer {
-    padding: 0 4vw 0 4vw;
+    /* padding: 0 4vw 0 4vw; */
   }
   .infoLeftBox {
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
 }
 @media (max-width: 1200px) {
   .infoContainer {
-    padding: 0 4vw 0 4vw;
+    /* padding: 0 4vw 0 4vw; */
   }
-  .infoLeftBox {
+  /* .infoLeftBox {
     padding-bottom: 100px;
     padding-left: 0;
-  }
+  } */
   .infoLeftImg {
-    order: 2;
+    /* order: 2; */
   }
-  .infoRightContainer {
+  /* .infoRightContainer {
     order: 1;
-  }
+  } */
 }
 @media (min-width: 1200px) {
   .infoLeftBox {
-    width: 54.9%;
-  }
-  .infoRightContainer {
-    display: flex;
-    justify-content: flex-end;
+    /* width: 54.9%; */
   }
   .infoRightBox {
-    width: 55%;
+    /* width: 55%; */
   }
 
   .infoRightImg {
@@ -228,33 +231,88 @@
 
 /* p */
 
-@media (max-width: 1600px) {
+@media (max-width: 1919px) {
+  .infoLeftBox {
+    /* padding-bottom: clamp(0px,0vw,200px); */
+    margin-right: clamp(127px,20vw,430px);
+  }
+  
+.infoRightBox {
+  padding-left:  clamp(127px,21vw,427px);
+}
+
+}
+@media (max-width: 1700px) {
+  .headingContainer {
+    padding: clamp(50px,7vw,167px) 4vw clamp(60px,8vw,180px) 4vw;
+  }
   .headingText {
-    font-size: clamp(12px,1.5vw,18px);
-    padding-bottom: clamp(20px,5vw,83px);
+    font-size: clamp(12px,0.7vw,18px);
+    padding-bottom: clamp(20px,4vw,80px);
   }
   .headingPara {
-    font-size: clamp(21px,2vw,32px);
-    line-height: clamp(31px,4vw,50px);
-    padding-bottom: clamp(25px,7vw,115px);
+    font-size: clamp(20px,1.7vw,32px);
+    line-height: clamp(30px,3vw,50px);
+    padding-bottom: clamp(25px,5.5vw,115px);
   }
+  .headingBtn {
+    font-size: clamp(14px,1vw,22px);
+  }
+  .projectImageTextBox > span,
+  .projectTextBoxBtn > span,
+  .infoBtn > span,
+  .headingBtnBox > span {
+    width: clamp(20px,1.3vw,25.19px)!important;
+    height: clamp(10px,0.5vw,12.86px)!important;
+   }
   /* project */
+  .projectContainer {
+    padding: clamp(40px,6.5vw,150px) 6vw clamp(50px,6vw,147px) 12vw;
+  }
+  .projectContainer .projectTextBox {
+    padding-left: clamp(65px,12vw,283px);
+  }
   .projectTextBoxParagh {
     font-size: clamp(13px,1vw,18px);
-    line-height: clamp(26px,2vw,32px);
-    padding-bottom: clamp(25px,3vw,80px);
+    line-height: clamp(23px,2vw,32px);
+    padding-bottom: clamp(20px,4.5vw,80px);
   }
+  /* info */
   .infoRightImg,
   .infoLeftImg {
-    height: clamp(600px,45vw,900px);
+    height: clamp(430px,45vw,900px);
   }
-  .infoLeftBox {
-    padding-bottom: clamp(0px,0vw,200px);
+  .projectTextHeading {
+    font-size: clamp(12px,0.7vw,18px);
+    padding-top: clamp(50px,6vw,147px);
+    padding-bottom: clamp(30px,3vw,50px);
+  }
+  .projectContainer .projectTextHeading {
+    padding-top: 0px;
+  }
+  .infoBtn {
+    padding: clamp(10px,1vw,18px) clamp(20px,1.5vw,34px);
+  }
+  .projectTextBoxBtn {
+    padding: clamp(10px,1vw,18px) clamp(30px,2vw,44px);
+
+  }
+  .projectImageText{
+    font-size: clamp(11px,1vw,16px);
+    line-height: clamp(17px,1.1vw,19px);
   }
 }
 @media (max-width: 1199px) {
+  .projectContainer .projectTextBox {
+    padding-left: clamp(65px,8vw,283px);
+  }
+  /* info */
   .infoLeftBox {
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
+    margin-right: clamp(128px,8vw,430px);
+  }
+  .infoRightBox {
+    padding-left: clamp(69px,13vw,427px);
   }
 }
 

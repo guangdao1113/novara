@@ -132,7 +132,8 @@
   font-size: 18px;
   line-height: 32px;
   color: #59493b;
-  width: 59%;
+  /* width: 59%; */
+  margin-right:300px;
 }
 
 .infoBox {
@@ -168,35 +169,70 @@
 }
 @media (max-width: 1800px) {
   .projectRowBox {
-    width: 85%;
+    /* width: 85%; */
   }
 }
 @media (max-width: 1700px) {
   .projectRowBox {
-    width: 89%;
+    /* width: 89%; */
   }
-}
-@media (max-width: 1600px) {
+  .headingContainer {
+    padding: clamp(45px,7vw,97px) 12vw clamp(48px,7.2vw,103px);
+
+  }
+  .projectTitle,
   .headingText {
-    font-size: clamp(12px,1.5vw,18px);
-    padding-bottom: clamp(20px,5vw,83px);
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(25px,2vw,32px);
+    padding-bottom: clamp(30px,3vw,47px);
+  }
+  .headingText {
+    padding-bottom: clamp(20px,4vw,80px);
+
   }
   .headingPara {
+    font-size: clamp(20px,1.7vw,32px);
+    line-height: clamp(30px,3vw,50px);
+  }
+
+
+
+  /* .headingText {
+    font-size: clamp(12px,1.5vw,18px);
+    padding-bottom: clamp(20px,5vw,83px);
+  } */
+  /* .headingPara {
     font-size: clamp(21px,2vw,32px);
     line-height: clamp(31px,4vw,50px);
-  }
+  } */
   /* about */
-  .headingQuotePara {
+  /* .headingQuotePara {
     font-size: clamp(13px,1vw,18px);
     line-height: clamp(26px,2vw,32px);
-  }
+  } */
   /* project */
+  .projectContainer {
+    padding: clamp(40px,6.3vw,145px) 12vw clamp(60px,8.5vw,199px);
+
+  }
   .projectTxt {
-    font-size: clamp(13px,1.5vw,18px);
+    font-size: clamp(13px,1vw,18px);
+    line-height: clamp(23px,2vw,32px);
   }
   .projectRowBox {
-    width: 95%;
+    /* width: 95%; */
   }
+  .projectTxt{
+    margin-right: clamp(155px,14vw,300px);
+  }
+  .projectRowBox:last-child .projectTitle{
+    padding-top: clamp(188px,15vw,309px);
+  }
+  .projectRowBox:last-child .projectRightBox .projectTitle{
+    padding-top: clamp(50px,3.5vw,77px);
+    
+  }
+
 }@media (max-width: 1500px) {
   .projectRowBox {
     width: 100%;
@@ -248,11 +284,11 @@
     margin-left: 50px;
   }
   .projectLeftBox {
-    padding-top: 130px;
+    /* padding-top: 130px; */
   }
   .projectRightBox {
-    padding-left: 50px;
-    margin-right: 50px;
+    /* padding-left: 50px;
+    margin-right: 50px; */
   }
 }
 @media (max-width: 1200px) {

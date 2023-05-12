@@ -57,7 +57,7 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
         .home-hero-text {
           position: absolute;
           width: 50%;
-          left: 80px;
+          left: 4vw;
           z-index: 11;
           bottom: 100px;
         }
@@ -80,10 +80,25 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           transform: translate(-50%, 0%);
         }
         button.navbar-toggler.collapsed {
+        } 
+        @media (max-width: 1700px) {
+          .home-hero-text {
+            bottom: clamp(50px,6vw,100px);
+          }
+          .scroll {
+            height: clamp(50px,6vw,100px);
+          }
+
+          .home-hero-text > div {
+            font-size: clamp(40px,4vw,70px);
+            line-height: clamp(50px,6vw,110px);
+          }
+          .hero-text > div {
+            font-size: clamp(30px, 3.5vw, 50px);
+          }
         }
         @media (max-width: 1600px) {
           .hero-text {
-            font-size: clamp(30px, 3.5vw, 50px);
           }
         }
         @media (max-width: 992px) {

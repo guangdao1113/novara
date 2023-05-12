@@ -82,7 +82,27 @@ export function ProjectCheckbox(props: ProjectCheckboxPropsType): JSX.Element {
           padding-left: 15px;
           color: #59493b;
         }
-
+        @media (max-width: 1700px) {
+          .headingBox {
+            padding-top: clamp(40px,3.5vw,58px);
+          }
+          .heading {
+            font-size: clamp(12px,0.7vw,18px);
+            line-height: clamp(25px,2vw,32px);
+          }
+          .subtitle {
+            font-size: clamp(10px, 0.5vw, 12px);
+            line-height: clamp(23px, 2vw, 32px);
+          }
+          .label {
+            font-size: clamp(12px,0.7vw,18px);
+            line-height: clamp(25px,2vw,32px);
+          }
+          .inputStyle {
+            height: clamp(20px,1vw,25px);
+            width: clamp(20px,1vw,25px);
+          }
+        }
         @media (max-width: 550px) {
           .heading {
             font-size: 16px;

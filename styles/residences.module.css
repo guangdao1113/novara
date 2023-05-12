@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 200px 12vw 200px;
+  margin: 200px 12vw;
 }
 /* .headingContainer:last-child {
   margin-bottom: 200px;
@@ -17,6 +17,7 @@
   padding-bottom: 45.5px;
   border-bottom: 1px solid #59493B;
   margin-bottom: 100.5px;
+  padding-left: 0px;
 }
 .headingRow > div {
   padding-right: 14px;
@@ -62,3 +63,44 @@
 }
 
 
+@media (max-width: 1700px) {
+  .headingContainer {
+    margin: clamp(80px,10vw,200px) 12vw;
+
+  }
+  .heading {
+    font-size: clamp(20px,1.7vw,32px);
+    line-height: clamp(30px,3vw,50px);
+    padding-bottom: clamp(25px,2vw,45.5px);
+    margin-bottom: clamp(35px,5vw,100.5px);
+  }
+
+
+  .headingRow > div {
+    padding-right: clamp(5px,0.7vw,14px);
+  }
+  .headingRow > div:last-child {
+    padding-left: clamp(5px,0.7vw,14px);
+  }
+  .headingTxt {
+    font-size: clamp(12px,0.7vw,18px);
+    margin-top: clamp(30px,3vw,47px);
+    margin-bottom: clamp(31px,3vw,50px);
+  }
+  .headingPara {
+    font-size: clamp(13px,1vw,18px);
+    line-height: clamp(23px,2vw,32px);
+  }
+  .projectImageText {
+    font-size: clamp(11px,1vw,16px);
+    line-height: clamp(17px,1.1vw,19px);
+  }
+  .projectTextBoxBtn {
+    padding-top: clamp(20px,2vw,29px);
+
+  }
+  .projectTextBoxBtn > span {
+    width: clamp(20px,1.3vw,25.19px)!important;
+    height: clamp(10px,0.5vw,12.86px)!important;
+  }
+}

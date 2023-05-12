@@ -34,7 +34,7 @@ function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="5">
+        <Col md="12" lg="5">
           <div
             style={{ paddingTop: "0" }}
             className={`${styles.projectImgBox} ${styles.leftVerImg}`}
@@ -48,7 +48,7 @@ function Project(): JSX.Element {
             />
           </div>
         </Col>
-        <Col lg="12" xl="6" data-aos="fade-up" data-aos-delay="150">
+        <Col md="12" lg="6" data-aos="fade-up" data-aos-delay="150">
           <div>
             <div className={`${styles.projectTitle} ${styles.speTitle}`}>
               CONTRIBUTION
@@ -63,7 +63,7 @@ function Project(): JSX.Element {
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="6">
+        <Col md="12" lg="6">
           <div className={styles.projectLeftBox}>
             <div
               className={styles.projectTitle}
@@ -85,7 +85,7 @@ function Project(): JSX.Element {
             </div>
             <div className={styles.projectImgBox}>
               <Image
-                src="/images/community-project-img2.jpg"
+                src="/images/community-project-img2.png"
                 width={586}
                 height={399}
                 layout="responsive"
@@ -94,7 +94,7 @@ function Project(): JSX.Element {
             </div>
           </div>
         </Col>
-        <Col style={{ padding: "0px" }} lg="12" xl="4">
+        <Col style={{ padding: "0px" }} md="12" lg="4">
           <div className={styles.projectRightBox}>
             <div>
               <Image

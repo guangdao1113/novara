@@ -15,7 +15,7 @@ export default function Layout({ children }: LayoutProps) {
 
   if (router.pathname === '/') {
     return (
-      <div>
+      <div style={{overflowX: 'hidden'}}>
         <Header 
           logo={homeLogo}
           homeLogo={styles.homeLogo}
@@ -27,7 +27,7 @@ export default function Layout({ children }: LayoutProps) {
     );
   } else {
     return (
-      <div>
+      <div style={{overflowX: 'hidden'}}>
         <Header 
           logo={whiteLogo}
           homeLogo=''

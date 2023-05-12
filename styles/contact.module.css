@@ -175,12 +175,42 @@
   padding-bottom: 200px;
   padding-left: 4vw;
 }
-@media (max-width: 1600px) {
-  .headingPara,
+@media (max-width: 1700px) {
+  .headingContainer {
+    padding: clamp(40px,6vw,120px) 4vw clamp(60px,8.5vw,200px);
+  }
+  .headingText {
+    font-size: clamp(19px,1.7vw,26px);
+    line-height: clamp(24px,2vw,31px);
+
+  }
+  .headingSubText,
+  .headingSubTxt,
+  .headingPara {
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(25px,2vw,32px);
+  }
+  .headingSubText {
+    padding-bottom: clamp(10px,1vw,37px);
+  }
+  .headingSubTxt {
+    padding-bottom: clamp(5px,0.5vw,10.5px);
+    padding-top: clamp(5px,0.5vw,10.5px);
+  }
+
+  /* .headingPara,
   .headingSubTxt {
     font-size: clamp(13px,1.5vw,18px);
     line-height: clamp(26px,2vw,32px);
-  }
+  } */
+}
+@media (max-width: 1200px) {
+  /* .headingContainer {
+    padding-right: 4vw;
+    padding-left: 4vw;
+
+  } */
+
 }
 @media (max-width: 768px) {
   .projectRowBox {

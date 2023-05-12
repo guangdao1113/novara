@@ -18,7 +18,7 @@ function CurrentProjects(): JSX.Element {
         data-aos-delay="150"
       >
         <div className={styles.heading}>Current</div>
-        <Col style={{ paddingLeft: "0px" }} xl="12" xxl="6">
+        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -44,7 +44,7 @@ function CurrentProjects(): JSX.Element {
             />
           </button>
         </Col>
-        <Col style={{ paddingRight: "0px" }} xl="12" xxl="6">
+        <Col style={{ paddingRight: "0px" }} md="12" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -83,7 +83,7 @@ function UpComingProjects(): JSX.Element {
         data-aos-delay="150"
       >
         <div className={styles.heading}>Upcoming</div>
-        <Col style={{ paddingLeft: "0px" }} xl="12" xxl="6">
+        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -109,7 +109,7 @@ function UpComingProjects(): JSX.Element {
             />
           </button>
         </Col>
-        <Col style={{ paddingRight: "0px" }} xl="12" xxl="6">
+        <Col style={{ paddingRight: "0px" }} md="12" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -148,7 +148,7 @@ function PastProjects(): JSX.Element {
         data-aos-delay="150"
       >
         <div className={styles.heading}>Past</div>
-        <Col style={{ paddingLeft: "0px" }} xl="12" xxl="6">
+        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -173,7 +173,7 @@ function PastProjects(): JSX.Element {
             />
           </button>
         </Col>
-        <Col style={{ paddingRight: "0px" }} xl="12" xxl="6">
+        <Col style={{ paddingRight: "0px" }} md="12" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
