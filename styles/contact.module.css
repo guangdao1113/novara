@@ -212,6 +212,13 @@
   } */
 
 }
+
+@media (max-width: 1199px) {
+  .cusFormHeading {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .projectRowBox {
     width: 100%;

@@ -60,7 +60,7 @@ function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="4">
+        <Col md="12" lg="4">
           <div className={styles.projectLeftBox}>
             <div className={`${styles.projectSepImgBox} ${styles.leftVerImg}`}>
               <Image
@@ -70,27 +70,9 @@ function Project(): JSX.Element {
                 layout="responsive"
               />
             </div>
-            <div
-              className={styles.projectTitle}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              BUILD & CONSTRUCTION
-            </div>
-            <div
-              className={styles.projectTxt}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              We work with the reliable construction team that prioritizes
-              quality and integrity just as we do. This diligence and care is
-              reflected in how the team handles every detail, including building
-              specifications and general design aesthetic. We oversee the entire
-              process, from initial design to permits and construction.
-            </div>
           </div>
         </Col>
-        <Col className={styles.projectRightBox} lg="12" xl="5">
+        <Col className={styles.projectRightBox} md="12" lg="5">
           <div
             className={styles.projectTitle}
             data-aos="fade-up"
@@ -108,18 +90,42 @@ function Project(): JSX.Element {
             person can make in their life, so Novara gives just as much
             attention to the minutiae to give every home a personal touch.
           </div>
+        </Col>
+      </Row>
+      <Row className={styles.projectRowBox}>
+        <Col className={styles.projectRightBox} md="12" lg="4">  
+          <div
+            className={styles.projectTitle}
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            BUILD & CONSTRUCTION
+          </div>
+          <div
+            className={styles.projectTxt}
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            We work with the reliable construction team that prioritizes
+            quality and integrity just as we do. This diligence and care is
+            reflected in how the team handles every detail, including building
+            specifications and general design aesthetic. We oversee the entire
+            process, from initial design to permits and construction.
+          </div>
+        </Col>
+        <Col className={styles.projectRightBox} md="12" lg="5">
           <div className={styles.projectImgBox}>
-            <Image
-              src="/images/approach-project-img3.png"
-              width={585}
-              height={425}
-              layout="responsive"
-            />
+              <Image
+                src="/images/approach-project-img3.png"
+                width={585}
+                height={425}
+                layout="responsive"
+              />
           </div>
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="5">
+        <Col md="12" lg="5">
           <div className={styles.projectSpeImgBox}>
             <Image
               src="/images/approach-project-img2.png"
@@ -131,8 +137,8 @@ function Project(): JSX.Element {
         </Col>
         <Col
           className={styles.projectSpeRightBox}
-          lg="12"
-          xl="6"
+          md="12"
+          lg="6"
           data-aos="fade-up"
           data-aos-delay="150"
         >
@@ -156,7 +162,7 @@ function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="4" data-aos="fade-up" data-aos-delay="150">
+        <Col md="12" lg="4" data-aos="fade-up" data-aos-delay="150">
           <div className={styles.projectTitle}>OUR GUARANTEE</div>
           <div className={styles.projectTxt}>
             Undoubtedly the highlight of the process is when you become the
@@ -178,7 +184,7 @@ function Info(): JSX.Element {
             </div>
           </div>
         </Col>
-        <Col className={styles.projectRightBox} lg="12" xl="7">
+        <Col className={styles.projectRightBox} md="12" lg="7">
           <div className={styles.projectImgBox}>
             <Image
               src="/images/approach-project-img4.png"

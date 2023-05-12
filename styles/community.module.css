@@ -82,7 +82,7 @@
   justify-content: space-between;
 }
 .projectRowBox:nth-child(2) .projectTxt {
-  width: 68%;
+  /* width: 68%; */
 }
 .projectLeftBox {
   /* padding-top: 182px; */
@@ -92,7 +92,7 @@
   padding-top: 245px;
 }
 .projectImgBox {
-  padding-top: 50px;
+  /* padding-top: 50px; */
   width: 91%;
 
 }
@@ -112,8 +112,8 @@
   line-height: 22px;
   word-spacing: 1px;
   color: #9b5d26;
-  padding-top:309px;
-  padding-bottom: 47px;
+  /* padding-top:309px;
+  padding-bottom: 47px; */
 }
 .projectRowBox:last-child {
   margin-left: 7vw;
@@ -133,9 +133,19 @@
   line-height: 32px;
   color: #59493b;
   /* width: 59%; */
-  margin-right:300px;
+  /* margin-right:202px; */
 }
 
+
+.projectRowBox:nth-child(2) {
+  align-items: flex-end;
+  padding-bottom: 77px;
+}
+.projectRowBox:nth-child(2) > div:first-child {
+  padding-left: 7vw;
+}
+
+/* info */
 .infoBox {
   display: flex;
   justify-content: center;
@@ -223,21 +233,35 @@
     /* width: 95%; */
   }
   .projectTxt{
-    margin-right: clamp(155px,14vw,300px);
+    /* margin-right: clamp(155px,14vw,300px); */
+  }
+  .projectRowBox:nth-child(2) .projectTxt {
+    margin-right: clamp(100px,8vw,202px);
   }
   .projectRowBox:last-child .projectTitle{
-    padding-top: clamp(188px,15vw,309px);
+    /* padding-top: clamp(162px,15vw,309px); */
   }
   .projectRowBox:last-child .projectRightBox .projectTitle{
     padding-top: clamp(50px,3.5vw,77px);
     
   }
+  .projectRowBox:nth-child(2) {
+    padding-top: clamp(50px,3.5vw,77px);
+  }
 
 }@media (max-width: 1500px) {
   .projectRowBox {
-    width: 100%;
+    /* width: 100%; */
   }
 }
+
+@media (max-width: 1200px) {
+  .projectContainer {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
+
 @media (max-width: 768px) {
   .projectRowBox {
     width: 100%;
@@ -265,9 +289,9 @@
 }
 
 @media (min-width: 1200px) {
-  .projectSpace {
+  /* .projectSpace {
     padding-top: 50px;
-  }
+  } */
 }
 @media (max-width: 1400px) {
   .headingQuoteTitle {
@@ -277,11 +301,11 @@
   .headingQuotePara {
     padding-left: 0;
   }
-  .projectRowBox {
+  /* .projectRowBox {
     width: 105%;
-  }
+  } */
   .leftVerImg {
-    margin-left: 50px;
+    /* margin-left: 50px; */
   }
   .projectLeftBox {
     /* padding-top: 130px; */
@@ -292,7 +316,7 @@
   }
 }
 @media (max-width: 1200px) {
-  .leftVerImg {
+  /* .leftVerImg {
     width: 100%;
     margin-left: 0px;
   }
@@ -321,7 +345,7 @@
   }
   .projectSpeImgBox {
     padding-top: 0px;
-  }
+  } */
   /* .infoContainer {
     padding-bottom: 200px;
   } */

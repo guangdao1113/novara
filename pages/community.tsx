@@ -83,19 +83,9 @@ function Project(): JSX.Element {
               community. We place a high importance on acts of charity,
               donations, and remaining open-minded.
             </div>
-            <div className={styles.projectImgBox}>
-              <Image
-                src="/images/community-project-img2.png"
-                width={586}
-                height={399}
-                layout="responsive"
-                priority={true}
-              />
-            </div>
           </div>
         </Col>
         <Col style={{ padding: "0px" }} md="12" lg="4">
-          <div className={styles.projectRightBox}>
             <div>
               <Image
                 src="/images/community-project-img3.jpg"
@@ -105,24 +95,40 @@ function Project(): JSX.Element {
                 priority={true}
               />
             </div>
-            <div
-              className={styles.projectTitle}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              CULTURE
-            </div>
-            <div
-              className={styles.projectTxt}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              Our people at Novara Properties are not merely a team, we’re
-              family. We care for each other just as we care for our work. From
-              daily interactions to big decisions, everything we do factors in
-              each person’s needs and embodies a spirit of camaraderie and
-              collaboration.
-            </div>
+        </Col>
+      </Row>
+      <Row className={styles.projectRowBox}>
+        <Col style={{ padding: "0px" }} md="12" lg="6">
+          <div className={styles.projectRightBox}>
+              <Image
+                src="/images/community-project-img2.png"
+                width={586}
+                height={399}
+                layout="responsive"
+                priority={true}
+              />
+          </div>
+        </Col>
+        <Col style={{ padding: "0px" }} md="12" lg="4">
+          <div className={styles.projectImgBox}>
+              <div
+                className={styles.projectTitle}
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                CULTURE
+              </div>
+              <div
+                className={styles.projectTxt}
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                Our people at Novara Properties are not merely a team, we’re
+                family. We care for each other just as we care for our work. From
+                daily interactions to big decisions, everything we do factors in
+                each person’s needs and embodies a spirit of camaraderie and
+                collaboration.
+              </div>
           </div>
         </Col>
       </Row>
