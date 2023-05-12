@@ -217,6 +217,11 @@
     padding-bottom: 60px;
   }
 }
+@media (max-width: 1199px) {
+  .cusFormHeading {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 992px) {
   .contactBtnText {
     font-size: 25px;
