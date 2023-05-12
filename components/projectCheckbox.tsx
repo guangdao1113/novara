@@ -6,9 +6,9 @@ interface ProjectCheckboxPropsType {
 export function ProjectCheckbox(props: ProjectCheckboxPropsType): JSX.Element {
   const [ckBoxState, setState] = useState({
     options: [
-      { id: 1, name: "Project Name1" },
+      { id: 1, name: "Ashlyn at Cambie Park" },
       { id: 2, name: "Project Name2" },
-      { id: 3, name: "Project Name3" },
+      // { id: 3, name: "Project Name3" },
     ],
     optionSelected: undefined,
   });
@@ -41,6 +41,7 @@ export function ProjectCheckbox(props: ProjectCheckboxPropsType): JSX.Element {
         .headingBox {
           display: flex;
           align-items: center;
+          padding-top:58px;
         }
         .heading {
           font-family: "Gotham-Medium";
@@ -66,7 +67,7 @@ export function ProjectCheckbox(props: ProjectCheckboxPropsType): JSX.Element {
           display: flex;
           align-items: center;
           width: 50%;
-          padding-bottom: 25px;
+          // padding-bottom: 25px;
         }
         .inputStyle {
           height: 25px;

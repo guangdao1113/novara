@@ -1,6 +1,6 @@
 .bannerContainer {
   position:relative;
-  padding: 119px 4vw 119.5px 4vw;
+  padding: 120px 80px 125px 80px;
   /* background-color: #FBEFE1; */
 }
 .bannerContainer:before,
@@ -18,10 +18,11 @@
 .bannerRow {
   border-bottom: solid 1px #59493b;
   padding-bottom: 119.5px;
+  justify-content: space-between;
 }
 .contactBtnContainer {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .contactBtnBox {
   display: flex;
@@ -42,6 +43,9 @@
   align-items: center;
   padding-right: 10.5px;
 }
+.contactBtnBox span {
+  margin-top: 10px!important;
+}
 .contactBtnBoxTwo {
   display: flex;
   align-items: center;
@@ -49,11 +53,12 @@
   padding: 18px 43px 18px 43.3px;
   background-color: transparent;
   border: 1px solid #9b5d26;
-  margin-top: 36px;
+  margin-top: 47px;
 }
 .contactBtnTextTwo {
-  font-family: "Gotham-Light";
+  font-family: "PPEiko-LightItalic";
   font-size: 16px;
+  font-weight: 300;
   line-height: 19px;
   color: #9b5d26;
   display: flex;
@@ -62,6 +67,20 @@
   padding-right: 10.5px;
 }
 /* custome form */
+.contactForm {
+  margin-right: 48px;
+}
+.row {
+  justify-content: space-between;
+}
+.row > div:first-child {
+  /* padding-left: 0px; */
+  /* padding-right: 31px; */
+}
+.row > div:last-child {
+  /* padding-right: 0px; */
+  /* padding-left: 31px; */
+}
 .cusFormSubtitle {
   font-family: "Gotham-Medium";
   font-size: 18px;
@@ -72,7 +91,7 @@
 }
 .cusFormContainer {
   position: relative;
-  padding: 0 4vw 150px 4vw;
+  padding: 146px 4vw 116px;
   /* background-color: #fbefe1; */
 }
 .cusFormHeading {
@@ -93,20 +112,22 @@
   background-color: transparent;
   margin-top: 28.5px;
 }
+
 .allowContactBox {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-top: 80.5px;
+  /* justify-content: space-between; */
+  padding-top: 100px;
 }
 .allowContactText {
   text-align: justify;
-  width: 90%;
+  width: 60%;
   font-family: "Gotham-Book";
   font-size: 12px;
   line-height: 18px;
   word-spacing: 1px;
   color: #59493b;
+  margin-left: 15px;
 }
 .allowContactInput {
   height: 25px;

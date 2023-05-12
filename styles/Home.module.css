@@ -3,16 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 4vw 149px 4vw;
+  padding: 167px 4vw 180px 4vw;
 }
 .headingText {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
-  padding-bottom: 83px;
+  padding-bottom: 80px;
 }
 .headingPara {
   font-family: "PPEiko-Thin";
@@ -22,7 +22,7 @@
   line-height: 50px;
   color: #59493b;
   font-weight: 100;
-  padding-bottom: 115px;
+  padding-bottom: 80px;
   text-align: center;
 }
 /* .headingBtnLink:hover {
@@ -37,7 +37,7 @@
 .headingBtn {
   font-family: "PPEiko-LightItalic";
   font-size: 22px;
-  line-height: 26px;
+  line-height: 25px;
   color: #9b5d26;
   font-weight: 300;
   text-align: center;
@@ -46,15 +46,18 @@
 
 /* project section */
 .projectContainer {
-  padding: 150px 4vw 162px 4vw;
-  background-color: #fbefe1;
+  padding: 150px 4vw 147px 4vw;
+  background-color: rgba(251,239,225,0.5);
+}
+.projectContainer .row {
+  justify-content: space-between;
 }
 .projectImageBox {
   display: flex;
   flex-wrap: wrap;
 }
 .projectImageLeft {
-  padding-right: 38px;
+  padding-left: 8vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -93,11 +96,12 @@
 .projectTextHeading {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
   padding-bottom: 50px;
+  text-transform: uppercase;
 }
 .projectTextBoxParagh {
   font-family: "Gotham-Book";
@@ -105,7 +109,8 @@
   line-height: 32px;
   color: #59493b;
   font-weight: 500;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
+  width: 86%;
 }
 .projectTextBox {
   padding-right: 30px;
@@ -124,15 +129,15 @@
   overflow: hidden;
 } */
 .infoTextHeading {
-  padding-top: 150px;
+  padding-top: 147px;
 }
 .infoLeftBox {
-  padding-bottom: 200px;
-  padding-left: 4vw;
+  /* padding-bottom: 200px; */
+  padding-left: 80px;
 }
 .infoRightBox {
   padding-bottom: 200px;
-  padding-right: 4vw;
+  padding-right: 80px;
 }
 .infoBtn {
   display: flex;
@@ -206,7 +211,7 @@
 }
 @media (min-width: 1200px) {
   .infoLeftBox {
-    width: 54.5%;
+    width: 54.9%;
   }
   .infoRightContainer {
     display: flex;

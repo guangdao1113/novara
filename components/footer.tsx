@@ -22,25 +22,26 @@ export default function Footer(): JSX.Element {
     <div className="footer-container">
       <style jsx>{`
         .footer-container {
-          padding: 104.3px 4vw 151px 4vw;
+          padding: 100px 80px 99px 80px;
           background-color: #483525;
         }
         .footer-heading {
           font-family: "Gotham-Medium";
           font-size: 18px;
           font-weight: 500;
-          line-height: 22px;
+          line-height: 21px;
           word-spacing: 1px;
           color: #d19e80;
-          padding-bottom: 30px;
+          padding-bottom: 28px;
         }
         .footer-link {
-          padding-bottom: 15px;
+          padding-bottom: 12px;
           font-family: "Gotham-Book";
           font-size: 15px;
           line-height: 18px;
           word-spacing: 1px;
           color: #dbc7a9;
+          letter-spacing: 1.2px;
         }
         .footer-link > a:hover {
           color: #fbefe1;
@@ -54,9 +55,10 @@ export default function Footer(): JSX.Element {
         .footer-text {
           font-family: "Gotham-Book";
           font-size: 12px;
-          line-height: 14px;
+          line-height: 15px;
           word-spacing: 1px;
           color: #dbc7a9;
+          letter-spacing: 1.2px;
         }
         .footer-spacer {
           padding: 0 5px 0 5px;
@@ -90,9 +92,9 @@ export default function Footer(): JSX.Element {
           }
         }
       `}</style>
-      <Row data-aos="fade-up" data-aos-delay="250">
+      <Row>
         <Col md="12" lg="4">
-          <div className="footer-logo">
+          <div className="footer-logo" data-aos="fade-up-right" data-aos-delay="150">
             <Image
               src="/images/footer-logo.png"
               width={220.79}
@@ -105,9 +107,9 @@ export default function Footer(): JSX.Element {
           <Row>
             <Col md="12" lg="4">
               <div className="footer-heading">NOVARA PROPERTIES</div>
-              {/* <div className="footer-link">
-                <a href="/">RESIDENCES</a>
-              </div> */}
+              <div className="footer-link">
+                <a href="/residences">RESIDENCES</a>
+              </div>
               <div className="footer-link">
                 <a href="/about">ABOUT</a>
               </div>
@@ -124,28 +126,28 @@ export default function Footer(): JSX.Element {
             <Col md="12" lg="4">
               <div className="footer-heading">INFORMATION</div>
               <div
-                style={{ paddingBottom: "10px", textTransform: "uppercase" }}
+                style={{ paddingBottom: "5px", textTransform: "uppercase" }}
                 className="footer-link"
               >
-                217 - 510 West Pender Street,
+                217 - 515 West Pender Street,
               </div>
               <div
-                style={{ paddingBottom: "10px", textTransform: "uppercase" }}
+                style={{ paddingBottom: "5px", textTransform: "uppercase" }}
                 className="footer-link"
               >
                 Vancouver BC V6B 6H5
               </div>
               <div
-                style={{ paddingBottom: "10px", textTransform: "uppercase" }}
+                style={{ paddingBottom: "5px", textTransform: "uppercase" }}
+                className="footer-link"
+              >
+                +1 (604) 232 1070
+              </div>
+              <div
+                style={{ paddingBottom: "5px", textTransform: "uppercase" }}
                 className="footer-link"
               >
                 info@novaraproperties.ca
-              </div>
-              <div
-                style={{ paddingBottom: "10px", textTransform: "uppercase" }}
-                className="footer-link"
-              >
-                604 888 9999
               </div>
             </Col>
             <Col md="12" lg="4">
@@ -159,21 +161,24 @@ export default function Footer(): JSX.Element {
               <div className="footer-link">
                 <a href="/">INSTAGRAM</a>
               </div>
+              <div className="footer-link">
+                <a href="/">WECHAT</a>
+              </div>
             </Col>
           </Row>
           <Row>
             <div className="footer-text-box">
+              <div className="footer-text">
+                © 2023 NOVARA PROPERTIES. ALL RIGHTS RESERVED.{""}
+              </div>
+              <div className="footer-text footer-spacer">&nbsp;|&nbsp;</div>
               <div className="footer-text">TERMS & PRIVACY </div>
-              <div className="footer-text footer-spacer">|</div>
+              <div className="footer-text footer-spacer">&nbsp;|&nbsp;</div>
               <Link href="https://www.alabcreative.ca/">
                 <a target="_blank">
                   <div className="footer-text">SITE BY A_LAB CREATIVE </div>
                 </a>
               </Link>
-              <div className="footer-text footer-spacer">|</div>
-              <div className="footer-text">
-                © 2022 NOVARA PROPERTIES. ALL RIGHTS RESERVED.{" "}
-              </div>
             </div>
           </Row>
         </Col>

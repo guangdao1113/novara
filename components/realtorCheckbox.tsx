@@ -59,7 +59,10 @@ export function RealtorCheckbox(props: RealtorCheckboxPropsType): JSX.Element {
           display: flex;
           align-items: center;
           width: 50%;
-          padding-bottom: 25px;
+          // padding-bottom: 25px;
+        }
+        .checkBox:last-child {
+          margin-left:-26%;
         }
         .inputStyle {
           height: 25px;

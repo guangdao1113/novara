@@ -1,15 +1,25 @@
 .headerContainer {
   position: fixed;
   z-index: 11;
-  padding: 60px 80px 0 80px;
+  padding: 60px 3.8vw 0 4vw;
   max-width: 100%;
+  transition: all 0.3s ease;
 }
 .headerLogoBtn {
   border: unset;
   background-color: transparent;
+  line-height: normal;
+  font-size: none;
 }
 .headerContainer .headerLogoBtn > span > img {
   filter: drop-shadow(1px 1px 3px rgb(0 0 0 / 51%));
+}
+.headerActiveContainer .headerLogoBtn > span {
+  height: 50px!important;
+  width: 183.99px!important;
+}
+.headerContainer .homeLogo {
+  filter: none!important;
 }
 .headerActiveContainer {
   position: fixed;
@@ -28,7 +38,8 @@
   left: 0;
   background: #ffffff;
   z-index: -1;
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  opacity: 0.95;
 
 }
 .navContainer {
@@ -60,6 +71,20 @@
   padding-right:25px !important;
   padding-left:25px !important;
 }
+.homeNavbarLink {
+  font-family: "Gotham-Book";
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #25211F !important;
+  padding-right:25px !important;
+  padding-left:25px !important;
+}
+.navbarLink:last-child,
+.homeNavbarLink:last-child {
+  padding-right: 0px!important;
+}
+
 .navbarLink:last-child,
 .navbarActiveLink:last-child{
   padding-right:0px!important;

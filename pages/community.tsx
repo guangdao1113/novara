@@ -3,6 +3,7 @@ import styles from "../styles/community.module.css";
 import HeroBanner from "components/heroBanner";
 import communityImage from "@/community-img.svg";
 import communityContact from "@/community-contact-img.png";
+import communityBnr from "@/communityBnr.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
@@ -13,18 +14,18 @@ function Heading(): JSX.Element {
       <div
         className={styles.headingText}
         data-aos="fade-up"
-        data-aos-delay="50"
+        data-aos-delay="150"
       >
         HAND IN HAND
       </div>
       <div
         className={styles.headingPara}
         data-aos="fade-up"
-        data-aos-delay="550"
+        data-aos-delay="200"
       >
-        We strive to treat all of our relationships as if they were family; we
-        see our people (team members, builders, homeowners, and investors) as
-        equals and stand alongside them.
+        Our concept of service involves caring for our neighbors, communities,
+        and cities, enriching people’s lives. We strive to reflect this in not
+        only our relationships but also in how we approach our work.
       </div>
     </div>
   );
@@ -32,18 +33,14 @@ function Heading(): JSX.Element {
 function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
-      <Row
-        className={styles.projectRowBox}
-        data-aos="fade-up"
-        data-aos-delay="50"
-      >
-        <Col lg="12" xl="6">
+      <Row className={styles.projectRowBox}>
+        <Col lg="12" xl="5">
           <div
             style={{ paddingTop: "0" }}
             className={`${styles.projectImgBox} ${styles.leftVerImg}`}
           >
             <Image
-              src="/images/community-project-img.png"
+              src="/images/community-project-img.jpg"
               width={575}
               height={426}
               layout="responsive"
@@ -51,7 +48,7 @@ function Project(): JSX.Element {
             />
           </div>
         </Col>
-        <Col lg="12" xl="6">
+        <Col lg="12" xl="6" data-aos="fade-up" data-aos-delay="150">
           <div>
             <div className={`${styles.projectTitle} ${styles.speTitle}`}>
               CONTRIBUTION
@@ -66,14 +63,20 @@ function Project(): JSX.Element {
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="7">
-          <div
-            className={styles.projectLeftBox}
-            data-aos="fade-up"
-            data-aos-delay="550"
-          >
-            <div className={styles.projectTitle}>BUILDING COMMUNITY</div>
-            <div className={styles.projectTxt}>
+        <Col lg="12" xl="6">
+          <div className={styles.projectLeftBox}>
+            <div
+              className={styles.projectTitle}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              BUILDING COMMUNITY
+            </div>
+            <div
+              className={styles.projectTxt}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               We believe that a community is at its healthiest when its people
               are uplifted collectively. We focus beyond the individuals in our
               immediate vicinity and look at how we can enrich the broader
@@ -82,7 +85,7 @@ function Project(): JSX.Element {
             </div>
             <div className={styles.projectImgBox}>
               <Image
-                src="/images/community-project-img2.png"
+                src="/images/community-project-img2.jpg"
                 width={586}
                 height={399}
                 layout="responsive"
@@ -91,21 +94,29 @@ function Project(): JSX.Element {
             </div>
           </div>
         </Col>
-        <Col lg="12" xl="5" data-aos="fade-up" data-aos-delay="1050">
+        <Col style={{ padding: "0px" }} lg="12" xl="4">
           <div className={styles.projectRightBox}>
             <div>
               <Image
-                src="/images/community-project-img3.png"
+                src="/images/community-project-img3.jpg"
                 width={456}
                 height={590}
                 layout="responsive"
                 priority={true}
               />
             </div>
-            <div style={{ paddingTop: "80px" }} className={styles.projectTitle}>
+            <div
+              className={styles.projectTitle}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               CULTURE
             </div>
-            <div style={{ width: "100%" }} className={styles.projectTxt}>
+            <div
+              className={styles.projectTxt}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               Our people at Novara Properties are not merely a team, we’re
               family. We care for each other just as we care for our work. From
               daily interactions to big decisions, everything we do factors in
@@ -122,7 +133,7 @@ function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
       <Image
-        src="/images/community-info-img.png"
+        src="/images/community-info-img.jpg"
         width={1920}
         height={900}
         layout="responsive"
@@ -135,8 +146,9 @@ export default function About() {
   return (
     <div>
       <HeroBanner
-        imageSrc={communityImage}
-        overlayOpa={0.45}
+        imageSrc={communityBnr}
+        overlayOpa={0.25}
+        headingTextClassName="hero-text"
         headingText="Our Community"
       />
       <Heading />

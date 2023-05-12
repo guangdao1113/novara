@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 interface HeroPropsType {
   imageSrc: string | StaticImageData;
   overlayOpa: number;
+  headingTextClassName: string;
   headingText: string;
 }
 
@@ -45,13 +46,28 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           font-family: PPEiko-LightItalic;
           font-weight: 300;
           font-size: 50px;
-          line-height: 60px;
+          line-height: 78px;
           width: 50%;
           transform: translate(-50%);
-          top: 50%;
+          top: 45%;
           left: 50%;
           text-align: center;
           z-index: 11;
+        }
+        .home-hero-text {
+          position: absolute;
+          width: 50%;
+          left: 80px;
+          z-index: 11;
+          bottom: 100px;
+        }
+        .home-hero-text > div {
+          color: #ffffff;
+          font-family: PPEiko-LightItalic;
+          font-weight: 300;
+          font-size: 70px;
+          line-height: 110px;
+
         }
         .scroll {
           width: 1px;
@@ -105,8 +121,8 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
         />
       </div> */}
       <div className="overlay"></div>
-      <div className="hero-text">
-        <div data-aos="fade-up" data-aos-delay="550">
+      <div className={props.headingTextClassName}>
+        <div data-aos="fade-in" data-aos-delay="150">
           {props.headingText}
         </div>
       </div>

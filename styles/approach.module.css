@@ -3,25 +3,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 4vw 149px 4vw;
+  padding: 97px 12vw 150px;
 }
 .headingText {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
-  padding-bottom: 83px;
 }
 .headingPara {
   font-family: "PPEiko-Thin";
-  width: 69%;
+  width: 83%;
   font-size: 32px;
   line-height: 50px;
   color: #59493b;
   font-weight: 100;
-  padding-bottom: 200px;
+  padding-top: 80px;
+  padding-bottom: 204px;
   text-align: center;
 }
 .headingTxt {
@@ -37,7 +37,8 @@
   color: #9b5d26;
 }
 .headingRow {
-  width: 77%;
+  /* width: 77%; */
+  justify-content: space-between;
 }
 .headingQuoteTxt {
   font-family: "Gotham-Light";
@@ -57,81 +58,115 @@
   font-size: 18px;
   color: #9b5d26;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 21px;
   word-spacing: 1px;
-  padding-bottom: 50px;
-  padding-right: 35%;
+  padding-bottom: 64px;
+  /* padding-right: 35%; */
 }
 .headingQuotePara {
   font-family: "Gotham-book";
   font-size: 18px;
   line-height: 32px;
   color: #59493b;
-  padding-right: 33%;
+  padding-right: 5%;
+  padding-bottom: 29px;
 }
 /* project section */
 .projectContainer {
-  padding: 150px 4vw 162px 4vw;
-  background-color: #fbefe1;
+  padding: 150px 12vw 229px;
+  background-color: rgba(251,239,225,0.5);
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .projectRowBox {
-  width: 80%;
-  max-width: 1336px;
+  /* width: 80%; */
+  /* max-width: 1336px; */
+  margin-left: 7vw;
+  justify-content: space-between;
 }
 .projectRowBox:nth-child(2) {
-  margin-right: 150px;
+  /* margin-right: 150px; */
+  margin-left: 0px;
+  margin-top: 147px;
 }
 .projectRowBox:nth-child(2) .projectTxt{
-  width: 74%;
+  width: 60%;
 }
 .projectLeftBox {
-  padding-left: 135px;
+  /* padding-left: 135px; */
 }
 .projectSpeImgBox {
-  padding-top: 155px;
+  /* padding-top: 155px; */
 }
 .projectImgBox {
-  padding-top: 80px;
+  padding-top: 79px;
 }
 .leftVerImg {
-  width: 80%;
+  /* width: 80%; */
 }
 .rightVerImg {
   width: 80%;
   text-align: right;
 }
 .projectRightBox {
-  padding-left: 166px;
+  /* padding-left: 166px; */
 }
 .projectSpeRightBox {
-  padding-left: 100px;
+  /* padding-left: 100px; */
 }
 .projectTitle {
   font-family: "Gotham-Medium";
   font-size: 18px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 21px;
   word-spacing: 1px;
   color: #9b5d26;
-  padding-top: 80px;
+  padding-top: 77px;
   padding-bottom: 50px;
 }
+.projectRowBox:nth-child(2) .projectTitle {
+  padding-top: 0px;
+}
 .projectSpeRightBox .projectTitle {
-  padding-top: 150px;
+  padding-top: 342px;
+  padding-bottom: 47px;
 }
 .projectTxt {
   font-family: "Gotham-Book";
   font-size: 18px;
   line-height: 32px;
   color: #59493b;
-  width: 85%;
+  /* width: 85%; */
+}
+.projectRightBox .projectTxt {
+  width: 84%;
 }
 .projectSubTxt {
-  padding-top: 52px;
+  padding-top: 40px;
 }
+/* info */
+.infoContainer {
+  padding: 81px 12vw 200px;
+}
+.infoContainer .projectRowBox{
+  margin-left: 0px;
+}
+.infoContainer .projectTitle{
+  padding-top: 0px;
+  padding-bottom: 47px;
+}
+
+.infoContainer .projectImgBox {
+  padding-top: 0px;
+  margin-top: -160px;
+}
+.infoContainer .projectTxt {
+  width: 95%;
+}
+
+
+
 @media (max-width: 1800px) {
   .projectRowBox {
     width: 85%;
@@ -236,9 +271,7 @@
   .projectTextBox {
     padding: 63px 12px 0 12px;
   }
-  /* .infoContainer {
-    padding: 0 4vw 0 4vw;
-  } */
+  
   .infoLeftBox {
     padding-bottom: 100px;
   }

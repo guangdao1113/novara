@@ -4,13 +4,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/header.styles.module.css";
-import whiteLogo from "@/white_logo.svg";
 import logo from "@/Novara-Properties_LOGO_Metallic.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Header(): JSX.Element {
-  const navLinkList = ["ABOUT", "APPROACH", "COMMUNITY", "CONTACT"];
+interface HeaderPropsType {
+  logo: string | StaticImageData;
+  homeLogo: string;
+  navbarLink: string;
+}
+export default function Header(props: HeaderPropsType): JSX.Element {
+  const navLinkList = ["RESIDENCES","ABOUT", "APPROACH", "COMMUNITY", "CONTACT"];
   const [isScroll, setScroll] = useState(false);
   const changeHeaderStyle = () => {
     if (typeof window !== "undefined" && window.scrollY >= 80) {
@@ -39,20 +43,23 @@ export default function Header(): JSX.Element {
         isScroll ? styles.headerActiveContainer : styles.headerContainer
       }
     >
-      <Row data-aos="fade-down" data-aos-delay="50">
-        <Col xs="9">
+      <Row data-aos="fade-in" data-aos-delay="50">
+        {/* <Col xs="9"> */}
+        <Col style={{padding:'0px'}}>
           <Link href="/">
             <button className={styles.headerLogoBtn}>
               <Image
-                src={isScroll ? logo : whiteLogo}
+                src={isScroll ? logo : props.logo}
                 width={isScroll ? 234.94 : 234.94}
                 height={isScroll ? 64 : 64}
                 alt="novara-logo"
+                className={props.homeLogo}
               />
             </button>
           </Link>
         </Col>
-        <Col xs="3" className={styles.navContainer}>
+        {/* <Col xs="3" className={styles.navContainer}> */}
+        <Col style={{padding:'0px'}} className={styles.navContainer}>
           <Navbar collapseOnSelect expand="lg" className={styles.navLinkBox}>
             <Navbar.Toggle
               className={
@@ -72,11 +79,11 @@ export default function Header(): JSX.Element {
                       key={index}
                       eventKey={index}
                       className={
-                        isScroll ? styles.navbarActiveLink : styles.navbarLink
+                        isScroll ? styles.navbarActiveLink : props.navbarLink
                       }
                       href={`/${url ?? ""}`}
                     >
-                      {item ?? "RESIDENCES"}
+                      {item}
                     </Nav.Link>
                   );
                 })}

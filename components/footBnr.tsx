@@ -31,8 +31,6 @@ function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
           borderBottom: "none",
           paddingBottom: "0px",
         }}
-        data-aos="fade-up"
-        data-aos-delay="50"
       >
         <Col sm="12" md="6">
           {imageSrc ? (
@@ -46,9 +44,12 @@ function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
             />
           ) : null}
         </Col>
-        <Col className={styles.contactBtnContainer} sm="12" md="6">
+        <Col style={{padding:'0px'}} className={styles.contactBtnContainer} sm="12" md="4">
           <Link href={`/${url}`}>
-            <button className={styles.contactBtnBox}>
+            <button className={styles.contactBtnBox} 
+              data-aos="fade-right"
+              data-aos-delay="150"
+              >
               {linkText ? (
                 <div className={styles.contactBtnText}>{linkText}</div>
               ) : null}

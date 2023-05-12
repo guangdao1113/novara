@@ -143,93 +143,97 @@ function CustomForm({
   };
   return (
     <div>
-      <Row data-aos="fade-up" data-aos-delay="50">
-        <Col className={styles.cusFormHeading} xl="12" xxl="4">
+      <Row data-aos="fade-up" data-aos-delay="150">
+        <Col className={styles.cusFormHeading} xl="12" xxl="6">
           Register Your Interest
         </Col>
-        <Col xl="12" xxl="8">
-          <form id="contact-form" onSubmit={handleSubmit}>
-            <Row>
-              <Col md="12" lg="6">
-                <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
-                <RealtorCheckbox realtorHandler={realtorHandler} />
+        <Col xl="12" xxl="6">
+          <form id="contact-form" className={styles.contactForm} onSubmit={handleSubmit}>
+            <div className={styles.cusFormSubtitle}>INFORMATION</div>
+            <Row className={styles.row}>
+              <Col className={styles.cusInputBox}>
+                <input
+                  className={styles.cusInput}
+                  id="firstName"
+                  name="firstName"
+                  required={true}
+                  type="text"
+                  placeholder="First Name"
+                  onChange={changeHandler}
+                />
+                <input
+                  className={styles.cusInput}
+                  id="email"
+                  name="email"
+                  required={true}
+                  type="email"
+                  placeholder="Email"
+                  onChange={changeHandler}
+                />
               </Col>
-              <Col md="12" lg="6">
-                <div className={styles.cusFormSubtitle}>INFORMATION</div>
-                <Row style={{ paddingTop: "7.5px" }}>
-                  <Col className={styles.cusInputBox}>
-                    <input
-                      className={styles.cusInput}
-                      id="firstName"
-                      name="firstName"
-                      required={true}
-                      type="text"
-                      placeholder="First Name"
-                      onChange={changeHandler}
-                    />
-                    <input
-                      className={styles.cusInput}
-                      id="email"
-                      name="email"
-                      required={true}
-                      type="email"
-                      placeholder="Email"
-                      onChange={changeHandler}
-                    />
-                  </Col>
-                  <Col className={styles.cusInputBox}>
-                    <input
-                      className={styles.cusInput}
-                      id="lastName"
-                      name="lastName"
-                      required={true}
-                      type="text"
-                      placeholder="Last Name"
-                      onChange={changeHandler}
-                    />
-                    <input
-                      className={styles.cusInput}
-                      id="phone"
-                      name="phone"
-                      required={true}
-                      type="text"
-                      placeholder="Phone Number"
-                      onChange={changeHandler}
-                    />
-                  </Col>
-                </Row>
-                <div className={styles.allowContactBox}>
-                  <input
-                    onChange={allowContactHandler}
-                    type="checkbox"
-                    name="allowContact"
-                    className={styles.allowContactInput}
-                  />
-                  <div className={styles.allowContactText}>
-                    I agree to allow Novara Properties and its affiliates to
-                    contact me and send me information via email, phone, or SMS.
-                    I understand I can unsubscribe at any time.
-                  </div>
-                </div>
-                <button className={styles.contactBtnBoxTwo}>
-                  <div className={styles.contactBtnTextTwo}>Register</div>
-                  <Image
-                    src="/images/btn-arrow.svg"
-                    alt="arrow"
-                    width={25.19}
-                    height={12.87}
-                    layout="fixed"
-                  />
-                </button>
+              <Col className={styles.cusInputBox}>
+                <input
+                  className={styles.cusInput}
+                  id="lastName"
+                  name="lastName"
+                  required={true}
+                  type="text"
+                  placeholder="Last Name"
+                  onChange={changeHandler}
+                />
+                <input
+                  className={styles.cusInput}
+                  id="phone"
+                  name="phone"
+                  required={true}
+                  type="text"
+                  placeholder="Phone Number"
+                  onChange={changeHandler}
+                />
               </Col>
             </Row>
+            <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
+            {/* <div className="subtitle">
+              What Novara Projects are you interested in?
+            </div>
+            <Select
+              label={strings.contactPageFormSourcePlaceholder}
+              name="source"
+              options={Object.values(Source).map(source => ({
+                name: source,
+                value: source,
+              }))}
+            /> */}
+            <RealtorCheckbox realtorHandler={realtorHandler} />
+            <div className={styles.allowContactBox}>
+              <input
+                onChange={allowContactHandler}
+                type="checkbox"
+                name="allowContact"
+                className={styles.allowContactInput}
+              />
+              <div className={styles.allowContactText}>
+              I agree to allow Novara Properties and its affiliates to contact me and send me information via email, phone, or SMS. I understand I can unsubscribe at any time.
+              </div>
+            </div>
+            <button className={styles.contactBtnBoxTwo}>
+              <div className={styles.contactBtnTextTwo}>Register</div>
+              <Image
+                src="/images/btn-arrow.svg"
+                alt="arrow"
+                width={25.19}
+                height={12.87}
+                layout="fixed"
+              />
+            </button>
           </form>
         </Col>
       </Row>
       <div className={styles.messageContainer}>
         {status === "success" ? (
           <div className={styles.messageTxt}>
-            Message Sent Successfully! {message}
+            Thank you for registering.<br />
+            We will be in touch with more information soon.{message}
           </div>
         ) : null}
         {status === "error" ? (
@@ -268,11 +272,6 @@ export default function Contact(props: FooterPropsType): JSX.Element {
         />
       ) : (
         <div
-          style={{
-            paddingTop: "110px",
-            backgroundColor: "#FBEFE1",
-            opacity: 0.5,
-          }}
         ></div>
       )}
       <Register />

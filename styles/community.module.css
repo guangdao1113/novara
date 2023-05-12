@@ -3,20 +3,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 98px 4vw 98px 4vw;
+  padding: 97px 12vw 103px;
 }
 .headingText {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
-  padding-bottom: 83px;
+  padding-bottom: 80px;
 }
 .headingPara {
   font-family: "PPEiko-Thin";
-  width: 63%;
+  width: 75%;
   font-size: 32px;
   line-height: 50px;
   color: #59493b;
@@ -71,36 +71,39 @@
 }
 /* project section */
 .projectContainer {
-  padding: 150px 4vw 162px 4vw;
+  padding: 145px 12vw 199px;
   background-color: #fbefe1;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .projectRowBox {
-  width: 80%;
+  /* width: 80%; */
+  justify-content: space-between;
 }
 .projectRowBox:nth-child(2) .projectTxt {
-  width: 67%;
+  width: 68%;
 }
 .projectLeftBox {
-  padding-top: 182px;
-  padding-left: 135px;
+  /* padding-top: 182px; */
+  /* padding-left: 135px; */
 }
 .projectSpeImgBox {
   padding-top: 245px;
 }
 .projectImgBox {
-  padding-top: 80px;
+  padding-top: 50px;
+  width: 91%;
+
 }
 .leftVerImg {
-  width: 80%;
+  /* width: 97%; */
 }
 .rightVerImg {
   width: 80%;
 }
 .projectRightBox {
-  padding-left: 166px;
+  /* padding-left: 166px; */
 }
 .projectTitle {
   font-family: "Gotham-Medium";
@@ -109,8 +112,17 @@
   line-height: 22px;
   word-spacing: 1px;
   color: #9b5d26;
-  padding-top:40px;
-  padding-bottom: 50px;
+  padding-top:309px;
+  padding-bottom: 47px;
+}
+.projectRowBox:last-child {
+  margin-left: 7vw;
+}
+.projectRowBox .projectRightBox .projectTitle {
+  padding-top: 77px;
+}
+.projectRowBox .projectRightBox .projectTxt {
+  width: 98%;
 }
 .speTitle {
   padding-top: 0;
@@ -120,7 +132,7 @@
   font-size: 18px;
   line-height: 32px;
   color: #59493b;
-  width: 62%;
+  width: 59%;
 }
 
 .infoBox {

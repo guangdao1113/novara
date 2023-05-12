@@ -1,0 +1,64 @@
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 12vw 200px;
+}
+/* .headingContainer:last-child {
+  margin-bottom: 200px;
+} */
+.heading {
+  font-family: "PPEiko-Thin";
+  font-size: 32px;
+  line-height: 50px;
+  color: #59493b;
+  font-weight: 100;
+  padding-bottom: 45.5px;
+  border-bottom: 1px solid #59493B;
+  margin-bottom: 100.5px;
+}
+.headingRow > div {
+  padding-right: 14px;
+}
+.headingRow > div:last-child {
+  padding-left: 14px;
+}
+.projectTextBoxBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  border: none;
+  padding-top: 29px;
+  background-color: transparent;
+  
+}
+.projectImageText {
+  font-family: "PPEiko-LightItalic";
+  font-size: 16px;
+  line-height: 19px;
+  color: #59493B;
+  font-weight: 300;
+  padding-right: 10.5px;
+}
+
+.headingTxt {
+  font-family: "Gotham-Medium";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #9b5d26;
+  margin-top: 47px;
+  margin-bottom: 50px;
+  width: 79%;
+}
+.headingPara {
+  font-family: "Gotham-book";
+  font-size: 18px;
+  line-height: 32px;
+  color: #59493b;
+  width: 80%;
+}
+
+

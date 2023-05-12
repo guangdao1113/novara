@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 100px 4vw 149px 4vw;
+  padding: 120px 4vw 200px;
   overflow: hidden;
   width: 100%;
 }
@@ -17,11 +17,11 @@
 .headingSubText {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
-  padding-bottom: 40px;
+  padding-bottom: 37px;
 }
 .headingPara {
   font-family: "Gotham-Book";
@@ -29,8 +29,8 @@
   line-height: 32px;
   color: #59493b;
   text-align: left;
-  width: 62%;
-  min-height: 150px;
+  width: 75%;
+  /* min-height: 150px; */
 }
 .headingSubTxt {
   font-family: "Gotham-Book";
@@ -39,9 +39,13 @@
   color: #59493b;
   text-align: left;
   border-bottom: 1px solid #59493b;
-  width: 62%;
+  /* width: 62%; */
   padding-bottom: 10.5px;
   padding-top: 10.5px;
+}
+.headingSubTxt:first-child {
+  border-top: 1px solid #59493b;
+
 }
 /* .headingBtnBox {
   display: flex;
