@@ -37,7 +37,7 @@ function Heading(): JSX.Element {
 function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
-      <Link href="https://www.google.com/maps/place/515+W+Pender+St+%23217,+Vancouver,+BC+V6B+6H5/@49.2836365,-123.115601,17z/data=!3m1!4b1!4m6!3m5!1s0x54867178ef8f4561:0x77aa958de3268ee0!8m2!3d49.283633!4d-123.1130261!16s%2Fg%2F11klnmn351">
+      <Link href="https://www.google.com/maps/place/515+W+Pender+St+%23215,+Vancouver,+BC+V6B+6H5/@49.2836983,-123.1154215,17z/data=!3m1!4b1!4m6!3m5!1s0x54867178f003943d:0xf6dd15347f0e18bf!8m2!3d49.2836948!4d-123.1128466!16s%2Fg%2F11qqn8kw7f">
         <a target="_blank">
           <Image
             src="/images/Novara-website-map-icon.png"

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Select from "react-select";
 import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
@@ -65,6 +66,7 @@ function CustomForm({
     email: null,
     phone: null,
     projectName: null,
+    hearUs: "Select",
     isRelator: null,
     allowContact: null,
   });
@@ -72,6 +74,12 @@ function CustomForm({
     setFormData({
       ...formData,
       projectName: projectName,
+    });
+  };
+  const changeSelectHandler = (event) => {
+    setFormData({
+      ...formData,
+      hearUs: event.target.value,
     });
   };
   const realtorHandler = (isRealtor) => {
@@ -108,6 +116,7 @@ function CustomForm({
       formData.isRelator &&
       formData.phone &&
       formData.projectName &&
+      formData.hearUs &&
       formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
@@ -116,6 +125,7 @@ function CustomForm({
         LNAME: formData.lastName,
         PHONE: formData.phone,
         PROJECTS: formData.projectName,
+        HEARUS: formData.hearUs,
         ISREALTOR: formData.isRelator,
         CONTACT: formData.allowContact,
       });
@@ -141,6 +151,43 @@ function CustomForm({
     ) as HTMLFormElement;
     contactForm.reset();
   };
+
+  const options = [
+    { value: "Friends and Family", label: "Friends and Family" },
+    { value: "Realtor", label: "Realtor" },
+    {
+      value: "Signage / Walk by / Drive by",
+      label: "Signage / Walk by / Drive by",
+    },
+    { value: "Online Search", label: "Online Search" },
+    { value: "Social Media", label: "Social Media" },
+  ];
+
+  // const colourStyles = {
+  //   placeholder: (defaultStyles) => {
+  //       return {
+  //           ...defaultStyles,
+  //           color: 'rgba(89,73,59,0.4)',
+  //           // fontSize: '18px'
+  //       }
+  //   }
+  // }
+
+  const style = {
+    control: (base) => ({
+      ...base,
+      borderTop: 0,
+      borderLeft: 0,
+      borderRight: 0,
+      borderBottom: "1px solid #59493B",
+      background: "transparent",
+      borderRadius: 0,
+      fontFamily: "Gotham-Book",
+      fontSize: "clamp(12px,0.7vw,18px)",
+      // This line disable the blue border
+      boxShadow: "none",
+    }),
+  };
   return (
     <div>
       <Row data-aos="fade-up" data-aos-delay="150">
@@ -148,7 +195,11 @@ function CustomForm({
           Register Your Interest
         </Col>
         <Col md="12" xl="6">
-          <form id="contact-form" className={styles.contactForm} onSubmit={handleSubmit}>
+          <form
+            id="contact-form"
+            className={styles.contactForm}
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <div className={styles.cusFormSubtitle}>INFORMATION</div>
             <Row className={styles.row}>
               <Col className={styles.cusInputBox}>
@@ -193,17 +244,58 @@ function CustomForm({
               </Col>
             </Row>
             <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
-            {/* <div className="subtitle">
-              What Novara Projects are you interested in?
+            <div className={styles.cusFormSubtitleHearUs}>
+              How did you hear about us?
             </div>
             <Select
-              label={strings.contactPageFormSourcePlaceholder}
-              name="source"
-              options={Object.values(Source).map(source => ({
-                name: source,
-                value: source,
-              }))}
-            /> */}
+              options={options}
+              placeholder={
+                <div className={styles.selectPlaceholderText}>Select</div>
+              }
+              className={styles.registerSelect}
+              styles={style}
+              components={{
+                IndicatorSeparator: () => null,
+              }}
+            />
+            {/* <select
+              id="mce-source"
+              name="hearUs"
+              className={styles.registerSelect}
+              onChange={changeSelectHandler}
+              // styles={{ opacity: this.state.someValidationError ? "0.5" : "1"}}
+            >
+              <option
+                className={styles.registerOption}
+                value=""
+                selected
+                disabled
+                hidden
+              >
+                Select
+              </option>
+              <option
+                className={styles.registerOption}
+                value="Friends and Family"
+              >
+                Friends and Family
+              </option>
+              <option className={styles.registerOption} value="Realtor">
+                Realtor
+              </option>
+              <option
+                className={styles.registerOption}
+                value="Signage / Walk by / Drive by"
+              >
+                Signage / Walk by / Drive by
+              </option>
+              <option className={styles.registerOption} value="Online Search">
+                Online Search
+              </option>
+              <option className={styles.registerOption} value="Social Media">
+                Social Media
+              </option>
+            </select> */}
             <RealtorCheckbox realtorHandler={realtorHandler} />
             <div className={styles.allowContactBox}>
               <input
@@ -213,7 +305,9 @@ function CustomForm({
                 className={styles.allowContactInput}
               />
               <div className={styles.allowContactText}>
-              I agree to allow Novara Properties and its affiliates to contact me and send me information via email, phone, or SMS. I understand I can unsubscribe at any time.
+                I agree to allow Novara Properties and its affiliates to contact
+                me and send me information via email, phone, or SMS. I
+                understand I can unsubscribe at any time.
               </div>
             </div>
             <button className={styles.contactBtnBoxTwo}>
@@ -226,26 +320,27 @@ function CustomForm({
                 layout="fixed"
               />
             </button>
+            <div className={styles.messageContainer}>
+              {status === "success" ? (
+                <div className={styles.messageTxt}>
+                  Thank you for registering.
+                  <br />
+                  We will be in touch with more information soon.
+                </div>
+              ) : null}
+              {status === "error" ? (
+                <div className={styles.messageTxt}>{message}</div>
+              ) : null}
+            </div>
           </form>
         </Col>
       </Row>
-      <div className={styles.messageContainer}>
-        {status === "success" ? (
-          <div className={styles.messageTxt}>
-            Thank you for registering.<br />
-            We will be in touch with more information soon.{message}
-          </div>
-        ) : null}
-        {status === "error" ? (
-          <div className={styles.messageTxt}>{message}</div>
-        ) : null}
-      </div>
     </div>
   );
 }
 function Register(): JSX.Element {
   const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
-
+  // const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
   return (
     <div className={styles.cusFormContainer}>
       <MailChimpSubscribe
@@ -271,8 +366,7 @@ export default function Contact(props: FooterPropsType): JSX.Element {
           url={props.url}
         />
       ) : (
-        <div
-        ></div>
+        <div></div>
       )}
       <Register />
     </div>

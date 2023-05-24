@@ -82,6 +82,9 @@
   /* padding-right: 0px; */
   /* padding-left: 31px; */
 }
+
+
+.cusFormSubtitleHearUs,
 .cusFormSubtitle {
   font-family: "Gotham-Medium";
   font-size: 18px;
@@ -90,6 +93,36 @@
   color: #9b5d26;
   font-weight: 500;
 }
+.cusFormSubtitleHearUs {
+  padding-top: 58px;
+  padding-bottom: 32px;
+  text-transform: uppercase;
+}
+.contactForm input::placeholder {
+  color: #59493B;
+  opacity: 0.4;
+
+}
+.registerSelect{
+  width: 100%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  /* font-family: "Gotham-book";
+  font-size: 18px;
+  line-height: 32px;
+  word-spacing: 1px; */
+}
+.selectPlaceholderText {
+  color: #59493B;
+  opacity: 0.4;
+  font-family: "Gotham-Book",
+}
+
+
+
+
 .cusFormContainer {
   position: relative;
   padding: 146px 4vw 116px;
@@ -139,13 +172,14 @@
   padding-right: 15px;
 }
 .messageContainer {
-  text-align: center;
-  padding-top: 100px;
+  /* text-align: center; */
+  padding-top: 34px;
   font-family: "Gotham-Medium";
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 18px;
+  line-height: 21px;
   word-spacing: 1px;
   color: #9b5d26;
+  text-transform: uppercase;
 }
 @media (max-width: 1700px) {
   .cusFormContainer {
@@ -160,6 +194,16 @@
   .cusFormSubtitle {
     font-size: clamp(12px,0.7vw,18px);
     line-height: clamp(25px,2vw,32px);
+  }
+  .cusFormSubtitleHearUs{
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(16px,0.6vw,22px);
+    padding-top: clamp(40px, 3.5vw, 58px);
+  }
+
+  .messageContainer {
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(15px, 0.6vw, 21px);
   }
   .cusInput {
     margin-top: clamp(15px,2vw,28.5px);

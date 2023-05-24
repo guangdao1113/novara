@@ -155,7 +155,7 @@ export default function Footer(): JSX.Element {
                 style={{ paddingBottom: "5px", textTransform: "uppercase" }}
                 className="footer-link"
               >
-                217 - 515 West Pender Street,
+                215 - 515 West Pender Street,
               </div>
               <div
                 style={{ paddingBottom: "5px", textTransform: "uppercase" }}
