@@ -79,7 +79,7 @@ function CustomForm({
   const changeSelectHandler = (event) => {
     setFormData({
       ...formData,
-      hearUs: event.target.value,
+      hearUs: event.value,
     });
   };
   const realtorHandler = (isRealtor) => {
