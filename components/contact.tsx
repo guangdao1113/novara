@@ -253,6 +253,7 @@ function CustomForm({
                 <div className={styles.selectPlaceholderText}>Select</div>
               }
               className={styles.registerSelect}
+              onChange={changeSelectHandler}
               styles={style}
               components={{
                 IndicatorSeparator: () => null,
