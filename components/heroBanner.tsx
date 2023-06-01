@@ -67,7 +67,6 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           font-weight: 300;
           font-size: 70px;
           line-height: 110px;
-
         }
         .scroll {
           width: 1px;
@@ -80,18 +79,18 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           transform: translate(-50%, 0%);
         }
         button.navbar-toggler.collapsed {
-        } 
+        }
         @media (max-width: 1700px) {
           .home-hero-text {
-            bottom: clamp(50px,6vw,100px);
+            bottom: clamp(50px, 6vw, 100px);
           }
           .scroll {
-            height: clamp(50px,6vw,100px);
+            height: clamp(50px, 6vw, 100px);
           }
 
           .home-hero-text > div {
-            font-size: clamp(40px,4vw,70px);
-            line-height: clamp(50px,6vw,110px);
+            font-size: clamp(40px, 4vw, 70px);
+            line-height: clamp(50px, 6vw, 110px);
           }
           .hero-text > div {
             font-size: clamp(30px, 3.5vw, 50px);
@@ -101,20 +100,33 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           .hero-text {
           }
         }
-        @media (max-width: 992px) {
+        @media (max-width: 991px) {
           .hero-text {
             width: 100%;
           }
-        }
-        @media (max-width: 550px) {
+          // }
+          // @media (max-width: 575px) {
           .hero-container {
             height: calc(100vh - 100px);
           }
           .hero-text {
-            font-size: 25px;
+            font-size: 32px;
+            line-height: 43px;
+          }
+          .home-hero-text {
+            width: 66%;
+            text-align: center;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, 0%);
+            bottom: 80px;
+          }
+          .home-hero-text > div {
+            font-size: 40px;
+            line-height: 43px;
           }
           .scroll {
-            height: 50px;
+            height: 56px;
           }
         }
       `}</style>

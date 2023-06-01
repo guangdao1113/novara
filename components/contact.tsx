@@ -60,6 +60,16 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
+  const options = [
+    { value: "Friends and Family", label: "Friends and Family" },
+    { value: "Realtor", label: "Realtor" },
+    {
+      value: "Signage / Walk by / Drive by",
+      label: "Signage / Walk by / Drive by",
+    },
+    { value: "Online Search", label: "Online Search" },
+    { value: "Social Media", label: "Social Media" },
+  ];
   const [formData, setFormData] = useState({
     firstName: null,
     lastName: null,
@@ -77,6 +87,7 @@ function CustomForm({
     });
   };
   const changeSelectHandler = (event) => {
+    console.log(event.value);
     setFormData({
       ...formData,
       hearUs: event.value,
@@ -152,17 +163,6 @@ function CustomForm({
     contactForm.reset();
   };
 
-  const options = [
-    { value: "Friends and Family", label: "Friends and Family" },
-    { value: "Realtor", label: "Realtor" },
-    {
-      value: "Signage / Walk by / Drive by",
-      label: "Signage / Walk by / Drive by",
-    },
-    { value: "Online Search", label: "Online Search" },
-    { value: "Social Media", label: "Social Media" },
-  ];
-
   // const colourStyles = {
   //   placeholder: (defaultStyles) => {
   //       return {
@@ -214,22 +214,22 @@ function CustomForm({
                 />
                 <input
                   className={styles.cusInput}
-                  id="email"
-                  name="email"
+                  id="lastName"
+                  name="lastName"
                   required={true}
-                  type="email"
-                  placeholder="Email"
+                  type="text"
+                  placeholder="Last Name"
                   onChange={changeHandler}
                 />
               </Col>
               <Col className={styles.cusInputBox}>
                 <input
                   className={styles.cusInput}
-                  id="lastName"
-                  name="lastName"
+                  id="email"
+                  name="email"
                   required={true}
-                  type="text"
-                  placeholder="Last Name"
+                  type="email"
+                  placeholder="Email"
                   onChange={changeHandler}
                 />
                 <input
@@ -326,7 +326,7 @@ function CustomForm({
                 <div className={styles.messageTxt}>
                   Thank you for registering.
                   <br />
-                  We will be in touch with more information soon.
+                  <span>We will be in touch with more information soon.</span>
                 </div>
               ) : null}
               {status === "error" ? (
@@ -341,7 +341,7 @@ function CustomForm({
 }
 function Register(): JSX.Element {
   const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
-  // const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
+  //const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
   return (
     <div className={styles.cusFormContainer}>
       <MailChimpSubscribe

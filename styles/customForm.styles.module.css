@@ -266,23 +266,78 @@
     margin-bottom: 30px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .contactBtnText {
     font-size: 25px;
   }
   
+  
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .contactBtnContainer {
     padding-top: 100px;
   }
+
+  /* register form */
+  .cusFormContainer {
+    padding: 70px 9vw 100px;
+  }
+  .cusFormHeading {
+    font-family: "PPEiko-Thin";
+    font-size: 20px;
+    line-height: 31px;
+    color: #59493B;
+    text-transform: capitalize;
+    margin-bottom: 48px;
+  }
+  .cusInput,
+  .cusFormSubtitle {
+    font-size:12px;
+    line-height:15px;
+  }
+  .cusFormSubtitle {
+    margin-bottom: 30px;
+
+  }
+
+  /* how did you hear about us */
+  .cusFormSubtitleHearUs {
+    font-size: 12px;
+    line-height: 15px;
+    padding-bottom: 29px;
+  }
+
+  .allowContactBox {
+    padding-top: 50px;
+  }
+  .allowContactText {
+    width: 100%;
+  }
+
+  /* message */
+  .messageContainer {
+    font-family: "PPEiko-Thin";
+    font-size: 20px;
+    line-height: 15px;
+    color: #59493B;
+    text-transform: capitalize;
+    margin-top: 30px;
+  }
+  .messageContainer span {
+    font-family: "Gotham-Medium";
+    font-size: 12px;
+    line-height: 15px;
+    color: #9B5D26;
+    text-transform: uppercase;
+    margin-top: 15px;
+    display: inline-block;
+
+  }
+
 }
 
-@media (max-width: 550px) {
-  .bannerContainer {
-    padding-bottom: 60px;
-  }
+@media (max-width: 575px) {
   /* .cusFormHeading {
     font-size:22px;
     margin-bottom: 35px;
@@ -297,6 +352,30 @@
   .cusFormContainer {
     padding-bottom: 60px;
   } */
+  
+  .bannerContainer {
+    padding: 0px;
+  }
+  
+  .contactBtnContainer {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .contactBtnText {
+    font-size: 30px;
+    line-height: 47px;
+    color: #FFFFFF;
+  }
+  .contactBtnBox > span {
+    width: 15.58px!important;
+    height: 9.86px!important;
+    margin-top: 7px!important;
+  }
   .footer-container {
     padding: 60px 4vw 60px 4vw;
   }

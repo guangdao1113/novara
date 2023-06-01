@@ -1,15 +1,27 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/residences.module.css";
 import HeroBanner from "components/heroBanner";
 import homeImage from "@/HOME-page-ps.jpg";
 import resImage from "@/Residences-Banner.jpg";
+import resImageMobile from "@/Residences-Banner-mobile.jpg";
 import aboutContact from "@/about-contact-img.svg";
 import aboutIntroPic from "@/about-intro-pic.jpg";
+import aboutIntroPicDark from "@/about-intro-pic-dark.jpg";
+import arrowOrange from "@/btn-arrow.svg";
+import arrowDark from "@/btn-arrow-white.png";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
 
 function CurrentProjects(): JSX.Element {
+  const [arrowDesk, arrowMobile] = useState(arrowDark);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    if (mediaQuery.matches) {
+      arrowMobile(arrowOrange);
+    }
+  }, []);
   return (
     <div id="content" className={styles.headingContainer}>
       <Row
@@ -18,7 +30,7 @@ function CurrentProjects(): JSX.Element {
         data-aos-delay="150"
       >
         <div className={styles.heading}>Current</div>
-        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
+        <Col style={{ paddingLeft: "0px" }} md="6" lg="6" className={styles.left}>
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -36,7 +48,7 @@ function CurrentProjects(): JSX.Element {
           <button className={styles.projectTextBoxBtn}>
             <div className={styles.projectImageText}>View Project</div>
             <Image
-              src="/images/btn-arrow-white.png"
+              src={arrowDesk}
               alt="arrow"
               width={25.19}
               height={12.87}
@@ -44,7 +56,7 @@ function CurrentProjects(): JSX.Element {
             />
           </button>
         </Col>
-        <Col style={{ paddingRight: "0px" }} md="12" lg="6">
+        <Col style={{ paddingRight: "0px" }} md="6" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -62,7 +74,7 @@ function CurrentProjects(): JSX.Element {
           <button className={styles.projectTextBoxBtn}>
             <div className={styles.projectImageText}>View Project</div>
             <Image
-              src="/images/btn-arrow-white.png"
+              src={arrowDesk}
               alt="arrow"
               width={25.19}
               height={12.87}
@@ -75,6 +87,13 @@ function CurrentProjects(): JSX.Element {
   );
 }
 function UpComingProjects(): JSX.Element {
+  const [arrowDesk, arrowMobile] = useState(arrowDark);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    if (mediaQuery.matches) {
+      arrowMobile(arrowOrange);
+    }
+  }, []);
   return (
     <div id="content" className={styles.headingContainer}>
       <Row
@@ -83,7 +102,7 @@ function UpComingProjects(): JSX.Element {
         data-aos-delay="150"
       >
         <div className={styles.heading}>Upcoming</div>
-        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
+        <Col style={{ paddingLeft: "0px" }} md="6" lg="6" className={styles.left}>
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -101,7 +120,7 @@ function UpComingProjects(): JSX.Element {
           <button className={styles.projectTextBoxBtn}>
             <div className={styles.projectImageText}>View Project</div>
             <Image
-              src="/images/btn-arrow-white.png"
+              src={arrowDesk}
               alt="arrow"
               width={25.19}
               height={12.87}
@@ -109,7 +128,7 @@ function UpComingProjects(): JSX.Element {
             />
           </button>
         </Col>
-        <Col style={{ paddingRight: "0px" }} md="12" lg="6">
+        <Col style={{ paddingRight: "0px" }} md="6" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -127,7 +146,7 @@ function UpComingProjects(): JSX.Element {
           <button className={styles.projectTextBoxBtn}>
             <div className={styles.projectImageText}>View Project</div>
             <Image
-              src="/images/btn-arrow-white.png"
+              src={arrowDesk}
               alt="arrow"
               width={25.19}
               height={12.87}
@@ -140,6 +159,13 @@ function UpComingProjects(): JSX.Element {
   );
 }
 function PastProjects(): JSX.Element {
+  const [arrowDesk, arrowMobile] = useState(arrowDark);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    if (mediaQuery.matches) {
+      arrowMobile(arrowOrange);
+    }
+  }, []);
   return (
     <div id="content" className={styles.headingContainer}>
       <Row
@@ -148,7 +174,7 @@ function PastProjects(): JSX.Element {
         data-aos-delay="150"
       >
         <div className={styles.heading}>Past</div>
-        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
+        <Col style={{ paddingLeft: "0px" }} md="6" lg="6" className={styles.left}>
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -165,7 +191,7 @@ function PastProjects(): JSX.Element {
           <button className={styles.projectTextBoxBtn}>
             <div className={styles.projectImageText}>View Project</div>
             <Image
-              src="/images/btn-arrow-white.png"
+              src={arrowDesk}
               alt="arrow"
               width={25.19}
               height={12.87}
@@ -173,7 +199,7 @@ function PastProjects(): JSX.Element {
             />
           </button>
         </Col>
-        <Col style={{ paddingRight: "0px" }} md="12" lg="6">
+        <Col style={{ paddingRight: "0px" }} md="6" lg="6">
           <Image
             src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
             width={721}
@@ -191,7 +217,7 @@ function PastProjects(): JSX.Element {
           <button className={styles.projectTextBoxBtn}>
             <div className={styles.projectImageText}>View Project</div>
             <Image
-              src="/images/btn-arrow-white.png"
+              src={arrowDesk}
               alt="arrow"
               width={25.19}
               height={12.87}
@@ -204,10 +230,20 @@ function PastProjects(): JSX.Element {
   );
 }
 export default function Residences() {
+  const [bnrDesk, bnrMobile] = useState(resImage);
+  const [footBnrDesk, footBnrMobile] = useState(aboutIntroPic);
+  useEffect(() => {
+    
+    const mediaQuery = window.matchMedia("(max-width: 575px)");
+    if (mediaQuery.matches) {
+      bnrMobile(resImageMobile);
+      footBnrMobile(aboutIntroPicDark);
+    }
+  }, []);
   return (
     <div>
       <HeroBanner
-        imageSrc={resImage}
+        imageSrc={bnrDesk}
         overlayOpa={0.25}
         headingTextClassName="hero-text"
         headingText="Our Residences"
@@ -215,7 +251,7 @@ export default function Residences() {
       <CurrentProjects />
       <UpComingProjects />
       <PastProjects />
-      <FootBnr imageSrc={aboutIntroPic} linkText="About Us" url="about" />
+      <FootBnr imageSrc={footBnrDesk} linkText="About Us" url="about" />
     </div>
   );
 }

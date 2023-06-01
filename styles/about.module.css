@@ -23,6 +23,14 @@
   margin-bottom: 200px;
   text-align: center;
 }
+.quoteMobile,
+.headingParaMobile,
+.projectMobile {
+  display: none;
+}
+.quoteDesk {
+  text-align: center;
+}
 /* .headingBtnBox {
   display: flex;
   align-items: center;
@@ -46,6 +54,7 @@
   color: #9b5d26;
   width: 60%;
   text-align: center;
+  margin: 0 auto;
 }
 .headingQuoteName {
   margin: 26px auto 199px;
@@ -235,7 +244,7 @@
   .headingQuoteTitle,
   .headingText {
     font-size: clamp(12px,0.7vw,18px);
-    line-height: clamp(25px,2vw,32px);
+    line-height: clamp(15px,2vw,32px);
     /* padding-bottom: clamp(20px,5vw,83px); */
   }
   .headingQuoteTitle {
@@ -243,7 +252,7 @@
   }
   .headingPara {
     font-size: clamp(20px,1.7vw,32px);
-    line-height: clamp(30px,3vw,50px);
+    line-height: clamp(31px,3vw,50px);
     /* padding-bottom: clamp(25px,7vw,200px); */
     margin-top: clamp(20px,4vw,80px);
     margin-bottom:clamp(45px,9vw,200px);
@@ -310,54 +319,13 @@
 }
 /* --p-- */
 
-@media (max-width: 768px) {
-  .projectRowBox {
-    width: 100%;
-  }
-  .projectTxt {
-    width: 100%;
-  }
-  .projectImageLeft {
-    padding-right: 0;
-    padding-bottom: 50px;
-  }
-  .projectImageRight {
+@media (max-width: 1400px) {
+  .headingQuoteTitle {
     padding-left: 0;
+    /* padding-top: 50px; */
   }
-  .projectImageRightImg {
-    text-align: center;
-  }
-  .projectTextBox {
-    padding: 63px 0 0 0;
-  }
-  .headingQuoteTxt {
-    width: 100%;
-    font-size: 18px;
-  }
-}
-@media (max-width: 992px) {
-  .headingPara {
-    width: 100%;
-  }
-  .headingRow {
-    width: 100%;
-  }
-  .infoRow {
-    padding-right: 4vw;
-    padding-left: 4vw;
-    width: 100%;
-  }
-  .infoQuotePara {
-    width: 100%;
-  }
-  .projectTextBox {
-    padding: 63px 12px 0 12px;
-  }
-  /* .infoContainer {
-    padding: 0 4vw 0 4vw;
-  } */
-  .infoLeftBox {
-    padding-bottom: 100px;
+  .headingQuotePara {
+    padding-left: 0;
   }
 }
 @media (max-width: 1200px) {
@@ -414,51 +382,202 @@
     padding-top: 50px;
   }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1050px) {
+  .headingRight {
+    padding-left: clamp(20px,5vw,50px);
+  }
+  .projectRightBox .projectTitle {
+    padding-top: clamp(170px,18vw,361px);
+  }
+  .projectTxt {
+    width: 72%;
+  }
+  .infoRow {
+    align-items: center;
+  }
+}
+@media (max-width: 992px) {
+  .headingPara {
+    width: 100%;
+  }
+  .headingRow {
+    width: 100%;
+  }
+  .infoRow {
+    padding-right: 4vw;
+    padding-left: 4vw;
+    width: 100%;
+  }
+  .infoQuotePara {
+    width: 100%;
+  }
+  .projectTextBox {
+    padding: 63px 12px 0 12px;
+  }
+  /* .infoContainer {
+    padding: 0 4vw 0 4vw;
+  } */
+  .infoLeftBox {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .projectDesk,
+  .quoteDesk {
+    display: none;
+  }
+  .projectMobile,
+  .quoteMobile {
+    display: block;
+  }
+  /* heading container */
+  .headingContainer {
+    padding: 68px 9vw 81px;
+  }
+  .headingText {
+    padding-bottom: 49px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .headingPara {
+    font-size: 20px;
+    line-height: 31px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  .headingRow {
+    width: 100vw;
+  }
+  .headingRight {
+    padding: 68px 9vw 0px;
+  }
   .headingQuoteTitle {
-    padding-left: 0;
-    /* padding-top: 50px; */
+    font-size: 12px;
+    line-height: 15px;
   }
   .headingQuotePara {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .headingQuotePara {
+    font-size: 16px;
+    line-height: 28px;
+    width: 93.5%;
+  }
+  .headingQuoteTxt {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 31px;
+    width: 97%;
+  }
+  .headingQuoteName {
+    margin-bottom: 0px;
+  }
+  .headingQuoteName span {
+    padding-top: 5px;
+    display: inline-block;
+  }
+  .headingQuoteTxt {
+  }
+  .headingQuoteName {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+
+  
+  .projectContainer {
+    padding: 60px 9vw 80px;
+  }
+  .projectLeftBox {
+    padding-top: 0px;
+  }
+  .projectTitle {
+    padding: 0px;
+  }
+  .projectTxt {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 49px 0px 31px;
+    width: 97%!important;
+  }
+  .projectRightBox .projectTitle {
+    padding: 0px;
+  }
+  .projectImgBox {
+    padding-top: 0px!important;
+  }
+  .projectRowBox:last-child {
+    flex-direction: column-reverse;
+  }
+  .projectRowBox:last-child {
+    margin-top: 0px;
+  }
+  .projectRowBox:last-child .projectTitle {
+    padding-top: 48px;
+    padding-bottom: 0px;
+  }
+
+
+  .infoContainer {
+    padding: 70px 8vw 81px;
+  }
+  .infoRow {
+    padding: 0px;
+    flex-direction: column-reverse;
+  }
+  .infoQuoteTitle {
+    padding-top: 48px;
+    padding-bottom: 49px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .infoQuotePara {
+    font-size: 16px;
+    line-height: 28px;
+
+  }
+
+
+  .projectRowBox {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .projectImageLeft {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .projectImageRight {
     padding-left: 0;
+  }
+  .projectImageRightImg {
+    text-align: center;
+  }
+  .projectTextBox {
+    padding: 63px 0 0 0;
+  }
+  .headingQuoteTxt {
   }
 }
 /* p */
-@media (max-width: 550px) {
-  /* heading container */
-  .headingContainer {
-    padding: 45px 4vw 60px 4vw;
-  }
-  .headingText {
-    font-size: 12px;
-  }
-  .headingText,
-  .projectTextHeading {
-    padding-bottom: 20px;
-  }
-  .headingPara {
-    font-size: 21px;
-    line-height: 1.6;
-    padding-bottom:50px;
-  }
+@media (max-width: 575px) {
   .headingBtn {
     font-size: 18px;
   }
+  .headingPara {
+    width: 93%;
+    margin: 0 auto 100px;
+  }
+  .headingParaDesk {
+    display: none;
+  }
+  .headingParaMobile {
+    display: block;
+  }
   /* about */
-  .headingQuoteTxt {
-    padding-top: 25px;;
-  }
-  .headingQuotePara {
-    font-size: 13px;
-    line-height: 26px;
-  }
-  .headingQuoteName {
-    font-size: 13px;
-  }
-  .projectTxt {
-    font-size: 13px;
-    line-height: 26px;
-  }
   /* project */
   /* .projectContainer {
     padding: 60px 4vw 80px 4vw;
@@ -481,13 +600,8 @@
     width:100%;
   } */
   /* team */
-  .infoQuotePara {
-    font-size: 13px;
-    line-height: 26px;
-
-  }
   .infoRow {
-    padding-top: 60px;
+    /* padding-top: 60px; */
   }
   .infoContainer {
     padding-bottom: 80px;

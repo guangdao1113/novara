@@ -62,7 +62,7 @@ export function RealtorCheckbox(props: RealtorCheckboxPropsType): JSX.Element {
           // padding-bottom: 25px;
         }
         .checkBox:last-child {
-          margin-left:-26%;
+          margin-left: -26%;
         }
         .inputStyle {
           height: 25px;
@@ -79,31 +79,43 @@ export function RealtorCheckbox(props: RealtorCheckboxPropsType): JSX.Element {
         }
         @media (max-width: 1700px) {
           .headingBox {
-            padding-top: clamp(40px,3.5vw,58px);
+            padding-top: clamp(40px, 3.5vw, 58px);
           }
           .heading {
-            font-size: clamp(12px,0.7vw,18px);
-            line-height: clamp(25px,2vw,32px);
+            font-size: clamp(12px, 0.7vw, 18px);
+            line-height: clamp(25px, 2vw, 32px);
           }
           .label {
-            font-size: clamp(12px,0.7vw,18px);
-            line-height: clamp(25px,2vw,32px);
+            font-size: clamp(12px, 0.7vw, 18px);
+            line-height: clamp(25px, 2vw, 32px);
           }
           .inputStyle {
-            height: clamp(20px,1vw,25px);
-            width: clamp(20px,1vw,25px);
+            height: clamp(20px, 1vw, 25px);
+            width: clamp(20px, 1vw, 25px);
+          }
+        }
+        @media (max-width: 767px) {
+          .heading {
+            font-size: 12px;
+            line-height: 15px;
+            padding-bottom: 49px;
+          }
+          .checkBoxContainer {
+            padding-top: 0px;
+            justify-content: space-between;
+          }
+          .label {
+            font-size: 14px;
+            line-height: 28px;
+          }
+          .allowContactText {
+            font-size: 10px;
+            line-height: 12px;
           }
         }
         @media (max-width: 550px) {
           .headingBox {
             padding-top: 35px;
-          }
-          .heading {
-            font-size: 16px;
-            padding-right: 10px;
-          }
-          .label {
-            font-size: 16px;
           }
         }
       `}</style>

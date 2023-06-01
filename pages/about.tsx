@@ -1,9 +1,12 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/about.module.css";
 import HeroBanner from "components/heroBanner";
 import homeImage from "@/HOME-page-ps.jpg";
 import aboutBnr from "@/about-bnr.jpg";
+import aboutBnrMobile from "@/about-bnr-mobile.jpg";
 import aboutContact from "@/about-contact-img.svg";
+import aboutContactdark from "@/about-contact-img-dark.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
@@ -18,17 +21,29 @@ function Heading(): JSX.Element {
       >
         NOVARA PROPERTIES
       </div>
-      <div
-        className={styles.headingPara}
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        We build high quality homes that suit your lifestyle,
-        <br />
-        that bring you peace and joy.
+      <div className={styles.headingParaDesk}>
+        <div
+          className={styles.headingPara}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          We build high quality homes that suit your lifestyle,
+          <br />
+          that bring you peace and joy.
+        </div>
+      </div>
+      <div className={styles.headingParaMobile}>
+        <div
+          className={styles.headingPara}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          We build high quality homes that suit your lifestyle, that bring you
+          peace and joy.
+        </div>
       </div>
       <Row className={styles.headingRow}>
-        <Col style={{ paddingLeft: "0px" }} md="12" lg="6">
+        <Col style={{ paddingLeft: "0px" }} md="6" lg="6">
           <Image
             src="/images/about-heading-img.jpg"
             width={720}
@@ -39,22 +54,42 @@ function Heading(): JSX.Element {
           />
         </Col>
         <Col
-          style={{ paddingRight: "0px" }}
           className={styles.headingRight}
-          md="12"
+          md="6"
           lg="6"
           data-aos="fade-left"
           data-aos-delay="150"
         >
-          <div className={styles.headingQuoteTitle}>ABOUT US</div>
-          <div className={styles.headingQuotePara}>
-            Founded in 2011, Novara Properties is a family- owned enterprise
-            that identifies opportunities for and invests in the development of
-            residential real estate in and around the Vancouver area. From the
-            beginning, our aim has been to provide exceptional quality and value
-            for clients by developing functional, innovative and characteristic
-            residential real estate, which blend into and enhance our local
-            community.
+          <div>
+            <div className={styles.headingQuoteTitle}>ABOUT US</div>
+            <div className={styles.headingQuotePara}>
+              Founded in 2011, Novara Properties is a family- owned enterprise
+              that identifies opportunities for and invests in the development
+              of residential real estate in and around the Vancouver area. From
+              the beginning, our aim has been to provide exceptional quality and
+              value for clients by developing functional, innovative and
+              characteristic residential real estate, which blend into and
+              enhance our local community.
+            </div>
+          </div>
+          <div className={styles.quoteMobile}>
+            <div
+              className={styles.headingQuoteTxt}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              “Attention to detail is the key to success of projects. From site
+              selection, design details, to construction management, we go above
+              and beyond on every detail, with future residences’ needs in
+              mind.”
+            </div>
+            <div
+              className={styles.headingQuoteName}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              — Michael Jin, <br /> <span>Cofounder Director Operations</span>
+            </div>
           </div>
         </Col>
       </Row>
@@ -64,33 +99,37 @@ function Heading(): JSX.Element {
 function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
-      <div
-        className={styles.headingQuoteTxt}
-        data-aos="zoom-in-up"
-        data-aos-delay="150"
-      >
-        “Attention to detail is the key to success of projects. From site
-        selection, design details, to construction management, we go above and
-        beyond on every detail, with future residences’ needs in mind.”
-      </div>
-      <div
-        className={styles.headingQuoteName}
-        data-aos="zoom-in-up"
-        data-aos-delay="150"
-      >
-        — Michael Jin, Cofounder Director Operations
+      <div className={styles.quoteDesk}>
+        <div
+          className={styles.headingQuoteTxt}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          “Attention to detail is the key to success of projects. From site
+          selection, design details, to construction management, we go above and
+          beyond on every detail, with future residences’ needs in mind.”
+        </div>
+        <div
+          className={styles.headingQuoteName}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          — Michael Jin, Cofounder Director Operations
+        </div>
       </div>
       <Row className={styles.projectRowBox}>
-        <Col style={{ padding: "0px" }} md="12" lg="5">
+        <Col style={{ padding: "0px" }} md="5" lg="5">
           <div className={styles.projectLeftBox}>
-            <div className={styles.projectSpeImgBox}>
-              <Image
-                src="/images/about-project-img.svg"
-                width={585}
-                height={425}
-                layout="responsive"
-                priority={true}
-              />
+            <div className={styles.projectDesk}>
+              <div className={styles.projectSpeImgBox}>
+                <Image
+                  src="/images/about-project-img.svg"
+                  width={585}
+                  height={425}
+                  layout="responsive"
+                  priority={true}
+                />
+              </div>
             </div>
             <div
               className={styles.projectTitle}
@@ -110,9 +149,20 @@ function Project(): JSX.Element {
               passionate about designing functional, yet intimate spaces that
               evolve as your family’s lifestyle and needs change.
             </div>
+            <div className={styles.projectMobile}>
+              <div className={styles.projectSpeImgBox}>
+                <Image
+                  src="/images/about-project-img.svg"
+                  width={585}
+                  height={425}
+                  layout="responsive"
+                  priority={true}
+                />
+              </div>
+            </div>
           </div>
         </Col>
-        <Col style={{ padding: "0px" }} md="12" lg="5">
+        <Col style={{ padding: "0px" }} md="5" lg="5">
           <div className={styles.projectRightBox}>
             <div
               className={styles.projectTitle}
@@ -144,7 +194,7 @@ function Project(): JSX.Element {
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col style={{ padding: "0px" }} md="12" lg="4">
+        <Col style={{ padding: "0px" }} md="4" lg="4">
           <div className={`${styles.projectImgBox} ${styles.leftVerImg}`}>
             <Image
               src="/images/about-project-img3.svg"
@@ -154,10 +204,28 @@ function Project(): JSX.Element {
               priority={true}
             />
           </div>
+          <div className={styles.quoteMobile}>
+            <div
+              className={styles.headingQuoteTxt}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              “We ensure our projects are financially viable and bring value to
+              our customers.”
+            </div>
+            <div
+              className={styles.headingQuoteName}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              — Nancy Jin, <br />
+              Cofounder Director Finance
+            </div>
+          </div>
         </Col>
         <Col
           style={{ padding: "0px" }}
-          md="12"
+          md="7"
           lg="7"
           data-aos="fade-up"
           data-aos-delay="150"
@@ -176,24 +244,26 @@ function Project(): JSX.Element {
 function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
-      <div
-        className={styles.headingQuoteTxt}
-        data-aos="zoom-in-up"
-        data-aos-delay="150"
-      >
-        “We ensure our projects are financially viable and bring value to our
-        customers.”
-      </div>
-      <div
-        className={styles.headingQuoteName}
-        data-aos="zoom-in-up"
-        data-aos-delay="150"
-      >
-        — Nancy Jin, Cofounder Director Finance
+      <div className={styles.quoteDesk}>
+        <div
+          className={styles.headingQuoteTxt}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          “We ensure our projects are financially viable and bring value to our
+          customers.”
+        </div>
+        <div
+          className={styles.headingQuoteName}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          — Nancy Jin, Cofounder Director Finance
+        </div>
       </div>
       <div className={styles.infoBox}>
         <Row className={styles.infoRow}>
-          <Col md="12" lg="4" data-aos="fade-right" data-aos-delay="150">
+          <Col md="5" xl="4" data-aos="fade-right" data-aos-delay="150">
             <div className={styles.infoQuoteTitle}>OUR TEAM</div>
             <div className={styles.infoQuotePara}>
               We are an eclectic family from all different walks of life and
@@ -204,7 +274,7 @@ function Info(): JSX.Element {
               developments and other creative projects to fruition.
             </div>
           </Col>
-          <Col className={styles.infoRightImg} md="12" lg="6">
+          <Col className={styles.infoRightImg} md="6" lg="6">
             <Image
               src="/images/about-info-img2.jpg"
               width={736}
@@ -219,10 +289,19 @@ function Info(): JSX.Element {
   );
 }
 export default function About() {
+  const [bnrDesk, bnrMobile] = useState(aboutBnr);
+  const [footBnrDesk, footBnrMobile] = useState(aboutContact);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 575px)");
+    if (mediaQuery.matches) {
+      bnrMobile(aboutBnrMobile);
+      footBnrMobile(aboutContactdark);
+    }
+  }, []);
   return (
     <div>
       <HeroBanner
-        imageSrc={aboutBnr}
+        imageSrc={bnrDesk}
         overlayOpa={0.25}
         headingTextClassName="hero-text"
         headingText="About Novara"
@@ -230,7 +309,7 @@ export default function About() {
       <Heading />
       <Project />
       <Info />
-      <FootBnr imageSrc={aboutContact} linkText="Approach" url="approach" />
+      <FootBnr imageSrc={footBnrDesk} linkText="Approach" url="approach" />
     </div>
   );
 }

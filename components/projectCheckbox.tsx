@@ -41,7 +41,7 @@ export function ProjectCheckbox(props: ProjectCheckboxPropsType): JSX.Element {
         .headingBox {
           display: flex;
           align-items: center;
-          padding-top:58px;
+          padding-top: 58px;
         }
         .heading {
           font-family: "Gotham-Medium";
@@ -84,33 +84,54 @@ export function ProjectCheckbox(props: ProjectCheckboxPropsType): JSX.Element {
         }
         @media (max-width: 1700px) {
           .headingBox {
-            padding-top: clamp(40px,3.5vw,58px);
+            padding-top: clamp(40px, 3.5vw, 58px);
           }
           .heading {
-            font-size: clamp(12px,0.7vw,18px);
-            line-height: clamp(25px,2vw,32px);
+            font-size: clamp(12px, 0.7vw, 18px);
+            line-height: clamp(25px, 2vw, 32px);
           }
           .subtitle {
             font-size: clamp(10px, 0.5vw, 12px);
             line-height: clamp(23px, 2vw, 32px);
           }
           .label {
-            font-size: clamp(12px,0.7vw,18px);
-            line-height: clamp(25px,2vw,32px);
+            font-size: clamp(12px, 0.7vw, 18px);
+            line-height: clamp(25px, 2vw, 32px);
           }
           .inputStyle {
-            height: clamp(20px,1vw,25px);
-            width: clamp(20px,1vw,25px);
+            height: clamp(20px, 1vw, 25px);
+            width: clamp(20px, 1vw, 25px);
+          }
+        }
+        @media (max-width: 767px) {
+          .headingBox {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .heading {
+            font-size: 12px;
+            line-height: 15px;
+            margin-bottom: 29px;
+          }
+          .subtitle {
+            font-size: 14px;
+            line-height: 28px;
+          }
+          .checkBoxContainer {
+            flex-direction: column;
+          }
+          .checkBox {
+            width: 100%;
+          }
+          .checkBox:first-child {
+            margin-bottom: 31px;
+          }
+          .label {
+            font-size: 14px;
+            line-height: 28px;
           }
         }
         @media (max-width: 550px) {
-          .heading {
-            font-size: 16px;
-            padding-right: 10px;
-          }
-          .label {
-            font-size: 16px;
-          }
         }
       `}</style>
       <div className="headingBox">

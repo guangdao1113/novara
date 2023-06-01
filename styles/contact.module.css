@@ -13,6 +13,7 @@
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
+  text-transform: uppercase;
 }
 .headingSubText {
   font-family: "Gotham-Medium";
@@ -204,76 +205,18 @@
     line-height: clamp(26px,2vw,32px);
   } */
 }
-@media (max-width: 1200px) {
-  /* .headingContainer {
-    padding-right: 4vw;
-    padding-left: 4vw;
-
-  } */
-
-}
-
-@media (max-width: 1199px) {
-  .cusFormHeading {
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .projectRowBox {
-    width: 100%;
-  }
-  .projectTxt {
-    width: 100%;
-  }
-  .projectImageLeft {
-    padding-right: 0;
-    padding-bottom: 50px;
-  }
-  .projectImageRight {
+@media (max-width: 1400px) {
+  .headingQuoteTitle {
     padding-left: 0;
-  }
-  .projectImageRightImg {
-    text-align: center;
-  }
-  .projectTextBox {
-    padding: 63px 0 0 0;
-  }
-  .headingQuoteTxt {
-    width: 100%;
-    font-size: 18px;
-  }
-}
-@media (max-width: 992px) {
-  .headingPara {
-    width: 100%;
-    min-height: unset;
-  }
-  .headingSubText {
     padding-top: 50px;
   }
-  .headingSubTxt {
-    width: 100%;
+  .headingQuotePara {
+    padding-left: 0;
   }
-  .headingRow {
-    width: 100%;
-  }
-  .infoRow {
-    padding-right: 4vw;
-    padding-left: 4vw;
-    width: 100%;
-  }
-  .infoQuotePara {
-    width: 100%;
-  }
-  .projectTextBox {
-    padding: 63px 12px 0 12px;
-  }
-  /* .infoContainer {
-    padding: 0 4vw 0 4vw;
-  } */
-  .infoLeftBox {
-    padding-bottom: 100px;
+}
+@media (min-width: 1200px) {
+  .projectSpace {
+    padding-top: 50px;
   }
 }
 @media (max-width: 1200px) {
@@ -310,28 +253,120 @@
     padding-bottom: 200px;
   } */
 }
-@media (min-width: 1200px) {
-  .projectSpace {
-    padding-top: 50px;
+@media (max-width: 1200px) {
+  /* .headingContainer {
+    padding-right: 4vw;
+    padding-left: 4vw;
+
+  } */
+
+}
+
+@media (max-width: 1199px) {
+  .cusFormHeading {
+    margin-bottom: 30px;
   }
 }
-@media (max-width: 1400px) {
-  .headingQuoteTitle {
-    padding-left: 0;
-    padding-top: 50px;
+
+@media (max-width: 992px) {
+  .headingPara {
+    width: 90%;
+    min-height: unset;
   }
-  .headingQuotePara {
+  .headingSubText {
+    /* padding-top: 50px; */
+  }
+  .headingSubTxt {
+    width: 100%;
+  }
+  .headingRow {
+    width: 100%;
+  }
+  .infoRow {
+    padding-right: 4vw;
+    padding-left: 4vw;
+    width: 100%;
+  }
+  .infoQuotePara {
+    width: 100%;
+  }
+  .projectTextBox {
+    padding: 63px 12px 0 12px;
+  }
+  /* .infoContainer {
+    padding: 0 4vw 0 4vw;
+  } */
+  .infoLeftBox {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .headingContainer {
+    padding: 70px 9vw;
+  }
+  .headingContainer > div:nth-child(2) {
+    margin-top: 68px;
+    margin-bottom: 31px;
+  }
+  .headingSubText {
+    padding-bottom: 49px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .headingText {
+    font-family: "PPEiko-Thin";
+    font-size: 20px;
+    line-height: 31px;
+    color: #59493B;
+    text-transform: capitalize;
+  }
+  .headingPara {
+    font-size: 16px;
+    line-height: 28px;
+    width: 100%;
+  }
+  .headingSubTxt {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px 0px;
+
+  }
+
+
+
+  .projectRowBox {
+    width: 100%;
+  }
+  .projectTxt {
+    width: 100%;
+  }
+  .projectImageLeft {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .projectImageRight {
     padding-left: 0;
   }
+  .projectImageRightImg {
+    text-align: center;
+  }
+  .projectTextBox {
+    padding: 63px 0 0 0;
+  }
+  .headingQuoteTxt {
+    width: 100%;
+    font-size: 18px;
+  }
+
 }
 
 
 /* p */
 @media (max-width: 550px) {
   /* heading container */
-  .headingPara,
+  /* .headingPara,
   .headingSubTxt {  
     font-size: 13px;
     line-height: 26px;
-  }
+  } */
 }

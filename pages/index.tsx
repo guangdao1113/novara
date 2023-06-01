@@ -1,20 +1,24 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import HeroBanner from "components/heroBanner";
 // import overlay from "@/index-overlay.svg";
 import homeImage from "@/home-img.jpg";
+import homeMobile from "@/home-img-mobile.jpg";
 import homeContact from "@/home-contact.svg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import Contact from "../components/contact";
 import aboutContact from "@/about-contact-img.svg";
 import resIntroPic from "@/Residences_Intro-pic.jpg";
+import resIntroPicDark from "@/Residences_Intro-pic-dark.jpg";
 import FootBnr from "../components/footBnr";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+// interface BnrPropsType {
+//   bnrImg: string | StaticImageData;
+// }
 function Heading(): JSX.Element {
   return (
     <div id="content" className={styles.headingContainer}>
@@ -58,7 +62,7 @@ function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
       <Row className={styles.row}>
-        <Col md="12" lg="7">
+        <Col md="7" lg="7" className={styles.projectTextBoxRight}>
           <div className={styles.projectImageLeft}>
             <Image
               src="/images/Ashlyn_Novara-Properties_Logo-Banner.jpg"
@@ -165,7 +169,7 @@ function Project(): JSX.Element {
         </Col>
         <Col
           className={styles.projectTextBox}
-          md="12"
+          md="5"
           lg="5"
           data-aos="fade-left"
           data-aos-delay="150"
@@ -196,8 +200,8 @@ function Project(): JSX.Element {
 function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
-      <Row>
-        <Col md="12" lg="6">
+      <Row className={styles.firstRow}>
+        <Col md="6" lg="6">
           <div
             className={styles.infoLeftBox}
             data-aos="fade-right"
@@ -229,7 +233,7 @@ function Info(): JSX.Element {
             </Link>
           </div>
         </Col>
-        <Col className={styles.infoRightImg} md="12" lg="6">
+        <Col className={styles.infoRightImg} md="6" lg="6">
           <Image
             src="/images/home-info1.jpg"
             layout="fill"
@@ -239,7 +243,7 @@ function Info(): JSX.Element {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.infoLeftImg} md="12" lg="6">
+        <Col className={styles.infoLeftImg} md="6" lg="6">
           <Image
             src="/images/home-info2.jpg"
             layout="fill"
@@ -247,7 +251,7 @@ function Info(): JSX.Element {
             alt="home-info2"
           />
         </Col>
-        <Col className={styles.infoRightContainer} md="12" lg="6">
+        <Col className={styles.infoRightContainer} md="6" lg="6">
           <div className={styles.infoRightBox}>
             <div data-aos="fade-right" data-aos-delay="150">
               <div
@@ -280,6 +284,8 @@ function Info(): JSX.Element {
   );
 }
 export default function Home() {
+  const [bnrDesk, bnrMobile] = useState(homeImage);
+  const [footBnrDesk, footBnrMobile] = useState(resIntroPic);
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -290,11 +296,18 @@ export default function Home() {
       mirror: true,
       anchorPlacement: "top-bottom",
     });
+
+    const mediaQuery = window.matchMedia("(max-width: 575px)");
+    // const mediaQuery991 = window.matchMedia("(max-width: 991px)");
+    if (mediaQuery.matches) {
+      bnrMobile(homeMobile);
+      footBnrMobile(resIntroPicDark);
+    }
   }, []);
   return (
     <div>
       <HeroBanner
-        imageSrc={homeImage}
+        imageSrc={bnrDesk}
         overlayOpa={0}
         headingTextClassName="home-hero-text"
         headingText="Where dreams come home."
@@ -302,7 +315,7 @@ export default function Home() {
       <Heading />
       <Project />
       <Info />
-      <FootBnr imageSrc={resIntroPic} linkText="Residences" url="residences" />
+      <FootBnr imageSrc={footBnrDesk} linkText="Residences" url="residences" />
     </div>
   );
 }

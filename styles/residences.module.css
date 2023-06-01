@@ -65,14 +65,13 @@
 
 @media (max-width: 1700px) {
   .headingContainer {
-    margin: clamp(80px,10vw,200px) 12vw;
-
+    margin: clamp(70px,10vw,200px) 12vw;
   }
   .heading {
     font-size: clamp(20px,1.7vw,32px);
-    line-height: clamp(30px,3vw,50px);
-    padding-bottom: clamp(25px,2vw,45.5px);
-    margin-bottom: clamp(35px,5vw,100.5px);
+    line-height: clamp(31px,3vw,50px);
+    padding-bottom: clamp(30.5px,2vw,45.5px);
+    margin-bottom: clamp(70.5px,5vw,100.5px);
   }
 
 
@@ -84,23 +83,73 @@
   }
   .headingTxt {
     font-size: clamp(12px,0.7vw,18px);
-    margin-top: clamp(30px,3vw,47px);
-    margin-bottom: clamp(31px,3vw,50px);
+    line-height: clamp(15px,1vw,21px);
+    /* margin-top: clamp(30px,3vw,47px);
+    margin-bottom: clamp(31px,3vw,50px); */
   }
   .headingPara {
-    font-size: clamp(13px,1vw,18px);
-    line-height: clamp(23px,2vw,32px);
+    font-size: clamp(16px,1vw,18px);
+    line-height: clamp(28px,2vw,32px);
   }
   .projectImageText {
     font-size: clamp(11px,1vw,16px);
     line-height: clamp(17px,1.1vw,19px);
   }
   .projectTextBoxBtn {
-    padding-top: clamp(20px,2vw,29px);
+    padding-top: clamp(31px,2vw,29px);
 
   }
   .projectTextBoxBtn > span {
-    width: clamp(20px,1.3vw,25.19px)!important;
-    height: clamp(10px,0.5vw,12.86px)!important;
+    width: clamp(15.58px,1.3vw,25.19px)!important;
+    height: clamp(9.86px,0.5vw,12.86px)!important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .headingPara {
+    font-size: clamp(14px,1vw,18px);
+    line-height: clamp(24px,2vw,32px);
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .headingContainer {
+    margin: 70px 9.5vw 100px;
+  } 
+  .heading {
+    font-size: 20px;
+    line-height: 31px;
+    padding-bottom: 30.5px;
+    margin-bottom: 70.5px;
+  }
+  .headingTxt {
+    font-size:12px;
+    line-height:15px;
+    margin-top: 48px;
+    margin-bottom: 49px;
+  }
+  .headingPara {
+    font-size: 16px;
+    line-height: 28px;
+    width: 85%;
+  }
+  .projectTextBoxBtn {
+    padding-top: 31px;
+  }
+  .left .projectTextBoxBtn {
+    padding-bottom: 70px;
+
+  }
+  .projectImageText {
+    font-size: 16px;
+    line-height: 25px;
+    color: #9B5D26;
+  }
+  .projectTextBoxBtn > span {
+    width:15.58px!important;
+    height:9.86px!important;
+  }
+  .headingRow > div:last-child {
+    padding-left:0px;
   }
 }

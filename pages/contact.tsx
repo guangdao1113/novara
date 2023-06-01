@@ -1,9 +1,11 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "../styles/contact.module.css";
 import HeroBanner from "components/heroBanner";
 import contactImage from "@/contact-img.svg";
 import contactBnr from "@/contactBnr.jpg";
+import contactBnrMobile from "@/contactBnr-mobile.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import Contact from "../components/contact";
@@ -16,17 +18,17 @@ function Heading(): JSX.Element {
       data-aos="fade-up"
       data-aos-delay="150"
     >
-      <Col md="12" lg="4">
-        <div className={styles.headingText}>GET IN TOUCH</div>
+      <Col md="4" lg="4">
+        <div className={styles.headingText}>Get in touch</div>
       </Col>
-      <Col md="12" lg="5">
+      <Col md="5" lg="5">
         <div className={styles.headingSubText}>GENERAL INQUIRIES</div>
         <div className={styles.headingPara}>
           For any general inquiries, please contact us at the number or email
           below and we’ll be happy to assist you.
         </div>
       </Col>
-      <Col md="12" lg="3">
+      <Col md="3" lg="3">
         <div className={styles.headingSubTxt}>+1 (604) 232 1070</div>
         <div className={styles.headingSubTxt}>info@novaraproperties.ca</div>
       </Col>
@@ -52,10 +54,17 @@ function Info(): JSX.Element {
   );
 }
 export default function About() {
+  const [bnrDesk, bnrMobile] = useState(contactBnr);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 575px)");
+    if (mediaQuery.matches) {
+      bnrMobile(contactBnrMobile);
+    }
+  }, []);
   return (
     <div>
       <HeroBanner
-        imageSrc={contactBnr}
+        imageSrc={bnrDesk}
         overlayOpa={0.25}
         headingTextClassName="hero-text"
         headingText="Contact Us"

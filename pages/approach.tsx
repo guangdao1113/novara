@@ -1,9 +1,12 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/approach.module.css";
 import HeroBanner from "components/heroBanner";
 import approachImg from "@/approach-img.svg";
 import approachBnr from "@/approachBnr.jpg";
+import approachBnrMobile from "@/approachBnr-mobile.jpg";
 import aboutContact from "@/approach-contact-img.png";
+import aboutContactMobile from "@/approach-contact-img-mobile.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
@@ -30,7 +33,13 @@ function Heading(): JSX.Element {
         step of the way, even after completion.
       </div>
       <Row className={styles.headingRow}>
-        <Col md="12" lg="6" data-aos="fade-right" data-aos-delay="150">
+        <Col
+          md="6"
+          lg="6"
+          data-aos="fade-right"
+          data-aos-delay="150"
+          className={styles.left}
+        >
           <div className={styles.headingQuoteTitle}>OUR APPROACH</div>
           <div className={styles.headingQuotePara}>
             We ensure quality, transparency, and excellent communication
@@ -43,7 +52,7 @@ function Heading(): JSX.Element {
           <div className={styles.headingTxt}>3. The Handover Guarantee</div>
           <div className={styles.headingSpeTxt}>4. Our Guarantee</div>
         </Col>
-        <Col md="12" lg="6">
+        <Col md="6" lg="6" className={styles.right}>
           <Image
             src="/images/approach-heading-img.svg"
             width={720}
@@ -60,7 +69,7 @@ function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
       <Row className={styles.projectRowBox}>
-        <Col md="12" lg="4">
+        <Col md="5" lg="4">
           <div className={styles.projectLeftBox}>
             <div className={`${styles.projectSepImgBox} ${styles.leftVerImg}`}>
               <Image
@@ -71,8 +80,28 @@ function Project(): JSX.Element {
               />
             </div>
           </div>
+          <div className={styles.projectMobile}>
+            <div
+              className={styles.projectTitle}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              BUILD & CONSTRUCTION
+            </div>
+            <div
+              className={styles.projectTxt}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              We work with the reliable construction team that prioritizes
+              quality and integrity just as we do. This diligence and care is
+              reflected in how the team handles every detail, including building
+              specifications and general design aesthetic. We oversee the entire
+              process, from initial design to permits and construction.
+            </div>
+          </div>
         </Col>
-        <Col className={styles.projectRightBox} md="12" lg="5">
+        <Col className={styles.projectRightBox} md="6" lg="5">
           <div
             className={styles.projectTitle}
             data-aos="fade-up"
@@ -93,7 +122,7 @@ function Project(): JSX.Element {
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col className={styles.projectRightBox} md="12" lg="4">  
+        <Col className={styles.projectRightBox} md="5" lg="4">
           <div
             className={styles.projectTitle}
             data-aos="fade-up"
@@ -106,26 +135,46 @@ function Project(): JSX.Element {
             data-aos="fade-up"
             data-aos-delay="150"
           >
-            We work with the reliable construction team that prioritizes
-            quality and integrity just as we do. This diligence and care is
-            reflected in how the team handles every detail, including building
-            specifications and general design aesthetic. We oversee the entire
-            process, from initial design to permits and construction.
+            We work with the reliable construction team that prioritizes quality
+            and integrity just as we do. This diligence and care is reflected in
+            how the team handles every detail, including building specifications
+            and general design aesthetic. We oversee the entire process, from
+            initial design to permits and construction.
           </div>
         </Col>
-        <Col className={styles.projectRightBox} md="12" lg="5">
+        <Col className={styles.projectRightBox} md="6" lg="5">
           <div className={styles.projectImgBox}>
-              <Image
-                src="/images/approach-project-img3.png"
-                width={585}
-                height={425}
-                layout="responsive"
-              />
+            <Image
+              src="/images/approach-project-img3.png"
+              width={585}
+              height={425}
+              layout="responsive"
+            />
+          </div>
+          <div className={styles.projectMobile}>
+            <div
+              className={styles.projectTitle}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              FINISHING
+            </div>
+            <div
+              className={styles.projectTxt}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              The big picture is important, but it’s the small things that make
+              a lasting impression. Buying a home is one of the biggest
+              decisions a person can make in their life, so Novara gives just as
+              much attention to the minutiae to give every home a personal
+              touch.
+            </div>
           </div>
         </Col>
       </Row>
       <Row className={styles.projectRowBox}>
-        <Col md="12" lg="5">
+        <Col md="5" lg="5">
           <div className={styles.projectSpeImgBox}>
             <Image
               src="/images/approach-project-img2.png"
@@ -137,7 +186,7 @@ function Project(): JSX.Element {
         </Col>
         <Col
           className={styles.projectSpeRightBox}
-          md="12"
+          md="7"
           lg="6"
           data-aos="fade-up"
           data-aos-delay="150"
@@ -162,7 +211,7 @@ function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
       <Row className={styles.projectRowBox}>
-        <Col md="12" lg="4" data-aos="fade-up" data-aos-delay="150">
+        <Col md="5" lg="4" data-aos="fade-up" data-aos-delay="150">
           <div className={styles.projectTitle}>OUR GUARANTEE</div>
           <div className={styles.projectTxt}>
             Undoubtedly the highlight of the process is when you become the
@@ -184,7 +233,7 @@ function Info(): JSX.Element {
             </div>
           </div>
         </Col>
-        <Col className={styles.projectRightBox} md="12" lg="7">
+        <Col className={styles.projectRightBox} md="6" lg="7">
           <div className={styles.projectImgBox}>
             <Image
               src="/images/approach-project-img4.png"
@@ -199,10 +248,19 @@ function Info(): JSX.Element {
   );
 }
 export default function About() {
+  const [bnrDesk, bnrMobile] = useState(approachBnr);
+  const [footBnrDesk, footBnrMobile] = useState(aboutContact);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 575px)");
+    if (mediaQuery.matches) {
+      bnrMobile(approachBnrMobile);
+      footBnrMobile(aboutContactMobile);
+    }
+  }, []);
   return (
     <div>
       <HeroBanner
-        imageSrc={approachBnr}
+        imageSrc={bnrDesk}
         overlayOpa={0.25}
         headingTextClassName="hero-text"
         headingText="Our Approah"
@@ -210,7 +268,7 @@ export default function About() {
       <Heading />
       <Project />
       <Info />
-      <FootBnr imageSrc={aboutContact} linkText="Community" url="community" />
+      <FootBnr imageSrc={footBnrDesk} linkText="Community" url="community" />
     </div>
   );
 }
