@@ -139,9 +139,11 @@
 .cusInputBox {
   display: flex;
   flex-direction: column;
+  border-radius: 0px;
 }
 .cusInput {
   border: 0;
+  border-radius: 0px;
   border-bottom: 1px solid #59493b;
   background-color: transparent;
   margin-top: 28.5px;
