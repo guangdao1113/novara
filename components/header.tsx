@@ -195,7 +195,6 @@ export default function Header(props: HeaderPropsType): JSX.Element {
                       </div>
                     </div>
                   </div>
-                  s
                 </div>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
