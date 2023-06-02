@@ -50,7 +50,7 @@ function Heading(): JSX.Element {
           <div className={styles.headingTxt}>1. Build & Construction</div>
           <div className={styles.headingTxt}>2. Finishing</div>
           <div className={styles.headingTxt}>3. The Handover Guarantee</div>
-          <div className={styles.headingSpeTxt}>4. Our Guarantee</div>
+          <div className={styles.headingTxt}>4. Our Guarantee</div>
         </Col>
         <Col md="6" lg="6" className={styles.right}>
           <Image
