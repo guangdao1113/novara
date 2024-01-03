@@ -336,6 +336,9 @@ function CustomForm({
     </div>
   );
 }
+type datatypeform = {
+  email:string
+}
 function Register(): JSX.Element {
   //const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
   const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
@@ -356,7 +359,7 @@ function Register(): JSX.Element {
         url={postUrl}
         render={({ subscribe, status, message }) => (
           <div>
-            <SimpleForm onSubmitted={formData => subscribe(formData)} />
+            <SimpleForm onSubmitted={(formData:datatypeform) => subscribe(formData)} />
             {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
             {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
             {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
