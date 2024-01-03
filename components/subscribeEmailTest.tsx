@@ -298,20 +298,20 @@ function CustomForm({
                 Social Media
               </option>
             </select> */}
-            {/* <RealtorCheckbox realtorHandler={realtorHandler} />
+            {/* <RealtorCheckbox realtorHandler={realtorHandler} /> */}
             <div className={styles.allowContactBox}>
               <input
                 onChange={allowContactHandler}
                 type="checkbox"
                 name="allowContact"
                 className={styles.allowContactInput}
-              />*/}
+              />
               <div className={styles.allowContactText}>
                 I agree to allow Novara Properties and its affiliates to contact
                 me and send me information via email, phone, or SMS. I
                 understand I can unsubscribe at any time.
               </div>
-            {/* </div>  */}
+            </div> 
             <button className={styles.contactBtnBoxTwo}>
               <div className={styles.contactBtnTextTwo}>Register</div>
               <Image
