@@ -129,7 +129,7 @@ function CustomForm({
       //  formData.isRelator &&
       //  formData.phone &&
       // formData.projectName &&
-      formData.hearUs &&
+      //formData.hearUs &&
      // formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
@@ -138,7 +138,7 @@ function CustomForm({
         // // LNAME: formData.lastName,
         //  PHONE: formData.phone,
         // PROJECTS: formData.projectName,
-        HEARUS: formData.hearUs,
+        //HEARUS: formData.hearUs,
         // ISREALTOR: formData.isRelator,
         // CONTACT: formData.allowContact,
       });
