@@ -6,12 +6,15 @@ import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
+import arrow from "@/btn-arrow.svg";
+import arrowWhite from "@/footbtn-arrow-white.png";
 interface FooterPropsType {
   imageSrc?: StaticImageData | string;
   url?: string;
   linkText?: string;
 }
 function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
+  const [bnrArrowDesk, bnrArrowMobile] = useState(arrow);
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -22,6 +25,10 @@ function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
       mirror: true,
       anchorPlacement: "top-bottom",
     });
+    const mediaQuery = window.matchMedia("(max-width: 575px)");
+    if (mediaQuery.matches) {
+      bnrArrowMobile(arrowWhite);
+    }
   }, []);
   return (
     <div className={styles.bannerContainer}>
@@ -31,10 +38,8 @@ function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
           borderBottom: "none",
           paddingBottom: "0px",
         }}
-        data-aos="fade-up"
-        data-aos-delay="50"
       >
-        <Col sm="12" md="6">
+        <Col sm="6">
           {imageSrc ? (
             <Image
               src={imageSrc}
@@ -46,14 +51,17 @@ function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
             />
           ) : null}
         </Col>
-        <Col className={styles.contactBtnContainer} sm="12" md="6">
+        <Col style={{padding:'0px'}} className={styles.contactBtnContainer} sm="4">
           <Link href={`/${url}`}>
-            <button className={styles.contactBtnBox}>
+            <button className={styles.contactBtnBox} 
+              data-aos="fade-right"
+              data-aos-delay="150"
+              >
               {linkText ? (
                 <div className={styles.contactBtnText}>{linkText}</div>
               ) : null}
               <Image
-                src="/images/btn-arrow.svg"
+                src={bnrArrowDesk}
                 alt="arrow"
                 width={25.19}
                 height={12.87}

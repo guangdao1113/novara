@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Select from "react-select";
 import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
@@ -59,12 +60,23 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
+  const options = [
+    { value: "Friends and Family", label: "Friends and Family" },
+    { value: "Realtor", label: "Realtor" },
+    {
+      value: "Signage / Walk by / Drive by",
+      label: "Signage / Walk by / Drive by",
+    },
+    { value: "Online Search", label: "Online Search" },
+    { value: "Social Media", label: "Social Media" },
+  ];
   const [formData, setFormData] = useState({
     firstName: null,
-    lastName: null,
+    // lastName: null,
     email: null,
     phone: null,
     projectName: null,
+    hearUs: "Select",
     isRelator: null,
     allowContact: null,
   });
@@ -72,6 +84,13 @@ function CustomForm({
     setFormData({
       ...formData,
       projectName: projectName,
+    });
+  };
+  const changeSelectHandler = (event) => {
+    console.log(event.value);
+    setFormData({
+      ...formData,
+      hearUs: event.value,
     });
   };
   const realtorHandler = (isRealtor) => {
@@ -100,25 +119,38 @@ function CustomForm({
     });
   };
   const handleSubmit = (e) => {
+    console.log('t2')
     e.preventDefault();
     // 需要所有的值不然会报 can not convert null or undefined to object的错误
     formData.email &&
       formData.firstName &&
-      formData.lastName &&
+      // formData.lastName &&
       formData.isRelator &&
       formData.phone &&
       formData.projectName &&
+      formData.hearUs &&
       formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
         EMAIL: formData.email,
         FNAME: formData.firstName,
-        LNAME: formData.lastName,
+        // LNAME: formData.lastName,
         PHONE: formData.phone,
         PROJECTS: formData.projectName,
+        HEARUS: formData.hearUs,
         ISREALTOR: formData.isRelator,
         CONTACT: formData.allowContact,
       });
+      console.log(onValidated({
+        EMAIL: formData.email,
+        FNAME: formData.firstName,
+        // LNAME: formData.lastName,
+        PHONE: formData.phone,
+        PROJECTS: formData.projectName,
+        HEARUS: formData.hearUs,
+        ISREALTOR: formData.isRelator,
+        CONTACT: formData.allowContact,
+      }))
   };
   useEffect(() => {
     AOS.init({
@@ -141,107 +173,186 @@ function CustomForm({
     ) as HTMLFormElement;
     contactForm.reset();
   };
+
+  // const colourStyles = {
+  //   placeholder: (defaultStyles) => {
+  //       return {
+  //           ...defaultStyles,
+  //           color: 'rgba(89,73,59,0.4)',
+  //           // fontSize: '18px'
+  //       }
+  //   }
+  // }
+
+  const style = {
+    control: (base) => ({
+      ...base,
+      borderTop: 0,
+      borderLeft: 0,
+      borderRight: 0,
+      borderBottom: "1px solid #59493B",
+      background: "transparent",
+      borderRadius: 0,
+      fontFamily: "Gotham-Book",
+      fontSize: "clamp(12px,0.7vw,18px)",
+      // This line disable the blue border
+      boxShadow: "none",
+    }),
+  };
   return (
     <div>
-      <Row data-aos="fade-up" data-aos-delay="50">
-        <Col className={styles.cusFormHeading} xl="12" xxl="4">
+      <Row data-aos="fade-up" data-aos-delay="150">
+        <Col className={styles.cusFormHeading} md="12" xl="6">
           Register Your Interest
         </Col>
-        <Col xl="12" xxl="8">
-          <form id="contact-form" onSubmit={handleSubmit}>
-            <Row>
-              <Col md="12" lg="6">
-                <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
-                <RealtorCheckbox realtorHandler={realtorHandler} />
+        <Col md="12" xl="6">
+          <form
+            id="contact-form"
+            className={styles.contactForm}
+            onSubmit={(e) => handleSubmit(e)}
+          >
+            <div className={styles.cusFormSubtitle}>INFORMATION</div>
+            <Row className={styles.row}>
+              <Col className={styles.cusInputBox}>
+                <input
+                  className={styles.cusInput}
+                  id="firstName"
+                  name="firstName"
+                  required={true}
+                  type="text"
+                  placeholder="First Name"
+                  onChange={changeHandler}
+                />
+                {/* <input
+                  className={styles.cusInput}
+                  id="lastName"
+                  name="lastName"
+                  required={true}
+                  type="text"
+                  placeholder="Last Name"
+                  onChange={changeHandler}
+                /> */}
               </Col>
-              <Col md="12" lg="6">
-                <div className={styles.cusFormSubtitle}>INFORMATION</div>
-                <Row style={{ paddingTop: "7.5px" }}>
-                  <Col className={styles.cusInputBox}>
-                    <input
-                      className={styles.cusInput}
-                      id="firstName"
-                      name="firstName"
-                      required={true}
-                      type="text"
-                      placeholder="First Name"
-                      onChange={changeHandler}
-                    />
-                    <input
-                      className={styles.cusInput}
-                      id="email"
-                      name="email"
-                      required={true}
-                      type="email"
-                      placeholder="Email"
-                      onChange={changeHandler}
-                    />
-                  </Col>
-                  <Col className={styles.cusInputBox}>
-                    <input
-                      className={styles.cusInput}
-                      id="lastName"
-                      name="lastName"
-                      required={true}
-                      type="text"
-                      placeholder="Last Name"
-                      onChange={changeHandler}
-                    />
-                    <input
-                      className={styles.cusInput}
-                      id="phone"
-                      name="phone"
-                      required={true}
-                      type="text"
-                      placeholder="Phone Number"
-                      onChange={changeHandler}
-                    />
-                  </Col>
-                </Row>
-                <div className={styles.allowContactBox}>
-                  <input
-                    onChange={allowContactHandler}
-                    type="checkbox"
-                    name="allowContact"
-                    className={styles.allowContactInput}
-                  />
-                  <div className={styles.allowContactText}>
-                    I agree to allow Novara Properties and its affiliates to
-                    contact me and send me information via email, phone, or SMS.
-                    I understand I can unsubscribe at any time.
-                  </div>
-                </div>
-                <button className={styles.contactBtnBoxTwo}>
-                  <div className={styles.contactBtnTextTwo}>Register</div>
-                  <Image
-                    src="/images/btn-arrow.svg"
-                    alt="arrow"
-                    width={25.19}
-                    height={12.87}
-                    layout="fixed"
-                  />
-                </button>
+              <Col className={styles.cusInputBox}>
+                <input
+                  className={styles.cusInput}
+                  id="email"
+                  name="email"
+                  required={true}
+                  type="email"
+                  placeholder="Email"
+                  onChange={changeHandler}
+                />
+                <input
+                  className={styles.cusInput}
+                  id="phone"
+                  name="phone"
+                  required={true}
+                  type="text"
+                  placeholder="Phone Number"
+                  onChange={changeHandler}
+                />
               </Col>
             </Row>
+            <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
+            <div className={styles.cusFormSubtitleHearUs}>
+              How did you hear about us?
+            </div>
+            <Select
+              options={options}
+              placeholder={
+                <div className={styles.selectPlaceholderText}>Select</div>
+              }
+              className={styles.registerSelect}
+              onChange={changeSelectHandler}
+              styles={style}
+              components={{
+                IndicatorSeparator: () => null,
+              }}
+            />
+            {/* <select
+              id="mce-source"
+              name="hearUs"
+              className={styles.registerSelect}
+              onChange={changeSelectHandler}
+              // styles={{ opacity: this.state.someValidationError ? "0.5" : "1"}}
+            >
+              <option
+                className={styles.registerOption}
+                value=""
+                selected
+                disabled
+                hidden
+              >
+                Select
+              </option>
+              <option
+                className={styles.registerOption}
+                value="Friends and Family"
+              >
+                Friends and Family
+              </option>
+              <option className={styles.registerOption} value="Realtor">
+                Realtor
+              </option>
+              <option
+                className={styles.registerOption}
+                value="Signage / Walk by / Drive by"
+              >
+                Signage / Walk by / Drive by
+              </option>
+              <option className={styles.registerOption} value="Online Search">
+                Online Search
+              </option>
+              <option className={styles.registerOption} value="Social Media">
+                Social Media
+              </option>
+            </select> */}
+            <RealtorCheckbox realtorHandler={realtorHandler} />
+            <div className={styles.allowContactBox}>
+              <input
+                onChange={allowContactHandler}
+                type="checkbox"
+                name="allowContact"
+                className={styles.allowContactInput}
+              />
+              <div className={styles.allowContactText}>
+                I agree to allow Novara Properties and its affiliates to contact
+                me and send me information via email, phone, or SMS. I
+                understand I can unsubscribe at any time.
+              </div>
+            </div>
+            <button className={styles.contactBtnBoxTwo}>
+              <div className={styles.contactBtnTextTwo}>Register</div>
+              <Image
+                src="/images/btn-arrow.svg"
+                alt="arrow"
+                width={25.19}
+                height={12.87}
+                layout="fixed"
+              />
+            </button>
+            <div className={styles.messageContainer}>
+              {status === "success" ? (
+                <div className={styles.messageTxt}>
+                  Thank you for registering.
+                  <br />
+                  <span>We will be in touch with more information soon.</span>
+                </div>
+              ) : null}
+              {status === "error" ? (
+                <div className={styles.messageTxt}>{message}</div>
+              ) : null}
+            </div>
           </form>
         </Col>
       </Row>
-      <div className={styles.messageContainer}>
-        {status === "success" ? (
-          <div className={styles.messageTxt}>
-            Message Sent Successfully! {message}
-          </div>
-        ) : null}
-        {status === "error" ? (
-          <div className={styles.messageTxt}>{message}</div>
-        ) : null}
-      </div>
     </div>
   );
 }
 function Register(): JSX.Element {
   const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
-
+  //const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
   return (
     <div className={styles.cusFormContainer}>
       <MailChimpSubscribe
@@ -267,15 +378,14 @@ export default function Contact(props: FooterPropsType): JSX.Element {
           url={props.url}
         />
       ) : (
-        <div
-          style={{
-            paddingTop: "110px",
-            backgroundColor: "#FBEFE1",
-            opacity: 0.5,
-          }}
-        ></div>
+        <div></div>
       )}
       <Register />
     </div>
   );
 }
+
+
+
+
+

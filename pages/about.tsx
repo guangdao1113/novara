@@ -1,8 +1,12 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/about.module.css";
 import HeroBanner from "components/heroBanner";
 import homeImage from "@/HOME-page-ps.jpg";
+import aboutBnr from "@/about-bnr.jpg";
+import aboutBnrMobile from "@/about-bnr-mobile.jpg";
 import aboutContact from "@/about-contact-img.svg";
+import aboutContactdark from "@/about-contact-img-dark.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
@@ -13,59 +17,79 @@ function Heading(): JSX.Element {
       <div
         className={styles.headingText}
         data-aos="fade-up"
-        data-aos-delay="50"
+        data-aos-delay="150"
       >
         NOVARA PROPERTIES
       </div>
-      <div
-        className={styles.headingPara}
-        data-aos="fade-up"
-        data-aos-delay="550"
-      >
-        We seek out locales with a lower supply of real estate and a high
-        potential for growth.
-        <br />
-        We build valued properties that deliver excellent returns with low
-        risks.
+      <div className={styles.headingParaDesk}>
+        <div
+          className={styles.headingPara}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          We build high quality homes that suit your lifestyle,
+          <br />
+          that bring you peace and joy.
+        </div>
+      </div>
+      <div className={styles.headingParaMobile}>
+        <div
+          className={styles.headingPara}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          We build high quality homes that suit your lifestyle, that bring you
+          peace and joy.
+        </div>
       </div>
       <Row className={styles.headingRow}>
-        <Col xl="12" xxl="6" data-aos="fade-right" data-aos-delay="50">
+        <Col style={{ paddingLeft: "0px" }} md="6" lg="6">
           <Image
-            src="/images/about-heading-img.svg"
+            src="/images/about-heading-img.jpg"
             width={720}
             height={450}
             layout="responsive"
             alt="about-heading"
             priority={true}
           />
-
-          <div className={styles.headingQuoteTxt}>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dd
-            tempor incididunt ut labore et dolore magna aliqua.”
-          </div>
-          <div className={styles.headingQuoteName}>
-            — Micheal Jin, Co-Founder
-          </div>
         </Col>
-        <Col xl="12" xxl="6" data-aos="fade-right" data-aos-delay="550">
-          <div className={styles.headingQuoteTitle}>ABOUT US</div>
-          <div
-            style={{ paddingBottom: "50px" }}
-            className={styles.headingQuotePara}
-          >
-            Founded in 2011, Novara Properties is a family- owned enterprise
-            that identifies opportunities for and invests in the development of
-            residential real estate in and around the Vancouver area. We build
-            valued properties that deliver excellent returns with low risks,
-            seeking out areas with a lower supply of real estate and,
-            consequently, a high potential for growth.
+        <Col
+          className={styles.headingRight}
+          md="6"
+          lg="6"
+          data-aos="fade-left"
+          data-aos-delay="150"
+        >
+          <div>
+            <div className={styles.headingQuoteTitle}>ABOUT US</div>
+            <div className={styles.headingQuotePara}>
+              Founded in 2011, Novara Properties is a family- owned enterprise
+              that identifies opportunities for and invests in the development
+              of residential real estate in and around the Vancouver area. From
+              the beginning, our aim has been to provide exceptional quality and
+              value for clients by developing functional, innovative and
+              characteristic residential real estate, which blend into and
+              enhance our local community.
+            </div>
           </div>
-          <div className={styles.headingQuotePara}>
-            From the beginning, our aim has been to provide exceptional value
-            for clients by developing functional and innovative residential real
-            estate. Our approach is progressive and, as a family-run business,
-            we have a heartfelt devotion to the local communities we help
-            develop.
+          <div className={styles.quoteMobile}>
+            <div
+              className={styles.headingQuoteTxt}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              “Attention to detail is the key to success of projects. From site
+              selection, design details, to construction management, we go above
+              and beyond on every detail, with future residences’ needs in
+              mind.”
+            </div>
+            <div
+              className={styles.headingQuoteName}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              — Michael Jin, <br /> <span>Cofounder Director Operations</span>
+            </div>
           </div>
         </Col>
       </Row>
@@ -75,49 +99,49 @@ function Heading(): JSX.Element {
 function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
+      <div className={styles.quoteDesk}>
+        <div
+          className={styles.headingQuoteTxt}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          “Attention to detail is the key to success of projects. From site
+          selection, design details, to construction management, we go above and
+          beyond on every detail, with future residences’ needs in mind.”
+        </div>
+        <div
+          className={styles.headingQuoteName}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          — Michael Jin, Cofounder Director Operations
+        </div>
+      </div>
       <Row className={styles.projectRowBox}>
-        <Col lg="12" xl="6">
-          <div
-            className={styles.projectTitle}
-            data-aos="fade-up"
-            data-aos-delay="50"
-          >
-            VALUES
-          </div>
-          <div
-            className={styles.projectTxt}
-            data-aos="fade-up"
-            data-aos-delay="250"
-          >
-            We value our process just as much as our results. Our work ethic,
-            relationships, and results are based on a set of values that our
-            entire organization embodies from the inside out.
-          </div>
+        <Col style={{ padding: "0px" }} md="5" lg="5">
           <div className={styles.projectLeftBox}>
-            <div
-              className={styles.projectSpeImgBox}
-              data-aos="fade-up"
-              data-aos-delay="750"
-            >
-              <Image
-                src="/images/about-project-img.svg"
-                width={585}
-                height={425}
-                layout="responsive"
-                priority={true}
-              />
+            <div className={styles.projectDesk}>
+              <div className={styles.projectSpeImgBox}>
+                <Image
+                  src="/images/about-project-img.svg"
+                  width={585}
+                  height={425}
+                  layout="responsive"
+                  priority={true}
+                />
+              </div>
             </div>
             <div
               className={styles.projectTitle}
               data-aos="fade-up"
-              data-aos-delay="750"
+              data-aos-delay="150"
             >
               VISION
             </div>
             <div
               className={styles.projectTxt}
               data-aos="fade-up"
-              data-aos-delay="750"
+              data-aos-delay="150"
             >
               As a family business, we understand that a home is more than a
               physical building; it’s a vibrant environment, full of life. The
@@ -125,91 +149,38 @@ function Project(): JSX.Element {
               passionate about designing functional, yet intimate spaces that
               evolve as your family’s lifestyle and needs change.
             </div>
-            <div
-              className={`${styles.projectImgBox} ${styles.leftVerImg}`}
-              data-aos="fade-up"
-              data-aos-delay="1250"
-            >
-              <Image
-                src="/images/about-project-img3.svg"
-                width={456}
-                height={590}
-                layout="responsive"
-                priority={true}
-              />
+            <div className={styles.projectMobile}>
+              <div className={styles.projectSpeImgBox}>
+                <Image
+                  src="/images/about-project-img.svg"
+                  width={585}
+                  height={425}
+                  layout="responsive"
+                  priority={true}
+                />
+              </div>
             </div>
+          </div>
+        </Col>
+        <Col style={{ padding: "0px" }} md="5" lg="5">
+          <div className={styles.projectRightBox}>
             <div
               className={styles.projectTitle}
               data-aos="fade-up"
-              data-aos-delay="1250"
+              data-aos-delay="150"
             >
-              PARTNERSHIP
+              PASSION
             </div>
             <div
               className={styles.projectTxt}
               data-aos="fade-up"
-              data-aos-delay="1250"
+              data-aos-delay="150"
             >
-              Cooperation is an integral factor in the success of our projects.
-              We build our relationships on a solid foundation of trust,
-              respect, and collaboration in order to forge authentic, enduring
-              connections.
+              Building homes is not just a business—it is integral to who we
+              are. We desire to create thriving spaces and communities that we
+              can be proud of, and this ethos permeates every level of our
+              organization.
             </div>
-          </div>
-          <div
-            className={styles.projectLeftBox}
-            data-aos="fade-up"
-            data-aos-delay="1750"
-          >
-            <div className={styles.projectImgBox}>
-              <Image
-                src="/images/about-project-img5.png"
-                width={585}
-                height={425}
-                layout="responsive"
-                priority={true}
-              />
-            </div>
-            <div className={styles.projectTitle}>COMMUNITY & SERVICE</div>
-            <div className={styles.projectTxt}>
-              We put others’ needs first and strive to help people. Our concept
-              of service encompasses caring for our neighbors, communities, and
-              cities and enriching people’s lives. We strive to reflect this in
-              not only our relationships but also in the way we approach our
-              work.
-            </div>
-          </div>
-        </Col>
-        <Col lg="12" xl="6">
-          <div
-            className={styles.projectRightBox}
-            data-aos="fade-up"
-            data-aos-delay="550"
-          >
-            <div>
-              <Image
-                src="/images/about-project-img2.png"
-                width={456}
-                height={590}
-                layout="responsive"
-                priority={true}
-              />
-            </div>
-            <div style={{ paddingTop: "80px" }} className={styles.projectTitle}>
-              INTEGRITY
-            </div>
-            <div className={styles.projectTxt}>
-              We strive for honesty, transparency, and mindfulness in everything
-              we do. We put people first, and the quality of our work reflects
-              our diligence and conscientiousness in the design and building
-              process.
-            </div>
-          </div>
-          <div
-            className={styles.projectRightBox}
-            data-aos="fade-up"
-            data-aos-delay="1000"
-          >
             <div className={styles.projectImgBox}>
               <Image
                 src="/images/about-project-img4.svg"
@@ -219,40 +190,51 @@ function Project(): JSX.Element {
                 priority={true}
               />
             </div>
-
-            <div style={{ paddingTop: "80px" }} className={styles.projectTitle}>
-              PASSION
+          </div>
+        </Col>
+      </Row>
+      <Row className={styles.projectRowBox}>
+        <Col style={{ padding: "0px" }} md="4" lg="4">
+          <div className={`${styles.projectImgBox} ${styles.leftVerImg}`}>
+            <Image
+              src="/images/about-project-img3.svg"
+              width={456}
+              height={590}
+              layout="responsive"
+              priority={true}
+            />
+          </div>
+          <div className={styles.quoteMobile}>
+            <div
+              className={styles.headingQuoteTxt}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              “We ensure our projects are financially viable and bring value to
+              our customers.”
             </div>
-            <div className={styles.projectTxt}>
-              Building homes is not just a business—it is integral to who we
-              are. We desire to create thriving spaces and communities that we
-              can be proud of, and this ethos permeates every level of our
-              organization.
+            <div
+              className={styles.headingQuoteName}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              — Nancy Jin, <br />
+              Cofounder Director Finance
             </div>
           </div>
-          <div
-            className={styles.projectRightBox}
-            data-aos="fade-up"
-            data-aos-delay="1500"
-          >
-            <div className={styles.projectImgBox}>
-              <Image
-                src="/images/about-project-img6.png"
-                width={456}
-                height={590}
-                layout="responsive"
-                priority={true}
-              />
-            </div>
-            <div style={{ paddingTop: "80px" }} className={styles.projectTitle}>
-              CULTURE
-            </div>
-            <div className={styles.projectTxt}>
-              The success and unity of our team revolves around keeping each
-              other accountable and following a set of values that we uphold
-              with positive energy, disciplined action, and camaraderie. We take
-              great pride in our people and what we do.
-            </div>
+        </Col>
+        <Col
+          style={{ padding: "0px" }}
+          md="7"
+          lg="7"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <div className={styles.projectTitle}>PARTNERSHIP</div>
+          <div className={styles.projectTxt}>
+            Cooperation is an integral factor in the success of our projects. We
+            build our relationships on a solid foundation of trust, respect, and
+            collaboration in order to forge authentic, enduring connections.
           </div>
         </Col>
       </Row>
@@ -262,21 +244,28 @@ function Project(): JSX.Element {
 function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
-      <Image
-        src="/images/about-info-img.png"
-        width={1920}
-        height={900}
-        layout="responsive"
-        priority={true}
-      />
+      <div className={styles.quoteDesk}>
+        <div
+          className={styles.headingQuoteTxt}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          “We ensure our projects are financially viable and bring value to our
+          customers.”
+        </div>
+        <div
+          className={styles.headingQuoteName}
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+        >
+          — Nancy Jin, Cofounder Director Finance
+        </div>
+      </div>
       <div className={styles.infoBox}>
         <Row className={styles.infoRow}>
-          <Col md="12" lg="12" xl="6" data-aos="fade-right" data-aos-delay="50">
+          <Col md="5" xl="4" data-aos="fade-right" data-aos-delay="150">
             <div className={styles.infoQuoteTitle}>OUR TEAM</div>
-            <div
-              style={{ paddingBottom: "50px" }}
-              className={styles.infoQuotePara}
-            >
+            <div className={styles.infoQuotePara}>
               We are an eclectic family from all different walks of life and
               bring with us a high level of local knowledge, experience, and a
               track record of exemplary results. We are creative, passionate,
@@ -285,30 +274,14 @@ function Info(): JSX.Element {
               developments and other creative projects to fruition.
             </div>
           </Col>
-          <Col
-            className={styles.infoRightImg}
-            md="12"
-            lg="12"
-            xl="6"
-            data-aos="fade-right"
-            data-aos-delay="550"
-          >
+          <Col className={styles.infoRightImg} md="6" lg="6">
             <Image
-              src="/images/about-info-img2.svg"
+              src="/images/about-info-img2.jpg"
               width={736}
               height={450}
               layout="responsive"
               alt="about-info"
             />
-
-            <div className={styles.headingQuoteTxt}>
-              “We are stronger together, and working collaboratively with a
-              common goal allows us to take a vision and turn it into a
-              reality..”
-            </div>
-            <div className={styles.headingQuoteName}>
-              — Nancy Jin, Co-Founder
-            </div>
           </Col>
         </Row>
       </div>
@@ -316,17 +289,27 @@ function Info(): JSX.Element {
   );
 }
 export default function About() {
+  const [bnrDesk, bnrMobile] = useState(aboutBnr);
+  const [footBnrDesk, footBnrMobile] = useState(aboutContact);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 575px)");
+    if (mediaQuery.matches) {
+      bnrMobile(aboutBnrMobile);
+      footBnrMobile(aboutContactdark);
+    }
+  }, []);
   return (
     <div>
       <HeroBanner
-        imageSrc={homeImage}
-        overlayOpa={0.1}
+        imageSrc={bnrDesk}
+        overlayOpa={0.25}
+        headingTextClassName="hero-text"
         headingText="About Novara"
       />
       <Heading />
       <Project />
       <Info />
-      <FootBnr imageSrc={aboutContact} linkText="Approach" url="approach" />
+      <FootBnr imageSrc={footBnrDesk} linkText="Approach" url="approach" />
     </div>
   );
 }
