@@ -60,25 +60,25 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
-  // const options = [
-  //   { value: "Friends and Family", label: "Friends and Family" },
-  //   { value: "Realtor", label: "Realtor" },
-  //   {
-  //     value: "Signage / Walk by / Drive by",
-  //     label: "Signage / Walk by / Drive by",
-  //   },
-  //   { value: "Online Search", label: "Online Search" },
-  //   { value: "Social Media", label: "Social Media" },
-  // ];
+  const options = [
+    { value: "Friends and Family", label: "Friends and Family" },
+    { value: "Realtor", label: "Realtor" },
+    {
+      value: "Signage / Walk by / Drive by",
+      label: "Signage / Walk by / Drive by",
+    },
+    { value: "Online Search", label: "Online Search" },
+    { value: "Social Media", label: "Social Media" },
+  ];
   const [formData, setFormData] = useState({
-    // firstName: null,
+    firstName: null,
     // lastName: null,
     email: null,
-    // phone: null,
+    phone: null,
     // projectName: null,
     // hearUs: "Select",
     // isRelator: null,
-    // allowContact: null,
+    allowContact: null,
   });
   // const projectInfoHandler = (projectName) => {
   //   setFormData({
@@ -99,19 +99,19 @@ function CustomForm({
   //     isRelator: isRealtor,
   //   });
   // };
-  // const allowContactHandler = (event) => {
-  //   if (event.target.checked) {
-  //     setFormData({
-  //       ...formData,
-  //       allowContact: "Yes",
-  //     });
-  //   } else {
-  //     setFormData({
-  //       ...formData,
-  //       allowContact: "No",
-  //     });
-  //   }
-  // };
+  const allowContactHandler = (event) => {
+    if (event.target.checked) {
+      setFormData({
+        ...formData,
+        allowContact: "Yes",
+      });
+    } else {
+      setFormData({
+        ...formData,
+        allowContact: "No",
+      });
+    }
+  };
   const changeHandler = (event) => {
     setFormData({
       ...formData,
@@ -123,34 +123,24 @@ function CustomForm({
     e.preventDefault();
     // 需要所有的值不然会报 can not convert null or undefined to object的错误
     formData.email &&
-      // formData.firstName &&
+      formData.firstName &&
       // // formData.lastName &&
       // formData.isRelator &&
-      // formData.phone &&
+       formData.phone &&
       // formData.projectName &&
       // formData.hearUs &&
-      // formData.allowContact &&
+      formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
         EMAIL: formData.email,
-        // FNAME: formData.firstName,
+        FNAME: formData.firstName,
         // // LNAME: formData.lastName,
-        // PHONE: formData.phone,
+         PHONE: formData.phone,
         // PROJECTS: formData.projectName,
         // HEARUS: formData.hearUs,
         // ISREALTOR: formData.isRelator,
-        // CONTACT: formData.allowContact,
+        CONTACT: formData.allowContact,
       });
-      console.log(onValidated({
-        EMAIL: formData.email,
-        // FNAME: formData.firstName,
-        // // LNAME: formData.lastName,
-        // PHONE: formData.phone,
-        // PROJECTS: formData.projectName,
-        // HEARUS: formData.hearUs,
-        // ISREALTOR: formData.isRelator,
-        // CONTACT: formData.allowContact,
-      }))
   };
   useEffect(() => {
     AOS.init({
@@ -214,7 +204,7 @@ function CustomForm({
             <div className={styles.cusFormSubtitle}>INFORMATION</div>
             <Row className={styles.row}>
               <Col className={styles.cusInputBox}>
-                {/* <input
+                <input
                   className={styles.cusInput}
                   id="firstName"
                   name="firstName"
@@ -222,7 +212,7 @@ function CustomForm({
                   type="text"
                   placeholder="First Name"
                   onChange={changeHandler}
-                /> */}
+                />
                 {/* <input
                   className={styles.cusInput}
                   id="lastName"
@@ -243,7 +233,7 @@ function CustomForm({
                   placeholder="Email"
                   onChange={changeHandler}
                 />
-                {/* <input
+                <input
                   className={styles.cusInput}
                   id="phone"
                   name="phone"
@@ -251,7 +241,7 @@ function CustomForm({
                   type="text"
                   placeholder="Phone Number"
                   onChange={changeHandler}
-                /> */}
+                />
               </Col>
             </Row>
             {/* <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
@@ -315,13 +305,13 @@ function CustomForm({
                 type="checkbox"
                 name="allowContact"
                 className={styles.allowContactInput}
-              />
+              />*/}
               <div className={styles.allowContactText}>
                 I agree to allow Novara Properties and its affiliates to contact
                 me and send me information via email, phone, or SMS. I
                 understand I can unsubscribe at any time.
               </div>
-            </div> */}
+            {/* </div>  */}
             <button className={styles.contactBtnBoxTwo}>
               <div className={styles.contactBtnTextTwo}>Register</div>
               <Image
