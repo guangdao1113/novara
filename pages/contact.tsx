@@ -71,7 +71,7 @@ export default function About() {
       />
       <Heading />
       <Info />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 }

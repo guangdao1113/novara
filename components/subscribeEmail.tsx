@@ -37,7 +37,12 @@ function CustomFormS({
     formData.email &&
       formData.firstName &&
       formData.lastName &&
-      formData.email.indexOf("@") > -1;
+      formData.email.indexOf("@") > -1 &&
+      onValidated({
+        EMAIL: formData.email,
+        FNAME: formData.firstName,
+        LNAME: formData.lastName,
+      });
   };
   useEffect(() => {
     AOS.init({
