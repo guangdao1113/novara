@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Select from "react-select";
 import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import MailChimpSubscribe from "react-mailchimp-subscribe";
-import { ProjectCheckbox } from "./projectCheckbox";
-import { RealtorCheckbox } from "./realtorCheckbox";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
