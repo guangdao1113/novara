@@ -108,7 +108,7 @@ function CustomFormS({
                 <input
                   className={styles.cusInput}
                   id="firstName"
-                  name="FIRSTNAME"
+                  name="firstName"
                   required={true}
                   type="text"
                   placeholder="First Name"
@@ -117,7 +117,7 @@ function CustomFormS({
                 <input
                   className={styles.cusInput}
                   id="lastName"
-                  name="LASTNAME"
+                  name="lastName"
                   required={true}
                   type="text"
                   placeholder="Last Name"
@@ -126,7 +126,7 @@ function CustomFormS({
                 <input
                   className={styles.cusInput}
                   id="email"
-                  name="EMAIL"
+                  name="email"
                   required={true}
                   type="email"
                   placeholder="Email"
