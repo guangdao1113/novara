@@ -175,21 +175,21 @@ function CustomForm({
   //   }
   // }
 
-  const style = {
-    control: (base) => ({
-      ...base,
-      borderTop: 0,
-      borderLeft: 0,
-      borderRight: 0,
-      borderBottom: "1px solid #59493B",
-      background: "transparent",
-      borderRadius: 0,
-      fontFamily: "Gotham-Book",
-      fontSize: "clamp(12px,0.7vw,18px)",
-      // This line disable the blue border
-      boxShadow: "none",
-    }),
-  };
+  // const style = {
+  //   control: (base) => ({
+  //     ...base,
+  //     borderTop: 0,
+  //     borderLeft: 0,
+  //     borderRight: 0,
+  //     borderBottom: "1px solid #59493B",
+  //     background: "transparent",
+  //     borderRadius: 0,
+  //     fontFamily: "Gotham-Book",
+  //     fontSize: "clamp(12px,0.7vw,18px)",
+  //     // This line disable the blue border
+  //     boxShadow: "none",
+  //   }),
+  // };
   return (
     <div>
       <Row data-aos="fade-up" data-aos-delay="150">
@@ -312,13 +312,13 @@ function CustomForm({
             </div>  */}
             <button className={styles.contactBtnBoxTwo}>
               <div className={styles.contactBtnTextTwo}>Register</div>
-              <Image
+              {/* <Image
                 src="/images/btn-arrow.svg"
                 alt="arrow"
                 width={25.19}
                 height={12.87}
                 layout="fixed"
-              />
+              /> */}
             </button>
             <div className={styles.messageContainer}>
               {status === "success" ? (
@@ -342,6 +342,7 @@ function CustomForm({
 function Register(): JSX.Element {
   //const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
   const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
+  console.log('53')
   return (
     <div className={styles.cusFormContainer}>
       <MailchimpSubscribe
@@ -354,6 +355,7 @@ function Register(): JSX.Element {
           />
         )}
       />
+      console.log(url)
     </div>
   );
 }
