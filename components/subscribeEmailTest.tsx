@@ -60,58 +60,59 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
-  // const options = [
-  //   { value: "Friends and Family", label: "Friends and Family" },
-  //   { value: "Realtor", label: "Realtor" },
-  //   {
-  //     value: "Signage / Walk by / Drive by",
-  //     label: "Signage / Walk by / Drive by",
-  //   },
-  //   { value: "Online Search", label: "Online Search" },
-  //   { value: "Social Media", label: "Social Media" },
-  // ];
+  const options = [
+    { value: "", label: "" },
+    { value: "Friends and Family", label: "Friends and Family" },
+    { value: "Realtor", label: "Realtor" },
+    {
+      value: "Signage / Walk by / Drive by",
+      label: "Signage / Walk by / Drive by",
+    },
+    { value: "Online Search", label: "Online Search" },
+    { value: "Social Media", label: "Social Media" },
+  ];
   const [formData, setFormData] = useState({
-    firstName: null,
+    //firstName: null,
     // lastName: null,
     email: null,
-    phone: null,
-    projectName: null,
-    //hearUs: "Select",
-    isRelator: null,
-    allowContact: null,
+    // phone: null,
+    // projectName: null,
+    hearUs: "Select",
+    // isRelator: null,
+    // allowContact: null,
   });
-  const projectInfoHandler = (projectName) => {
-    setFormData({
-      ...formData,
-      projectName: projectName,
-    });
-  };
-  // const changeSelectHandler = (event) => {
-  //   console.log(event.value);
+  // const projectInfoHandler = (projectName) => {
   //   setFormData({
   //     ...formData,
-  //     hearUs: event.value,
+  //     projectName: projectName,
   //   });
   // };
-  const realtorHandler = (isRealtor) => {
+  const changeSelectHandler = (event) => {
+    console.log(event.value);
     setFormData({
       ...formData,
-      isRelator: isRealtor,
+      hearUs: event.value,
     });
   };
-  const allowContactHandler = (event) => {
-    if (event.target.checked) {
-      setFormData({
-        ...formData,
-        allowContact: "Yes",
-      });
-    } else {
-      setFormData({
-        ...formData,
-        allowContact: "No",
-      });
-    }
-  };
+  // const realtorHandler = (isRealtor) => {
+  //   setFormData({
+  //     ...formData,
+  //     isRelator: isRealtor,
+  //   });
+  // };
+  // const allowContactHandler = (event) => {
+  //   if (event.target.checked) {
+  //     setFormData({
+  //       ...formData,
+  //       allowContact: "Yes",
+  //     });
+  //   } else {
+  //     setFormData({
+  //       ...formData,
+  //       allowContact: "No",
+  //     });
+  //   }
+  // };
   const changeHandler = (event) => {
     setFormData({
       ...formData,
@@ -123,23 +124,23 @@ function CustomForm({
     e.preventDefault();
     // 需要所有的值不然会报 can not convert null or undefined to object的错误
     formData.email &&
-      formData.firstName &&
+      //formData.firstName &&
       // // formData.lastName &&
-       formData.isRelator &&
-       formData.phone &&
-      formData.projectName &&
-      //formData.hearUs &&
-      formData.allowContact &&
+      //  formData.isRelator &&
+      //  formData.phone &&
+      // formData.projectName &&
+      formData.hearUs &&
+     // formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
         EMAIL: formData.email,
-        FNAME: formData.firstName,
+        // FNAME: formData.firstName,
         // // LNAME: formData.lastName,
-         PHONE: formData.phone,
-        PROJECTS: formData.projectName,
-        //HEARUS: formData.hearUs,
-        ISREALTOR: formData.isRelator,
-        CONTACT: formData.allowContact,
+        //  PHONE: formData.phone,
+        // PROJECTS: formData.projectName,
+        HEARUS: formData.hearUs,
+        // ISREALTOR: formData.isRelator,
+        // CONTACT: formData.allowContact,
       });
   };
   useEffect(() => {
@@ -174,21 +175,21 @@ function CustomForm({
   //   }
   // }
 
-  // const style = {
-  //   control: (base) => ({
-  //     ...base,
-  //     borderTop: 0,
-  //     borderLeft: 0,
-  //     borderRight: 0,
-  //     borderBottom: "1px solid #59493B",
-  //     background: "transparent",
-  //     borderRadius: 0,
-  //     fontFamily: "Gotham-Book",
-  //     fontSize: "clamp(12px,0.7vw,18px)",
-  //     // This line disable the blue border
-  //     boxShadow: "none",
-  //   }),
-  // };
+  const style = {
+    control: (base) => ({
+      ...base,
+      borderTop: 0,
+      borderLeft: 0,
+      borderRight: 0,
+      borderBottom: "1px solid #59493B",
+      background: "transparent",
+      borderRadius: 0,
+      fontFamily: "Gotham-Book",
+      fontSize: "clamp(12px,0.7vw,18px)",
+      // This line disable the blue border
+      boxShadow: "none",
+    }),
+  };
   return (
     <div>
       <Row data-aos="fade-up" data-aos-delay="150">
@@ -204,7 +205,7 @@ function CustomForm({
             <div className={styles.cusFormSubtitle}>INFORMATION</div>
             <Row className={styles.row}>
               <Col className={styles.cusInputBox}>
-                <input
+                {/* <input
                   className={styles.cusInput}
                   id="firstName"
                   name="firstName"
@@ -212,7 +213,7 @@ function CustomForm({
                   type="text"
                   placeholder="First Name"
                   onChange={changeHandler}
-                />
+                /> */}
                 {/* <input
                   className={styles.cusInput}
                   id="lastName"
@@ -233,7 +234,7 @@ function CustomForm({
                   placeholder="Email"
                   onChange={changeHandler}
                 />
-                <input
+                {/* <input
                   className={styles.cusInput}
                   id="phone"
                   name="phone"
@@ -241,14 +242,14 @@ function CustomForm({
                   type="text"
                   placeholder="Phone Number"
                   onChange={changeHandler}
-                />
+                /> */}
               </Col>
             </Row>
-            <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
+            {/* <ProjectCheckbox projectInfoHandler={projectInfoHandler} /> */}
             {/* <div className={styles.cusFormSubtitleHearUs}>
               How did you hear about us?
             </div> */}
-            {/* <Select
+            <Select 
               options={options}
               placeholder={
                 <div className={styles.selectPlaceholderText}>Select</div>
@@ -259,7 +260,7 @@ function CustomForm({
               components={{
                 IndicatorSeparator: () => null,
               }}
-            />  */}
+            /> 
             {/* <select
               id="mce-source"
               name="hearUs"
@@ -298,7 +299,7 @@ function CustomForm({
                 Social Media
               </option>
             </select> */}
-            <RealtorCheckbox realtorHandler={realtorHandler} />
+            {/* <RealtorCheckbox realtorHandler={realtorHandler} />
             <div className={styles.allowContactBox}>
               <input
                 onChange={allowContactHandler}
@@ -311,7 +312,7 @@ function CustomForm({
                 me and send me information via email, phone, or SMS. I
                 understand I can unsubscribe at any time.
               </div>
-            </div> 
+            </div>  */}
             <button className={styles.contactBtnBoxTwo}>
               <div className={styles.contactBtnTextTwo}>Register</div>
               <Image
@@ -326,8 +327,6 @@ function CustomForm({
               {status === "success" ? (
                 <div className={styles.messageTxt}>
                   Thank you for registering.
-                  <br />
-                  <span>We will be in touch with more information soon.</span>
                 </div>
               ) : null}
               {status === "error" ? (
