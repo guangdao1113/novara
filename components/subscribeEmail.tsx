@@ -31,6 +31,11 @@ function CustomFormS({
     console.log('t1')
     e.preventDefault();
     // 需要所有的值不然会报 can not convert null or undefined to object的错误
+    console.log({
+      EMAIL: formData.email,
+      FNAME: formData.firstName,
+      LNAME: formData.lastName,
+    })
     console.log(onValidated({
       EMAIL: formData.email,
       FNAME: formData.firstName,
