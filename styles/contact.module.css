@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 100px 4vw 149px 4vw;
+  padding: 120px 4vw 200px;
   overflow: hidden;
   width: 100%;
 }
@@ -13,15 +13,16 @@
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
+  text-transform: uppercase;
 }
 .headingSubText {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
-  padding-bottom: 40px;
+  padding-bottom: 37px;
 }
 .headingPara {
   font-family: "Gotham-Book";
@@ -29,8 +30,8 @@
   line-height: 32px;
   color: #59493b;
   text-align: left;
-  width: 62%;
-  min-height: 150px;
+  width: 75%;
+  /* min-height: 150px; */
 }
 .headingSubTxt {
   font-family: "Gotham-Book";
@@ -39,9 +40,13 @@
   color: #59493b;
   text-align: left;
   border-bottom: 1px solid #59493b;
-  width: 62%;
+  /* width: 62%; */
   padding-bottom: 10.5px;
   padding-top: 10.5px;
+}
+.headingSubTxt:first-child {
+  border-top: 1px solid #59493b;
+
 }
 /* .headingBtnBox {
   display: flex;
@@ -171,68 +176,47 @@
   padding-bottom: 200px;
   padding-left: 4vw;
 }
-@media (max-width: 1600px) {
-  .headingPara,
+@media (max-width: 1700px) {
+  .headingContainer {
+    padding: clamp(40px,6vw,120px) 4vw clamp(60px,8.5vw,200px);
+  }
+  .headingText {
+    font-size: clamp(19px,1.7vw,26px);
+    line-height: clamp(24px,2vw,31px);
+
+  }
+  .headingSubText,
+  .headingSubTxt,
+  .headingPara {
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(25px,2vw,32px);
+  }
+  .headingSubText {
+    padding-bottom: clamp(10px,1vw,37px);
+  }
+  .headingSubTxt {
+    padding-bottom: clamp(5px,0.5vw,10.5px);
+    padding-top: clamp(5px,0.5vw,10.5px);
+  }
+
+  /* .headingPara,
   .headingSubTxt {
     font-size: clamp(13px,1.5vw,18px);
     line-height: clamp(26px,2vw,32px);
-  }
+  } */
 }
-@media (max-width: 768px) {
-  .projectRowBox {
-    width: 100%;
-  }
-  .projectTxt {
-    width: 100%;
-  }
-  .projectImageLeft {
-    padding-right: 0;
-    padding-bottom: 50px;
-  }
-  .projectImageRight {
+@media (max-width: 1400px) {
+  .headingQuoteTitle {
     padding-left: 0;
-  }
-  .projectImageRightImg {
-    text-align: center;
-  }
-  .projectTextBox {
-    padding: 63px 0 0 0;
-  }
-  .headingQuoteTxt {
-    width: 100%;
-    font-size: 18px;
-  }
-}
-@media (max-width: 992px) {
-  .headingPara {
-    width: 100%;
-    min-height: unset;
-  }
-  .headingSubText {
     padding-top: 50px;
   }
-  .headingSubTxt {
-    width: 100%;
+  .headingQuotePara {
+    padding-left: 0;
   }
-  .headingRow {
-    width: 100%;
-  }
-  .infoRow {
-    padding-right: 4vw;
-    padding-left: 4vw;
-    width: 100%;
-  }
-  .infoQuotePara {
-    width: 100%;
-  }
-  .projectTextBox {
-    padding: 63px 12px 0 12px;
-  }
-  /* .infoContainer {
-    padding: 0 4vw 0 4vw;
-  } */
-  .infoLeftBox {
-    padding-bottom: 100px;
+}
+@media (min-width: 1200px) {
+  .projectSpace {
+    padding-top: 50px;
   }
 }
 @media (max-width: 1200px) {
@@ -269,28 +253,120 @@
     padding-bottom: 200px;
   } */
 }
-@media (min-width: 1200px) {
-  .projectSpace {
-    padding-top: 50px;
+@media (max-width: 1200px) {
+  /* .headingContainer {
+    padding-right: 4vw;
+    padding-left: 4vw;
+
+  } */
+
+}
+
+@media (max-width: 1199px) {
+  .cusFormHeading {
+    margin-bottom: 30px;
   }
 }
-@media (max-width: 1400px) {
-  .headingQuoteTitle {
-    padding-left: 0;
-    padding-top: 50px;
+
+@media (max-width: 992px) {
+  .headingPara {
+    width: 90%;
+    min-height: unset;
   }
-  .headingQuotePara {
+  .headingSubText {
+    /* padding-top: 50px; */
+  }
+  .headingSubTxt {
+    width: 100%;
+  }
+  .headingRow {
+    width: 100%;
+  }
+  .infoRow {
+    padding-right: 4vw;
+    padding-left: 4vw;
+    width: 100%;
+  }
+  .infoQuotePara {
+    width: 100%;
+  }
+  .projectTextBox {
+    padding: 63px 12px 0 12px;
+  }
+  /* .infoContainer {
+    padding: 0 4vw 0 4vw;
+  } */
+  .infoLeftBox {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .headingContainer {
+    padding: 70px 9vw;
+  }
+  .headingContainer > div:nth-child(2) {
+    margin-top: 68px;
+    margin-bottom: 31px;
+  }
+  .headingSubText {
+    padding-bottom: 49px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .headingText {
+    font-family: "PPEiko-Thin";
+    font-size: 20px;
+    line-height: 31px;
+    color: #59493B;
+    text-transform: capitalize;
+  }
+  .headingPara {
+    font-size: 16px;
+    line-height: 28px;
+    width: 100%;
+  }
+  .headingSubTxt {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px 0px;
+
+  }
+
+
+
+  .projectRowBox {
+    width: 100%;
+  }
+  .projectTxt {
+    width: 100%;
+  }
+  .projectImageLeft {
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .projectImageRight {
     padding-left: 0;
   }
+  .projectImageRightImg {
+    text-align: center;
+  }
+  .projectTextBox {
+    padding: 63px 0 0 0;
+  }
+  .headingQuoteTxt {
+    width: 100%;
+    font-size: 18px;
+  }
+
 }
 
 
 /* p */
 @media (max-width: 550px) {
   /* heading container */
-  .headingPara,
+  /* .headingPara,
   .headingSubTxt {  
     font-size: 13px;
     line-height: 26px;
-  }
+  } */
 }

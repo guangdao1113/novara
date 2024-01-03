@@ -3,16 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 4vw 149px 4vw;
+  padding: 167px 4vw 180px 4vw;
 }
 .headingText {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
-  padding-bottom: 83px;
+  padding-bottom: 80px;
 }
 .headingPara {
   font-family: "PPEiko-Thin";
@@ -22,7 +22,7 @@
   line-height: 50px;
   color: #59493b;
   font-weight: 100;
-  padding-bottom: 115px;
+  padding-bottom: 80px;
   text-align: center;
 }
 /* .headingBtnLink:hover {
@@ -37,7 +37,7 @@
 .headingBtn {
   font-family: "PPEiko-LightItalic";
   font-size: 22px;
-  line-height: 26px;
+  line-height: 25px;
   color: #9b5d26;
   font-weight: 300;
   text-align: center;
@@ -46,18 +46,22 @@
 
 /* project section */
 .projectContainer {
-  padding: 150px 4vw 162px 4vw;
-  background-color: #fbefe1;
+  padding: 150px 6vw 147px 12vw;
+  background-color: rgba(251,239,225,0.5);
+}
+.projectContainer .row {
+  justify-content: space-between;
 }
 .projectImageBox {
   display: flex;
   flex-wrap: wrap;
 }
 .projectImageLeft {
-  padding-right: 38px;
+  /* padding-left: 8vw; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 88%;
 }
 .projectImageRight {
   padding-left: 38px;
@@ -93,11 +97,12 @@
 .projectTextHeading {
   font-family: "Gotham-Medium";
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21px;
   letter-spacing: 1px;
   color: #9b5d26;
   font-weight: 500;
   padding-bottom: 50px;
+  text-transform: uppercase;
 }
 .projectTextBoxParagh {
   font-family: "Gotham-Book";
@@ -105,11 +110,12 @@
   line-height: 32px;
   color: #59493b;
   font-weight: 500;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
+  /* width: 86%; */
 }
 .projectTextBox {
-  padding-right: 30px;
-  padding-left: 90px;
+  /* padding-right: 30px; */
+  padding-left: 283px;
 }
 .projectTextBoxBtn {
   display: flex;
@@ -124,14 +130,20 @@
   overflow: hidden;
 } */
 .infoTextHeading {
-  padding-top: 150px;
+  padding-top: 147px;
 }
 .infoLeftBox {
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
   padding-left: 4vw;
+  /* margin-right: 18.7vw; */
+  margin-right: 430px;
+}
+.infoRightContainer {
+  display: flex;
+  /* justify-content: flex-end; */
 }
 .infoRightBox {
-  padding-bottom: 200px;
+  padding-left: 427px;
   padding-right: 4vw;
 }
 .infoBtn {
@@ -157,7 +169,7 @@
   /* min-height: 50vh; */
   height: 900px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .projectImageLeft {
     padding-right: 0;
     padding-bottom: 50px;
@@ -172,48 +184,27 @@
     padding: 63px 0 0 0;
   }
 }
-@media (max-width: 992px) {
-  .headingPara {
-    width: 100%;
-  }
-  .headingRow {
-    width: 100%;
-  }
-  .projectTextBox {
-    padding: 63px 12px 0 12px;
-  }
-  .infoContainer {
-    padding: 0 4vw 0 4vw;
-  }
-  .infoLeftBox {
-    padding-bottom: 100px;
-  }
-}
 @media (max-width: 1200px) {
   .infoContainer {
-    padding: 0 4vw 0 4vw;
+    /* padding: 0 4vw 0 4vw; */
   }
-  .infoLeftBox {
+  /* .infoLeftBox {
     padding-bottom: 100px;
     padding-left: 0;
-  }
+  } */
   .infoLeftImg {
-    order: 2;
+    /* order: 2; */
   }
-  .infoRightContainer {
+  /* .infoRightContainer {
     order: 1;
-  }
+  } */
 }
 @media (min-width: 1200px) {
   .infoLeftBox {
-    width: 54.5%;
-  }
-  .infoRightContainer {
-    display: flex;
-    justify-content: flex-end;
+    /* width: 54.9%; */
   }
   .infoRightBox {
-    width: 55%;
+    /* width: 55%; */
   }
 
   .infoRightImg {
@@ -223,90 +214,225 @@
 
 /* p */
 
-@media (max-width: 1600px) {
+@media (max-width: 1919px) {
+  .infoLeftBox {
+    /* padding-bottom: clamp(0px,0vw,200px); */
+    margin-right: clamp(127px,20vw,430px);
+  }
+  
+.infoRightBox {
+  padding-left:  clamp(127px,21vw,427px);
+}
+
+}
+@media (max-width: 1700px) {
+  .headingContainer {
+    padding: clamp(68px,7vw,167px) 4vw clamp(100px,8vw,180px) 4vw;
+  }
   .headingText {
-    font-size: clamp(12px,1.5vw,18px);
-    padding-bottom: clamp(20px,5vw,83px);
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(15px,1vw,21px);
+    padding-bottom: clamp(20px,4vw,80px);
   }
   .headingPara {
-    font-size: clamp(21px,2vw,32px);
-    line-height: clamp(31px,4vw,50px);
-    padding-bottom: clamp(25px,7vw,115px);
+    font-size: clamp(20px,1.7vw,32px);
+    line-height: clamp(31px,3vw,50px);
+    padding-bottom: clamp(25px,5.5vw,115px);
   }
+  .headingBtn {
+    font-size: clamp(16px,1vw,22px);
+  }
+  .projectImageTextBox > span,
+  .projectTextBoxBtn > span,
+  .infoBtn > span,
+  .headingBtnBox > span {
+    width: clamp(15.58px,1.3vw,25.19px)!important;
+    height: clamp(9.86px,0.5vw,12.86px)!important;
+   }
   /* project */
-  .projectTextBoxParagh {
-    font-size: clamp(13px,1vw,18px);
-    line-height: clamp(26px,2vw,32px);
-    padding-bottom: clamp(25px,3vw,80px);
+  .projectContainer {
+    padding: clamp(40px,6.5vw,150px) 6vw clamp(50px,6vw,147px) 12vw;
   }
+  .projectContainer .projectTextBox {
+    padding-left: clamp(65px,12vw,283px);
+  }
+  .projectTextBoxParagh {
+    font-size: clamp(16px,1vw,18px);
+    line-height: clamp(28px,2vw,32px);
+    padding-bottom: clamp(31px,4.5vw,80px);
+  }
+  /* info */
   .infoRightImg,
   .infoLeftImg {
-    height: clamp(600px,45vw,900px);
+    height: clamp(430px,45vw,900px);
   }
-  .infoLeftBox {
-    padding-bottom: clamp(0px,0vw,200px);
+  .projectTextHeading {
+    font-size: clamp(12px,0.7vw,18px);
+    line-height: clamp(15px,1vw,21px);
+    padding-top: clamp(50px,6vw,147px);
+    padding-bottom: clamp(30px,3vw,50px);
+  }
+  .projectContainer .projectTextHeading {
+    padding-top: 0px;
+  }
+  .infoBtn {
+    padding: clamp(10px,1vw,18px) clamp(20px,1.5vw,34px);
+  }
+  .projectTextBoxBtn {
+    padding: clamp(12px,1vw,18px) clamp(38.5px,2vw,44px);
+
+  }
+  .projectImageText{
+    font-size: clamp(11px,1vw,16px);
+    line-height: clamp(17px,1.1vw,19px);
   }
 }
 @media (max-width: 1199px) {
+  .projectContainer .projectTextBox {
+    padding-left: clamp(65px,8vw,283px);
+  }
+  /* info */
   .infoLeftBox {
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
+    margin-right: clamp(128px,8vw,430px);
+  }
+  .infoRightBox {
+    padding-left: clamp(69px,13vw,427px);
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1050px) {
+  /* our residences */
+  .projectTextBox {
+    padding-left: 0px!important;
+  }
+  .infoLeftBox {
+    margin-right: 20px;
+  }
+  .projectTextBoxParagh {
+    font-size: clamp(14px,1vw,18px);
+    line-height: clamp(24px,2vw,32px);
+  }
+
+}
+@media (max-width: 991px) {
+  .headingPara {
+    width: 100%;
+  }
+  .headingRow {
+    width: 100%;
+  }
+  .infoContainer {
+    /* padding: 0 4vw 0 4vw; */
+  }
+  .infoLeftBox {
+    /* padding-bottom: 100px; */
+  }
+}
+@media (max-width: 767px) {
+  .projectContainer .row {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .projectContainer .row.no-gutter {
+  }
+/* }
+@media (max-width: 575px) { */
   /* heading container */
   .headingContainer {
-    padding: 45px 12vw 60px 12vw;
+    padding: 68px 9vw 100px;
   }
   .headingText {
     font-size: 12px;
+    line-height: 15px;
   }
   .headingText,
   .projectTextHeading {
-    padding-bottom: 20px;
+    padding-bottom: 49px;
+    font-size: 12px;
+    line-height: 15px;
   }
   .headingPara {
-    font-size: 21px;
-    line-height: 1.6;
-    padding-bottom:25px;
+    font-size: 20px;
+    line-height: 31px;
+    padding-bottom:50px;
   }
   .headingBtn {
-    font-size: 18px;
+    font-size: 16px;
   }
+  .projectImageTextBox > span,
+  .projectTextBoxBtn > span,
+  .infoBtn > span,
+  .headingBtnBox > span {
+    width: 15.58px!important;
+    height: 9.86px!important;
+   }
   /* projects */
   .projectContainer {
     overflow: hidden;
-    padding: 60px 4vw 60px 4vw;
+    padding: 68px 9.5vw 100px;
     
   }
+  .projectTextBoxRight,
+  .projectTextBox {
+    padding: 0px!important;
+  }
   .projectImageLeft {
-    padding-bottom: 25px;
+    padding-bottom: 0px;
+    width: 100%;
+  }
+  .projectImageTextBox {
+    padding-top: 15px;
+  }
+  .projectImageTextBox .projectImageText{
+    font-size: 16px;
+    line-height: 25px;
   }
   .projectImageBoxTwo {
     padding-top: 25px;
   }
   .projectTextBoxParagh {
-    font-size: 13px;
-    line-height: 26px;
-    padding-bottom:25px;
+    font-size: 16px;
+    line-height: 28px;
+    padding-bottom:31px;
+  }
+  .infoBtn,
+  .projectTextBoxBtn {
+    padding: 12px 38.5px;
+    margin-bottom: 70px;
+
   }
   .projectImageText {
     font-size: 12px;
+  }
+  .infoBtn .projectImageText,
+  .projectTextBoxBtn .projectImageText {
+    font-size: 16px;
+    line-height: 25px;
   }
   .projectImageTextBox > span {
     width: 15px!important;
   }
   /* info container */
+  .infoContainer .firstRow {
+    flex-direction: column-reverse;
+  }
   .infoTextHeading {
-    padding-top: 60px;
+    padding-top: 0px;
   }
   .infoLeftBox,
   .infoRightBox {
-    padding-bottom: 80px;
+    margin: 68px 9vw 100px;
+    padding: 0px;
   }
   .infoRightImg,
   .infoLeftImg {
     height: 400px;
+  }
+  .infoContainer .infoBtn {
+    margin-bottom: 0px;
   }
   
 }

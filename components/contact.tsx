@@ -72,7 +72,7 @@ function CustomForm({
   ];
   const [formData, setFormData] = useState({
     firstName: null,
-    // lastName: null,
+    lastName: null,
     email: null,
     phone: null,
     projectName: null,
@@ -124,7 +124,7 @@ function CustomForm({
     // 需要所有的值不然会报 can not convert null or undefined to object的错误
     formData.email &&
       formData.firstName &&
-      // formData.lastName &&
+      formData.lastName &&
       formData.isRelator &&
       formData.phone &&
       formData.projectName &&
@@ -134,23 +134,13 @@ function CustomForm({
       onValidated({
         EMAIL: formData.email,
         FNAME: formData.firstName,
-        // LNAME: formData.lastName,
+        LNAME: formData.lastName,
         PHONE: formData.phone,
         PROJECTS: formData.projectName,
         HEARUS: formData.hearUs,
         ISREALTOR: formData.isRelator,
         CONTACT: formData.allowContact,
       });
-      console.log(onValidated({
-        EMAIL: formData.email,
-        FNAME: formData.firstName,
-        // LNAME: formData.lastName,
-        PHONE: formData.phone,
-        PROJECTS: formData.projectName,
-        HEARUS: formData.hearUs,
-        ISREALTOR: formData.isRelator,
-        CONTACT: formData.allowContact,
-      }))
   };
   useEffect(() => {
     AOS.init({
@@ -223,7 +213,7 @@ function CustomForm({
                   placeholder="First Name"
                   onChange={changeHandler}
                 />
-                {/* <input
+                <input
                   className={styles.cusInput}
                   id="lastName"
                   name="lastName"
@@ -231,7 +221,7 @@ function CustomForm({
                   type="text"
                   placeholder="Last Name"
                   onChange={changeHandler}
-                /> */}
+                />
               </Col>
               <Col className={styles.cusInputBox}>
                 <input
