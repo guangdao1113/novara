@@ -246,9 +246,9 @@ function CustomForm({
               </Col>
             </Row>
             {/* <ProjectCheckbox projectInfoHandler={projectInfoHandler} /> */}
-            <div className={styles.cusFormSubtitleHearUs}>
+            {/* <div className={styles.cusFormSubtitleHearUs}>
               How did you hear about us?
-            </div>
+            </div> */}
             {/* <Select 
               options={options}
               placeholder={
