@@ -60,24 +60,24 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
-  const options = [
-    { value: "", label: "" },
-    { value: "Friends and Family", label: "Friends and Family" },
-    { value: "Realtor", label: "Realtor" },
-    {
-      value: "Signage / Walk by / Drive by",
-      label: "Signage / Walk by / Drive by",
-    },
-    { value: "Online Search", label: "Online Search" },
-    { value: "Social Media", label: "Social Media" },
-  ];
+  // const options = [
+  //   { value: "", label: "" },
+  //   { value: "Friends and Family", label: "Friends and Family" },
+  //   { value: "Realtor", label: "Realtor" },
+  //   {
+  //     value: "Signage / Walk by / Drive by",
+  //     label: "Signage / Walk by / Drive by",
+  //   },
+  //   { value: "Online Search", label: "Online Search" },
+  //   { value: "Social Media", label: "Social Media" },
+  // ];
   const [formData, setFormData] = useState({
     //firstName: null,
     // lastName: null,
     email: null,
     // phone: null,
     // projectName: null,
-    hearUs: "Select",
+    //hearUs: "Select",
     // isRelator: null,
     // allowContact: null,
   });
@@ -87,13 +87,13 @@ function CustomForm({
   //     projectName: projectName,
   //   });
   // };
-  const changeSelectHandler = (event) => {
-    console.log(event.value);
-    setFormData({
-      ...formData,
-      hearUs: event.value,
-    });
-  };
+  // const changeSelectHandler = (event) => {
+  //   console.log(event.value);
+  //   setFormData({
+  //     ...formData,
+  //     hearUs: event.value,
+  //   });
+  // };
   // const realtorHandler = (isRealtor) => {
   //   setFormData({
   //     ...formData,
@@ -249,7 +249,7 @@ function CustomForm({
             {/* <div className={styles.cusFormSubtitleHearUs}>
               How did you hear about us?
             </div> */}
-            <Select 
+            {/* <Select 
               options={options}
               placeholder={
                 <div className={styles.selectPlaceholderText}>Select</div>
@@ -257,7 +257,7 @@ function CustomForm({
               className={styles.registerSelect}
               onChange={changeSelectHandler}
               styles={style}
-            /> 
+            />  */}
             {/* <select
               id="mce-source"
               name="hearUs"
