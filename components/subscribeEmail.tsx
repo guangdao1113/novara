@@ -9,16 +9,16 @@ import { RealtorCheckbox } from "./realtorCheckbox";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
-interface CustomFormPropsType {
+interface CustomFormPropsTypeS {
   status: string;
   message: string;
   onValidated: (string) => string;
 }
-function CustomForm({
+function CustomFormS({
   status,
   message,
   onValidated,
-}: CustomFormPropsType): JSX.Element {
+}: CustomFormPropsTypeS): JSX.Element {
   const [formData, setFormData] = useState({
     firstName: null,
     lastName: null,
@@ -167,7 +167,7 @@ export default function SubscribeEmail(): JSX.Element {
       <MailChimpSubscribe
         url={postUrl}
         render={({ subscribe, status, message }) => (
-          <CustomForm
+          <CustomFormS
             status={status}
             message={message}
             onValidated={(formData) => subscribe(formData)}
