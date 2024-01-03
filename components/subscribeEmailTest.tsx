@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Select from "react-select";
+// import Select from "react-select";
 import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import MailChimpSubscribe from "react-mailchimp-subscribe";
-import { ProjectCheckbox } from "./projectCheckbox";
-import { RealtorCheckbox } from "./realtorCheckbox";
+// import { ProjectCheckbox } from "./projectCheckbox";
+// import { RealtorCheckbox } from "./realtorCheckbox";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -60,16 +60,16 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
-  const options = [
-    { value: "Friends and Family", label: "Friends and Family" },
-    { value: "Realtor", label: "Realtor" },
-    {
-      value: "Signage / Walk by / Drive by",
-      label: "Signage / Walk by / Drive by",
-    },
-    { value: "Online Search", label: "Online Search" },
-    { value: "Social Media", label: "Social Media" },
-  ];
+  // const options = [
+  //   { value: "Friends and Family", label: "Friends and Family" },
+  //   { value: "Realtor", label: "Realtor" },
+  //   {
+  //     value: "Signage / Walk by / Drive by",
+  //     label: "Signage / Walk by / Drive by",
+  //   },
+  //   { value: "Online Search", label: "Online Search" },
+  //   { value: "Social Media", label: "Social Media" },
+  // ];
   const [formData, setFormData] = useState({
     // firstName: null,
     // lastName: null,
@@ -80,38 +80,38 @@ function CustomForm({
     // isRelator: null,
     // allowContact: null,
   });
-  const projectInfoHandler = (projectName) => {
-    setFormData({
-      ...formData,
-      projectName: projectName,
-    });
-  };
-  const changeSelectHandler = (event) => {
-    console.log(event.value);
-    setFormData({
-      ...formData,
-      hearUs: event.value,
-    });
-  };
-  const realtorHandler = (isRealtor) => {
-    setFormData({
-      ...formData,
-      isRelator: isRealtor,
-    });
-  };
-  const allowContactHandler = (event) => {
-    if (event.target.checked) {
-      setFormData({
-        ...formData,
-        allowContact: "Yes",
-      });
-    } else {
-      setFormData({
-        ...formData,
-        allowContact: "No",
-      });
-    }
-  };
+  // const projectInfoHandler = (projectName) => {
+  //   setFormData({
+  //     ...formData,
+  //     projectName: projectName,
+  //   });
+  // };
+  // const changeSelectHandler = (event) => {
+  //   console.log(event.value);
+  //   setFormData({
+  //     ...formData,
+  //     hearUs: event.value,
+  //   });
+  // };
+  // const realtorHandler = (isRealtor) => {
+  //   setFormData({
+  //     ...formData,
+  //     isRelator: isRealtor,
+  //   });
+  // };
+  // const allowContactHandler = (event) => {
+  //   if (event.target.checked) {
+  //     setFormData({
+  //       ...formData,
+  //       allowContact: "Yes",
+  //     });
+  //   } else {
+  //     setFormData({
+  //       ...formData,
+  //       allowContact: "No",
+  //     });
+  //   }
+  // };
   const changeHandler = (event) => {
     setFormData({
       ...formData,
