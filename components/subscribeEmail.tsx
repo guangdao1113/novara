@@ -107,7 +107,7 @@ function CustomForm({
                 <input
                   className={styles.cusInput}
                   id="firstName"
-                  name="firstName"
+                  name="FIRSTNAME"
                   required={true}
                   type="text"
                   placeholder="First Name"
@@ -116,7 +116,7 @@ function CustomForm({
                 <input
                   className={styles.cusInput}
                   id="lastName"
-                  name="lastName"
+                  name="LASTNAME"
                   required={true}
                   type="text"
                   placeholder="Last Name"
@@ -125,7 +125,7 @@ function CustomForm({
                 <input
                   className={styles.cusInput}
                   id="email"
-                  name="email"
+                  name="EMAIL"
                   required={true}
                   type="email"
                   placeholder="Email"
@@ -160,7 +160,7 @@ function CustomForm({
   );
 }
 export default function SubscribeEmail(): JSX.Element {
-  const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
+  const postUrl = `${process.env.PENNY_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.PENNY_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.PENNY_PUBLIC_MAILCHIMP_ID_VALUE}`;
   //const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
   return (
     <div className={styles.cusFormContainer}>
