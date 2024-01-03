@@ -257,9 +257,6 @@ function CustomForm({
               className={styles.registerSelect}
               onChange={changeSelectHandler}
               styles={style}
-              components={{
-                IndicatorSeparator: () => null,
-              }}
             /> 
             {/* <select
               id="mce-source"
