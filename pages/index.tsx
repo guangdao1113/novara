@@ -8,7 +8,7 @@ import homeMobile from "@/home-img-mobile.jpg";
 import homeContact from "@/home-contact.svg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
-import Contact from "../components/contact";
+// import Contact from "../components/contact";
 import aboutContact from "@/about-contact-img.svg";
 import resIntroPic from "@/Residences_Intro-pic.jpg";
 import resIntroPicDark from "@/Residences_Intro-pic-dark.jpg";
