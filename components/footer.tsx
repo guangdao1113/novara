@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
+import SubscribeEmail from './subscribeEmail'
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/header.styles.module.css";
@@ -151,6 +152,7 @@ export default function Footer(): JSX.Element {
                 />
               </Link>
             </div>
+            <SubscribeEmail/>
           </Col>
           <Col md="12" lg="8">
             <Row>
