@@ -174,21 +174,21 @@ function CustomForm({
   //   }
   // }
 
-  const style = {
-    control: (base) => ({
-      ...base,
-      borderTop: 0,
-      borderLeft: 0,
-      borderRight: 0,
-      borderBottom: "1px solid #59493B",
-      background: "transparent",
-      borderRadius: 0,
-      fontFamily: "Gotham-Book",
-      fontSize: "clamp(12px,0.7vw,18px)",
-      // This line disable the blue border
-      boxShadow: "none",
-    }),
-  };
+  // const style = {
+  //   control: (base) => ({
+  //     ...base,
+  //     borderTop: 0,
+  //     borderLeft: 0,
+  //     borderRight: 0,
+  //     borderBottom: "1px solid #59493B",
+  //     background: "transparent",
+  //     borderRadius: 0,
+  //     fontFamily: "Gotham-Book",
+  //     fontSize: "clamp(12px,0.7vw,18px)",
+  //     // This line disable the blue border
+  //     boxShadow: "none",
+  //   }),
+  // };
   return (
     <div>
       <Row data-aos="fade-up" data-aos-delay="150">
