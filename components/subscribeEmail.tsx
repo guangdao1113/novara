@@ -17,8 +17,6 @@ function CustomFormS({
   onValidated,
 }: CustomFormPropsTypeS): JSX.Element {
   const [formData, setFormData] = useState({
-    firstName: null,
-    lastName: null,
     email: null,
   });
   const changeHandler = (event) => {
@@ -31,24 +29,10 @@ function CustomFormS({
     console.log('t1')
     e.preventDefault();
     // 需要所有的值不然会报 can not convert null or undefined to object的错误
-    console.log({
-      EMAIL: formData.email,
-      FNAME: formData.firstName,
-      LNAME: formData.lastName,
-    })
-    console.log(onValidated({
-      EMAIL: formData.email,
-      FNAME: formData.firstName,
-      LNAME: formData.lastName,
-    }))
     formData.email &&
-      formData.firstName &&
-      formData.lastName &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
         EMAIL: formData.email,
-        FNAME: formData.firstName,
-        LNAME: formData.lastName,
       });
   };
   useEffect(() => {
@@ -112,24 +96,6 @@ function CustomFormS({
           >
             <Row className={styles.row}>
               <Col className={styles.cusInputBox}>
-                <input
-                  className={styles.cusInput}
-                  id="firstName"
-                  name="firstName"
-                  required={true}
-                  type="text"
-                  placeholder="First Name"
-                  onChange={changeHandler}
-                />
-                <input
-                  className={styles.cusInput}
-                  id="lastName"
-                  name="lastName"
-                  required={true}
-                  type="text"
-                  placeholder="Last Name"
-                  onChange={changeHandler}
-                />
                 <input
                   className={styles.cusInput}
                   id="email"

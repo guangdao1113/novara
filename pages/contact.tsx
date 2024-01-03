@@ -8,7 +8,7 @@ import contactBnr from "@/contactBnr.jpg";
 import contactBnrMobile from "@/contactBnr-mobile.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
-// import Contact from "../components/contact";
+import Contact from "../components/contact";
 
 function Heading(): JSX.Element {
   return (
@@ -71,7 +71,7 @@ export default function About() {
       />
       <Heading />
       <Info />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }
