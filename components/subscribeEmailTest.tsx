@@ -3,7 +3,7 @@ import Select from "react-select";
 import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
-import MailChimpSubscribe from "react-mailchimp-subscribe";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { ProjectCheckbox } from "./projectCheckbox";
 import { RealtorCheckbox } from "./realtorCheckbox";
 import Link from "next/link";
@@ -336,16 +336,15 @@ function CustomForm({
     </div>
   );
 }
-type datatypeform = {
-  email:string
-}
+// type datatypeform = {
+//   email:string
+// }
 function Register(): JSX.Element {
   //const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
   const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
-  const SimpleForm = () => <MailChimpSubscribe url={postUrl}/>
   return (
     <div className={styles.cusFormContainer}>
-      {/* <MailChimpSubscribe
+      <MailchimpSubscribe
         url={postUrl}
         render={({ subscribe, status, message }) => (
           <CustomForm
@@ -353,17 +352,6 @@ function Register(): JSX.Element {
             message={message}
             onValidated={(formData) => subscribe(formData)}
           />
-        )}
-      /> */}
-      <MailChimpSubscribe
-        url={postUrl}
-        render={({ subscribe, status, message }) => (
-          <div>
-            <SimpleForm onSubmitted={(formData:datatypeform) => subscribe(formData)} />
-            {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-            {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
-            {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
-          </div>
         )}
       />
     </div>
