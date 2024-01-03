@@ -76,7 +76,7 @@ function CustomForm({
     email: null,
     phone: null,
     // projectName: null,
-    // hearUs: "Select",
+    hearUs: "Select",
     // isRelator: null,
     allowContact: null,
   });
@@ -86,13 +86,13 @@ function CustomForm({
   //     projectName: projectName,
   //   });
   // };
-  // const changeSelectHandler = (event) => {
-  //   console.log(event.value);
-  //   setFormData({
-  //     ...formData,
-  //     hearUs: event.value,
-  //   });
-  // };
+  const changeSelectHandler = (event) => {
+    console.log(event.value);
+    setFormData({
+      ...formData,
+      hearUs: event.value,
+    });
+  };
   // const realtorHandler = (isRealtor) => {
   //   setFormData({
   //     ...formData,
@@ -128,7 +128,7 @@ function CustomForm({
       // formData.isRelator &&
        formData.phone &&
       // formData.projectName &&
-      // formData.hearUs &&
+      formData.hearUs &&
       formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
@@ -137,7 +137,7 @@ function CustomForm({
         // // LNAME: formData.lastName,
          PHONE: formData.phone,
         // PROJECTS: formData.projectName,
-        // HEARUS: formData.hearUs,
+        HEARUS: formData.hearUs,
         // ISREALTOR: formData.isRelator,
         CONTACT: formData.allowContact,
       });
@@ -260,7 +260,7 @@ function CustomForm({
                 IndicatorSeparator: () => null,
               }}
             /> */}
-            {/* <select
+            <select
               id="mce-source"
               name="hearUs"
               className={styles.registerSelect}
@@ -297,7 +297,7 @@ function CustomForm({
               <option className={styles.registerOption} value="Social Media">
                 Social Media
               </option>
-            </select> */}
+            </select>
             {/* <RealtorCheckbox realtorHandler={realtorHandler} /> */}
             <div className={styles.allowContactBox}>
               <input
