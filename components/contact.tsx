@@ -141,6 +141,16 @@ function CustomForm({
         ISREALTOR: formData.isRelator,
         CONTACT: formData.allowContact,
       });
+      console.log(onValidated({
+        EMAIL: formData.email,
+        FNAME: formData.firstName,
+        // LNAME: formData.lastName,
+        PHONE: formData.phone,
+        PROJECTS: formData.projectName,
+        HEARUS: formData.hearUs,
+        ISREALTOR: formData.isRelator,
+        CONTACT: formData.allowContact,
+      }))
   };
   useEffect(() => {
     AOS.init({
