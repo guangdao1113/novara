@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Select from "react-select";
+import Select from "react-select";
 import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
@@ -244,7 +244,7 @@ function CustomForm({
                 />
               </Col>
             </Row>
-            {/* <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
+            {/* <ProjectCheckbox projectInfoHandler={projectInfoHandler} />*/}
             <div className={styles.cusFormSubtitleHearUs}>
               How did you hear about us?
             </div>
@@ -259,8 +259,8 @@ function CustomForm({
               components={{
                 IndicatorSeparator: () => null,
               }}
-            /> */}
-            <select
+            /> 
+            {/* <select
               id="mce-source"
               name="hearUs"
               className={styles.registerSelect}
@@ -297,7 +297,7 @@ function CustomForm({
               <option className={styles.registerOption} value="Social Media">
                 Social Media
               </option>
-            </select>
+            </select> */}
             {/* <RealtorCheckbox realtorHandler={realtorHandler} /> */}
             <div className={styles.allowContactBox}>
               <input
