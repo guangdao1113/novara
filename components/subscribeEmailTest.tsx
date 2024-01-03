@@ -341,6 +341,7 @@ function Register(): JSX.Element {
   const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
   return (
     <div className={styles.cusFormContainer}>
+      <MailChimpSubscribe url={postUrl} />
       <MailChimpSubscribe
         url={postUrl}
         render={({ subscribe, status, message }) => (
