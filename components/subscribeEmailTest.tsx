@@ -4,8 +4,8 @@ import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import MailChimpSubscribe from "react-mailchimp-subscribe";
-// import { ProjectCheckbox } from "./projectCheckbox";
-// import { RealtorCheckbox } from "./realtorCheckbox";
+import { ProjectCheckbox } from "./projectCheckbox";
+import { RealtorCheckbox } from "./realtorCheckbox";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -60,45 +60,45 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
-  const options = [
-    { value: "Friends and Family", label: "Friends and Family" },
-    { value: "Realtor", label: "Realtor" },
-    {
-      value: "Signage / Walk by / Drive by",
-      label: "Signage / Walk by / Drive by",
-    },
-    { value: "Online Search", label: "Online Search" },
-    { value: "Social Media", label: "Social Media" },
-  ];
+  // const options = [
+  //   { value: "Friends and Family", label: "Friends and Family" },
+  //   { value: "Realtor", label: "Realtor" },
+  //   {
+  //     value: "Signage / Walk by / Drive by",
+  //     label: "Signage / Walk by / Drive by",
+  //   },
+  //   { value: "Online Search", label: "Online Search" },
+  //   { value: "Social Media", label: "Social Media" },
+  // ];
   const [formData, setFormData] = useState({
     firstName: null,
     // lastName: null,
     email: null,
     phone: null,
-    // projectName: null,
-    hearUs: "Select",
-    // isRelator: null,
+    projectName: null,
+    //hearUs: "Select",
+    isRelator: null,
     allowContact: null,
   });
-  // const projectInfoHandler = (projectName) => {
-  //   setFormData({
-  //     ...formData,
-  //     projectName: projectName,
-  //   });
-  // };
-  const changeSelectHandler = (event) => {
-    console.log(event.value);
+  const projectInfoHandler = (projectName) => {
     setFormData({
       ...formData,
-      hearUs: event.value,
+      projectName: projectName,
     });
   };
-  // const realtorHandler = (isRealtor) => {
+  // const changeSelectHandler = (event) => {
+  //   console.log(event.value);
   //   setFormData({
   //     ...formData,
-  //     isRelator: isRealtor,
+  //     hearUs: event.value,
   //   });
   // };
+  const realtorHandler = (isRealtor) => {
+    setFormData({
+      ...formData,
+      isRelator: isRealtor,
+    });
+  };
   const allowContactHandler = (event) => {
     if (event.target.checked) {
       setFormData({
@@ -125,10 +125,10 @@ function CustomForm({
     formData.email &&
       formData.firstName &&
       // // formData.lastName &&
-      // formData.isRelator &&
+       formData.isRelator &&
        formData.phone &&
-      // formData.projectName &&
-      formData.hearUs &&
+      formData.projectName &&
+      //formData.hearUs &&
       formData.allowContact &&
       formData.email.indexOf("@") > -1 &&
       onValidated({
@@ -136,9 +136,9 @@ function CustomForm({
         FNAME: formData.firstName,
         // // LNAME: formData.lastName,
          PHONE: formData.phone,
-        // PROJECTS: formData.projectName,
-        HEARUS: formData.hearUs,
-        // ISREALTOR: formData.isRelator,
+        PROJECTS: formData.projectName,
+        //HEARUS: formData.hearUs,
+        ISREALTOR: formData.isRelator,
         CONTACT: formData.allowContact,
       });
   };
@@ -244,11 +244,11 @@ function CustomForm({
                 />
               </Col>
             </Row>
-            {/* <ProjectCheckbox projectInfoHandler={projectInfoHandler} />*/}
-            <div className={styles.cusFormSubtitleHearUs}>
+            <ProjectCheckbox projectInfoHandler={projectInfoHandler} />
+            {/* <div className={styles.cusFormSubtitleHearUs}>
               How did you hear about us?
-            </div>
-            <Select
+            </div> */}
+            {/* <Select
               options={options}
               placeholder={
                 <div className={styles.selectPlaceholderText}>Select</div>
@@ -259,7 +259,7 @@ function CustomForm({
               components={{
                 IndicatorSeparator: () => null,
               }}
-            /> 
+            />  */}
             {/* <select
               id="mce-source"
               name="hearUs"
@@ -298,7 +298,7 @@ function CustomForm({
                 Social Media
               </option>
             </select> */}
-            {/* <RealtorCheckbox realtorHandler={realtorHandler} /> */}
+            <RealtorCheckbox realtorHandler={realtorHandler} />
             <div className={styles.allowContactBox}>
               <input
                 onChange={allowContactHandler}
