@@ -60,17 +60,17 @@ function CustomForm({
   message,
   onValidated,
 }: CustomFormPropsType): JSX.Element {
-  const options = [
-    { value: "", label: "" },
-    { value: "", label: "" },
-    { value: "", label: "" },
-    {
-      value: "Signage / Walk by / Drive by",
-      label: "Signage / Walk by / Drive by",
-    },
-    { value: "Online Search", label: "Online Search" },
-    { value: "Social Media", label: "Social Media" },
-  ];
+  // const options = [
+  //   { value: "", label: "" },
+  //   { value: "", label: "" },
+  //   { value: "", label: "" },
+  //   {
+  //     value: "Signage / Walk by / Drive by",
+  //     label: "Signage / Walk by / Drive by",
+  //   },
+  //   { value: "Online Search", label: "Online Search" },
+  //   { value: "Social Media", label: "Social Media" },
+  // ];
   const [formData, setFormData] = useState({
     //firstName: null,
     // lastName: null,
@@ -249,7 +249,7 @@ function CustomForm({
             <div className={styles.cusFormSubtitleHearUs}>
               How did you hear about us?
             </div>
-            <Select 
+            {/* <Select 
               options={options}
               placeholder={
                 <div className={styles.selectPlaceholderText}>Select</div>
@@ -257,7 +257,7 @@ function CustomForm({
               className={styles.registerSelect}
               // onChange={changeSelectHandler}
               styles={style}
-            /> 
+            />  */}
             {/* <select
               id="mce-source"
               name="hearUs"
