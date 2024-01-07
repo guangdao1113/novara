@@ -12,6 +12,7 @@ import Contact from "../components/contact";
 import aboutContact from "@/about-contact-img.svg";
 import resIntroPic from "@/Residences_Intro-pic.jpg";
 import resIntroPicDark from "@/Residences_Intro-pic-dark.jpg";
+import Instagram from "../components/instagram"
 import FootBnr from "../components/footBnr";
 import Link from "next/link";
 import AOS from "aos";
@@ -182,7 +183,7 @@ function Project(): JSX.Element {
           </div>
           <Link href="/residences">
             <button className={styles.projectTextBoxBtn}>
-              <div className={styles.projectImageText}>View all</div>
+              <div className={styles.projectImageText}>Coming soon</div>
               <Image
                 src="/images/btn-arrow.svg"
                 alt="arrow"
@@ -315,7 +316,8 @@ export default function Home() {
       <Heading />
       <Project />
       <Info />
-      <FootBnr imageSrc={footBnrDesk} linkText="Residences" url="residences" />
+      <FootBnr imageSrc={footBnrDesk} linkText="Projects" url="projects" />
+      <Instagram />
     </div>
   );
 }

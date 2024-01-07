@@ -122,7 +122,8 @@
   align-items: center;
   justify-content: center;
   max-width: 200px;
-  padding: 18px 44px 18px 44px;
+  /* padding: 18px 44px 18px 44px; */
+  padding: 18px 35px 18px 35px;
   border: solid 1px #9b5d26;
   background-color: transparent;
 }

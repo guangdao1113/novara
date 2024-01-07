@@ -119,7 +119,6 @@ function CustomForm({
     });
   };
   const handleSubmit = (e) => {
-    console.log('t2')
     e.preventDefault();
     // 需要所有的值不然会报 can not convert null or undefined to object的错误
     formData.email &&
@@ -374,8 +373,3 @@ export default function Contact(props: FooterPropsType): JSX.Element {
     </div>
   );
 }
-
-
-
-
-

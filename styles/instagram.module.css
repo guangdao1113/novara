@@ -1,0 +1,65 @@
+.instaContainer {
+  padding: 190px 4vw 218px;
+}
+.contactBtnBox {
+  font-family: "PPEiko-LightItalic";
+  font-size: 50px;
+  line-height: 60px;
+  color: #9b5d26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: unset;
+  margin-bottom: 98px;
+}
+.contactBtnBox span {
+  margin-top: 10px!important;
+}
+.contactBtnText {
+  padding-right: 10.5px;
+}
+.firstCol {
+  display: inline-flex;
+  /* flex-wrap: wrap; */
+  justify-content: left;
+  /* overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; */
+    /* cursor: pointer; */
+}
+.postImg {
+  margin-left: 20px;
+}
+
+
+@media (max-width: 1700px) {
+  .instaContainer {
+    padding: clamp(68px,7vw,190px) 4vw clamp(100px,8vw,218px) 4vw
+  }
+  .contactBtnBox {
+    font-size: clamp(30px, 3vw, 50px);
+    margin-bottom: clamp(25px,5vw,98px);
+  }
+  .postImg {
+    margin-left: clamp(8px, 0.7vw, 20px);
+  }
+}
+
+/* when change to touch pad, instagram change the fixed image width and height */
+@media (max-width: 1024px) {
+  .postImg span {
+    width: 270px!important;
+  }
+  .firstCol {
+    overflow: scroll;
+    /* overflow-y: hidden; 
+    white-space: nowrap;
+    cursor: pointer; */
+  }
+  .firstCol:after {
+      border-bottom: 3px solid black;
+      content: '';
+  }
+
+}

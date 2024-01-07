@@ -9,6 +9,7 @@ import contactBnrMobile from "@/contactBnr-mobile.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import Contact from "../components/contact";
+import Instagram from '../components/instagram'
 
 function Heading(): JSX.Element {
   return (
@@ -72,6 +73,7 @@ export default function About() {
       <Heading />
       <Info />
       <Contact />
+      <Instagram/>
     </div>
   );
 }

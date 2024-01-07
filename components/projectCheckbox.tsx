@@ -7,7 +7,7 @@ export function ProjectCheckbox(props: ProjectCheckboxPropsType): JSX.Element {
   const [ckBoxState, setState] = useState({
     options: [
       { id: 1, name: "Ashlyn at Cambie Park" },
-      { id: 2, name: "Project Name2" },
+      // { id: 2, name: "Project Name2" },
       // { id: 3, name: "Project Name3" },
     ],
     optionSelected: undefined,

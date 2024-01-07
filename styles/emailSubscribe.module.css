@@ -1,0 +1,95 @@
+.signupHeading {
+  font-family: "Gotham-Medium";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    word-spacing: 1px;
+    color: #d19e80;
+    padding-bottom: 28px;
+}
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #D6C3A4;
+}
+.emailInput {
+  padding-bottom: 12px;
+  font-family: "Gotham-Book";
+  font-size: 12px;
+  line-height: 15px;
+  word-spacing: -1.5px;
+  color: #D6C3A4;
+  opacity: 0.5;
+  letter-spacing: 1.2px;
+  background:transparent;
+  border: none;
+  width: 100%;
+}
+.emailInput:focus{
+  outline: none;
+  background:transparent;
+}
+.emailInput:autofill {
+  outline: none;
+  background:transparent!important;
+}
+.emailInput:-webkit-autofill {
+  outline: none;
+  background:transparent!important;
+
+}
+.emailInput::placeholder {
+  color: #D6C3A4;
+  opacity: 0.5;
+}
+.signupBtn {
+  background: transparent;
+  border: none;
+}
+.signupBtn > span {
+  margin-bottom: 5.5px!important;
+}
+.subscribe {
+  padding-bottom: 12px;
+  font-family: "Gotham-Book";
+  font-size: 15px;
+  line-height: 18px;
+  word-spacing: 1px;
+  color: #dbc7a9;
+  letter-spacing: 1.2px;
+}
+.error {
+  padding-bottom: 12px;
+  font-family: "Gotham-Book";
+  font-size: 15px;
+  line-height: 18px;
+  word-spacing: 1px;
+  color:red;
+  letter-spacing: 1.2px;
+
+}
+
+
+@media (max-width: 1700px) {
+  .signupHeading {
+    font-size: clamp(12px, 0.7vw, 16px);
+    line-height: clamp(18px, 1vw, 19px);
+  }
+  .emailInput {
+    font-size: clamp(10px, 0.6vw, 12px);
+    line-height: clamp(9px, 0.5vw, 15px);
+  }
+}
+@media (max-width: 991px) {
+  .signupHeading {
+    padding-bottom: 46px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .emailInput {
+    font-size: 15px;
+    line-height: 24px;
+
+  }
+}

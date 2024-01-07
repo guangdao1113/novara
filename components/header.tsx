@@ -4,6 +4,8 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import Image from "next/image";
+//import arrow from "@/instagram/insta-arrow.png";
+import arrow from "@/socialIcons/test-arrow.png";
 import styles from "../styles/header.styles.module.css";
 import logo from "@/Novara-Properties_LOGO_Metallic.png";
 import AOS from "aos";
@@ -16,14 +18,19 @@ interface HeaderPropsType {
 }
 export default function Header(props: HeaderPropsType): JSX.Element {
   const navLinkList = [
-    "RESIDENCES",
-    "ABOUT",
+    "PROJECTS",
+    "COMPANY",
     "APPROACH",
     "COMMUNITY",
     "CONTACT",
   ];
   const [isScroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [hidden,setHidden] = useState({
+    visibility:'hidden',
+    opacity:0
+  })
+
   const changeHeaderStyle = () => {
     if (typeof window !== "undefined" && window.scrollY >= 80) {
       setScroll(true);
@@ -31,6 +38,10 @@ export default function Header(props: HeaderPropsType): JSX.Element {
       setScroll(false);
     }
   };
+  
+  const scrolltotop = () => {
+    window.scrollTo(0, 0);
+  }
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -41,6 +52,20 @@ export default function Header(props: HeaderPropsType): JSX.Element {
       mirror: true,
       anchorPlacement: "top-bottom",
     });
+
+    window.onscroll = () => {
+      if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        setHidden({
+          visibility:'visible',
+          opacity:1
+        })
+      }else {
+        setHidden({
+          visibility:'hidden',
+          opacity:0
+        })
+      }
+    }
 
     window.addEventListener("scroll", changeHeaderStyle);
     return () => window.removeEventListener("scroll", changeHeaderStyle);
@@ -180,14 +205,14 @@ export default function Header(props: HeaderPropsType): JSX.Element {
                   <div>
                     <div className={styles.footerTextBox}>
                       <div className={styles.footerText}>
-                        © 2023 NOVARA PROPERTIES. {""}
+                        © 2024 NOVARA PROPERTIES. {""}
                       </div>
                       <div className="footer-text footer-spacer">
                         ALL RIGHTS RESERVED.
                       </div>
                       <div className="footer-text">
                         TERMS & PRIVACY &nbsp;|&nbsp;
-                        <Link href="https://www.alabcreative.ca/">
+                        <Link href="https://www.alabcreative.com/">
                           <a target="_blank" className={styles.footerText}>
                             SITE BY A_LAB CREATIVE
                           </a>
@@ -201,6 +226,15 @@ export default function Header(props: HeaderPropsType): JSX.Element {
           </Navbar>
         </Col>
       </Row>
+        <div className={styles.scrollup} onClick={scrolltotop} style={{visibility: hidden.visibility,opacity:hidden.opacity}}>
+          <Image
+              src={arrow}
+              alt="arrow"
+              width={12.08}
+              height={15.85}
+              layout="fixed"
+            />
+        </div>
     </Container>
   );
 }
