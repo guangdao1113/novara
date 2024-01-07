@@ -27,7 +27,7 @@ export default function Header(props: HeaderPropsType): JSX.Element {
   const [isScroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [hidden,setHidden] = useState({
-    visibility:'hidden',
+    // visibility:'hidden',
     opacity:0
   })
 
@@ -56,12 +56,12 @@ export default function Header(props: HeaderPropsType): JSX.Element {
     window.onscroll = () => {
       if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         setHidden({
-          visibility:'visible',
+          // visibility:'visible',
           opacity:1
         })
       }else {
         setHidden({
-          visibility:'hidden',
+          // visibility:'hidden',
           opacity:0
         })
       }
@@ -226,7 +226,8 @@ export default function Header(props: HeaderPropsType): JSX.Element {
           </Navbar>
         </Col>
       </Row>
-        <div className={styles.scrollup} onClick={scrolltotop} style={{visibility: hidden.visibility,opacity:hidden.opacity}}>
+        <div className={styles.scrollup} onClick={scrolltotop} style={{
+    opacity:hidden.opacity}}>
           <Image
               src={arrow}
               alt="arrow"
