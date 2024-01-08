@@ -10,6 +10,7 @@ import aboutContactdark from "@/about-contact-img-dark.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
+import Footer from "../components/footer";
 
 function Heading(): JSX.Element {
   return (
@@ -310,6 +311,7 @@ export default function About() {
       <Project />
       <Info />
       <FootBnr imageSrc={footBnrDesk} linkText="Approach" url="approach" />
+      <Footer/>
     </div>
   );
 }

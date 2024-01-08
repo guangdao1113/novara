@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import blurPlaceHolder from "@/blurPlaceHolder.png";
 import AOS from "aos";
+import styles from '../styles/herobanner.module.css'
 import "aos/dist/aos.css";
 
 interface HeroPropsType {
@@ -32,6 +33,10 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           position: relative;
           width: 100%;
           height: 100vh;
+          overflow:hidden;
+        }
+        .bgImg-wrapper span {
+          background:red;
         }
         .overlay {
           position: relative;
@@ -78,6 +83,7 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           margin-right: -50%;
           transform: translate(-50%, 0%);
         }
+        
         button.navbar-toggler.collapsed {
         }
         @media (max-width: 1700px) {
@@ -130,15 +136,17 @@ export default function HeroBanner(props: HeroPropsType): JSX.Element {
           }
         }
       `}</style>
-      <Image
-        src={props.imageSrc}
-        layout="fill"
-        objectFit="cover"
-        alt="hero-bg-img"
-        // placeholder="blur"
-        // blurDataURL={blurPlaceHolder}
-        priority={true}
-      />
+      <div className={styles.bgImgWrapper}>
+        <Image
+          src={props.imageSrc}
+          layout="fill"
+          objectFit="cover"
+          alt="hero-bg-img"
+          // placeholder="blur"
+          // blurDataURL={blurPlaceHolder}
+          priority={true}
+        />
+      </div>
       {/* <div className="overlayImg">
         <Image
           src={props.overlaySrc}

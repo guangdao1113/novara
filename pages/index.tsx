@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "../styles/Home.module.css";
 import HeroBanner from "components/heroBanner";
 // import overlay from "@/index-overlay.svg";
@@ -287,6 +287,7 @@ function Info(): JSX.Element {
 export default function Home() {
   const [bnrDesk, bnrMobile] = useState(homeImage);
   const [footBnrDesk, footBnrMobile] = useState(resIntroPic);
+
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -304,6 +305,7 @@ export default function Home() {
       bnrMobile(homeMobile);
       footBnrMobile(resIntroPicDark);
     }
+
   }, []);
   return (
     <div>

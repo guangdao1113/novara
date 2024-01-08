@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "../styles/customForm.styles.module.css";
 import { Row, Col } from "react-bootstrap";
 import Image from "next/image";
@@ -15,6 +15,9 @@ interface FooterPropsType {
 }
 function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
   const [bnrArrowDesk, bnrArrowMobile] = useState(arrow);
+
+  const footbnrNode = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -29,9 +32,14 @@ function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
     if (mediaQuery.matches) {
       bnrArrowMobile(arrowWhite);
     }
+
+    // make footerBnr sticky
+    //console.log(footbnrNode.current.parentElement)
+    footbnrNode.current.parentElement.style.position = "sticky";
+    footbnrNode.current.parentElement.style.top = "80px";
   }, []);
   return (
-    <div className={styles.bannerContainer}>
+    <div ref={footbnrNode} className={styles.bannerContainer}>
       <Row
         className={styles.bannerRow}
         style={{

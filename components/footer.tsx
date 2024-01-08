@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,MutableRefObject  } from "react";
 import { useEffect } from "react";
 import EmailMailchimpFormContainer from "./emailSubscribe"
 import { Row, Col } from "react-bootstrap";
@@ -11,6 +11,7 @@ import "aos/dist/aos.css";
 import { relative } from 'path';
 
 export default function Footer(): JSX.Element {
+
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -28,6 +29,8 @@ export default function Footer(): JSX.Element {
         .footer-container {
           padding: 78px 4vw 70px 4vw;
           background-color: #483525;
+          position:relative;
+          z-index:2;
         }
         .row-container {
           display:flex;

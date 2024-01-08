@@ -10,6 +10,7 @@ import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import Contact from "../components/contact";
 import Instagram from '../components/instagram'
+import Footer from "../components/footer";
 
 function Heading(): JSX.Element {
   return (
@@ -74,6 +75,7 @@ export default function About() {
       <Info />
       <Contact />
       <Instagram/>
+      <Footer/>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import communityBnrMobile from "@/communityBnr-mobile.jpg";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
+import Footer from "../components/footer";
 
 function Heading(): JSX.Element {
   return (
@@ -213,6 +214,7 @@ export default function About() {
       <Project />
       <Info />
       <FootBnr imageSrc={footBnrDesk} linkText="Contact Us" url="contact" />
+      <Footer/>
     </div>
   );
 }

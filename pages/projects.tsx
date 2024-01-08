@@ -13,6 +13,8 @@ import arrowDark from "@/btn-arrow-white.png";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
+import Instagram from "../components/instagram"
+import Footer from "../components/footer";
 
 function CurrentProjects(): JSX.Element {
   const [arrowDesk, arrowMobile] = useState(arrowDark);
@@ -252,6 +254,7 @@ export default function Residences() {
       {/* <UpComingProjects />
       <PastProjects /> */}
       <FootBnr imageSrc={footBnrDesk} linkText="Company" url="company" />
+      <Footer/>
     </div>
   );
 }

@@ -1,5 +1,8 @@
 .instaContainer {
   padding: 190px 4vw 218px;
+  background: white;
+  z-index: 2;
+  position: relative;
 }
 .contactBtnBox {
   font-family: "PPEiko-LightItalic";
