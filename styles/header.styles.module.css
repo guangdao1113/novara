@@ -263,6 +263,10 @@
 
 
 @media (max-width:575px) {
+  .theme,
+  .otherPages {
+    overflow: hidden;
+  }
   .headerContainer {
     padding: 45px 7vw 0px 8vw;
   }

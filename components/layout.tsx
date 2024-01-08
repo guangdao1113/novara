@@ -17,7 +17,7 @@ export default function Layout({ children }: LayoutProps) {
 
   if (router.pathname === "/") {
     return (
-      <div>
+      <div className={styles.theme}>
       {/* <div style={{ overflowX: "hidden" }}> */}
         <Header
           logo={homeLogo}
