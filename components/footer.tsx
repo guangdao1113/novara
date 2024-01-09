@@ -294,7 +294,7 @@ export default function Footer(): JSX.Element {
                       {/* <div className="footer-text footer-spacer"></div> */}
                         <Link href="https://www.alabcreative.com/">
                           <a target="_blank" className="alabcreative">
-                            <div>SITE BY A_LAB CREATIVE </div>
+                            <div>SITE BY ALab Creative </div>
                           </a>
                         </Link>
                       </div>
@@ -378,7 +378,7 @@ export default function Footer(): JSX.Element {
                 TERMS & PRIVACY &nbsp;|&nbsp;
                 <Link href="https://www.alabcreative.com/">
                   <a target="_blank" className={styles.alabcreative}>
-                    SITE BY A_LAB CREATIVE
+                    SITE BY ALab Creative
                   </a>
                 </Link>
               </div>

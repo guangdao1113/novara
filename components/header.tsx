@@ -214,7 +214,7 @@ export default function Header(props: HeaderPropsType): JSX.Element {
                         TERMS & PRIVACY &nbsp;|&nbsp;
                         <Link href="https://www.alabcreative.com/">
                           <a target="_blank" className={styles.footerText}>
-                            SITE BY A_LAB CREATIVE
+                            SITE BY ALab Creative
                           </a>
                         </Link>
                       </div>

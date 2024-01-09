@@ -181,7 +181,7 @@ function Project(): JSX.Element {
             in Greater Vancouver. We focus on creating modern, yet cozy spaces
             that evolve with your family’s lifestyle and needs.
           </div>
-          <Link href="/residences">
+          <Link href="/projects">
             <button className={styles.projectTextBoxBtn}>
               <div className={styles.projectImageText}>Coming soon</div>
               <Image
