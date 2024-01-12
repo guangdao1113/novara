@@ -19,9 +19,9 @@ export default function Layout({ children }: LayoutProps) {
     return (
       <div className={styles.theme}>
       {/* <div style={{ overflowX: "hidden" }}> */}
-        <Head>
+        {/* <Head>
           <link rel="shortcut icon" href="/images/socialIcons/UA-logo.jpg" />
-        </Head>
+        </Head> */}
         <Header
           logo={homeLogo}
           homeLogo={styles.homeLogo}
@@ -34,9 +34,9 @@ export default function Layout({ children }: LayoutProps) {
     return (
       <div className={styles.otherPages}>
       {/* <div style={{ overflowX: "hidden" }} className={styles.otherPages}> */}
-        <Head>
+        {/* <Head>
           <link rel="shortcut icon" href="/images/socialIcons/UA-logo.jpg" />
-        </Head>
+        </Head> */}
         <Header logo={whiteLogo} homeLogo="" navbarLink={styles.navbarLink} />
         <div>{children}</div>
         {/* <Footer /> */}
