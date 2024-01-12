@@ -86,7 +86,7 @@ function Heading(): JSX.Element {
               data-aos="zoom-in-up"
               data-aos-delay="150"
             >
-              — Michael Jin, <br /> <span>Joseph Gao, cofounder CEO</span>
+              — Joseph Gao,, <br /> <span> cofounder CEO</span>
             </div>
           </div>
         </Col>
@@ -94,6 +94,170 @@ function Heading(): JSX.Element {
     </div>
   );
 }
+// function Project(): JSX.Element {
+//   return (
+//     <div className={styles.projectContainer}>
+//       <div className={styles.quoteDesk}>
+//         <div
+//           className={styles.headingQuoteTxt}
+//           data-aos="zoom-in-up"
+//           data-aos-delay="150"
+//         >
+//           “Our mission is simple: maintain high quality standard to each individual project, as if build each unit for our own living.”
+//         </div>
+//         <div
+//           className={styles.headingQuoteName}
+//           data-aos="zoom-in-up"
+//           data-aos-delay="150"
+//         >
+//           — Joseph Gao, cofounder CEO
+//         </div>
+//       </div>
+//       <Row className={styles.projectRowBox}>
+//         <Col style={{ padding: "0px" }} md="5" lg="5">
+//           <div className={styles.projectLeftBox}>
+//             <div className={styles.projectDesk}>
+//               <div className={styles.projectSpeImgBox}>
+//                 <Image
+//                   src="/images/about-project-img.svg"
+//                   width={585}
+//                   height={425}
+//                   layout="responsive"
+//                   priority={true}
+//                 />
+//               </div>
+//             </div>
+//             <div
+//               className={styles.projectTitle}
+//               data-aos="fade-up"
+//               data-aos-delay="150"
+//             >
+//               VISION
+//             </div>
+//             <div
+//               className={styles.projectTxt}
+//               data-aos="fade-up"
+//               data-aos-delay="150"
+//             >
+//               As a family business, we understand that a home is more than a
+//               physical building; it’s a vibrant environment, full of life. The
+//               space we live in influences our well-being, which is why we are
+//               passionate about designing functional, yet intimate spaces that
+//               evolve as your family’s lifestyle and needs change.
+//             </div>
+//             <div className={styles.projectMobile}>
+//               <div className={styles.projectSpeImgBox}>
+//                 <Image
+//                   src="/images/about-project-img.svg"
+//                   width={585}
+//                   height={425}
+//                   layout="responsive"
+//                   priority={true}
+//                 />
+//               </div>
+//             </div>
+//           </div>
+//         </Col>
+//         <Col style={{ padding: "0px" }} md="5" lg="5">
+//           <div className={styles.projectRightBox}>
+//             <div
+//               className={styles.projectTitle}
+//               data-aos="fade-up"
+//               data-aos-delay="150"
+//             >
+//               PASSION
+//             </div>
+//             <div
+//               className={styles.projectTxt}
+//               data-aos="fade-up"
+//               data-aos-delay="150"
+//             >
+//               Building homes is not just a business—it is integral to who we
+//               are. We desire to create thriving spaces and communities that we
+//               can be proud of, and this ethos permeates every level of our
+//               organization.
+//             </div>
+//             <div className={styles.projectImgBox}>
+//               <Image
+//                 src="/images/about-project-img4.svg"
+//                 width={585}
+//                 height={425}
+//                 layout="responsive"
+//                 priority={true}
+//               />
+//             </div>
+//           </div>
+//         </Col>
+//       </Row>
+//       <Row className={styles.projectRowBox}>
+//         <Col style={{ padding: "0px" }} md="4" lg="4">
+//           <div className={`${styles.projectImgBox} ${styles.leftVerImg}`}>
+//             <Image
+//               src="/images/about-project-img3.svg"
+//               width={456}
+//               height={590}
+//               layout="responsive"
+//               priority={true}
+//             />
+//           </div>
+//         </Col>
+//         <Col
+//           style={{ padding: "0px" }}
+//           md="7"
+//           lg="7"
+//           data-aos="fade-up"
+//           data-aos-delay="150"
+//         >
+//           <div className={styles.projectTitle}>PARTNERSHIP</div>
+//           <div className={styles.projectTxt}>
+//             Cooperation is an integral factor in the success of our projects. We
+//             build our relationships on a solid foundation of trust, respect, and
+//             collaboration in order to forge authentic, enduring connections.
+//           </div>
+//         </Col>
+//       </Row>
+//       <div className={styles.bottomQuoteWrapper}>
+//         <div className={styles.quoteDesk}>
+//           <div
+//             className={styles.headingQuoteTxt}
+//             data-aos="zoom-in-up"
+//             data-aos-delay="150"
+//           >
+//             “Attention to detail is the key to success of projects. From site
+//             selection, design details, to construction management, we go above and
+//             beyond on every detail, with future residences’ needs in mind.”
+//           </div>
+//           <div
+//             className={styles.headingQuoteName}
+//             data-aos="zoom-in-up"
+//             data-aos-delay="150"
+//           >
+//             — Michael Jin, Cofounder Director Operations
+//           </div>
+//         </div>
+//       </div>
+//       <div className={styles.quoteMobile}>
+//         <div
+//           className={styles.headingQuoteTxt}
+//           data-aos="zoom-in-up"
+//           data-aos-delay="150"
+//         >
+//           “Attention to detail is the key to success of projects. From site
+//           selection, design details, to construction management, we go above
+//           and beyond on every detail, with future residences’ needs in
+//           mind.”
+//         </div>
+//         <div
+//           className={styles.headingQuoteName}
+//           data-aos="zoom-in-up"
+//           data-aos-delay="150"
+//         >
+//           — Michael Jin, <br /> <span>Cofounder Director Operations</span>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 function Project(): JSX.Element {
   return (
     <div className={styles.projectContainer}>
@@ -113,13 +277,74 @@ function Project(): JSX.Element {
           — Joseph Gao, cofounder CEO
         </div>
       </div>
-      <Row className={styles.projectRowBox}>
-        <Col style={{ padding: "0px" }} md="5" lg="5">
-          <div className={styles.projectLeftBox}>
-            <div className={styles.projectDesk}>
-              <div className={styles.projectSpeImgBox}>
+      <div>
+        <Row className={styles.projectRowBox}>
+          <Col style={{ padding: "0px" }} md="5" lg="5">
+            <div className={styles.projectLeftBox}>
+              <div className={styles.projectDesk}>
+                <div className={styles.projectSpeImgBox}>
+                  <Image
+                    src="/images/about-project-img.svg"
+                    width={585}
+                    height={425}
+                    layout="responsive"
+                    priority={true}
+                  />
+                </div>
+              </div>
+              <div
+                className={styles.projectTitle}
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                VISION
+              </div>
+              <div
+                className={styles.projectTxt}
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                As a family business, we understand that a home is more than a
+                physical building; it’s a vibrant environment, full of life. The
+                space we live in influences our well-being, which is why we are
+                passionate about designing functional, yet intimate spaces that
+                evolve as your family’s lifestyle and needs change.
+              </div>
+              <div className={styles.projectMobile}>
+                <div className={styles.projectSpeImgBox}>
+                  <Image
+                    src="/images/about-project-img.svg"
+                    width={585}
+                    height={425}
+                    layout="responsive"
+                    priority={true}
+                  />
+                </div>
+              </div>
+            </div>
+          </Col>
+          <Col style={{ padding: "0px" }} md="5" lg="5">
+            <div className={styles.projectRightBox}>
+              <div
+                className={styles.projectTitle}
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                PASSION
+              </div>
+              <div
+                className={styles.projectTxt}
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                Building homes is not just a business—it is integral to who we
+                are. We desire to create thriving spaces and communities that we
+                can be proud of, and this ethos permeates every level of our
+                organization.
+              </div>
+              <div className={styles.projectImgBox}>
                 <Image
-                  src="/images/about-project-img.svg"
+                  src="/images/about-project-img4.svg"
                   width={585}
                   height={425}
                   layout="responsive"
@@ -127,114 +352,55 @@ function Project(): JSX.Element {
                 />
               </div>
             </div>
-            <div
-              className={styles.projectTitle}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              VISION
-            </div>
-            <div
-              className={styles.projectTxt}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              As a family business, we understand that a home is more than a
-              physical building; it’s a vibrant environment, full of life. The
-              space we live in influences our well-being, which is why we are
-              passionate about designing functional, yet intimate spaces that
-              evolve as your family’s lifestyle and needs change.
-            </div>
-            <div className={styles.projectMobile}>
-              <div className={styles.projectSpeImgBox}>
-                <Image
-                  src="/images/about-project-img.svg"
-                  width={585}
-                  height={425}
-                  layout="responsive"
-                  priority={true}
-                />
-              </div>
-            </div>
-          </div>
-        </Col>
-        <Col style={{ padding: "0px" }} md="5" lg="5">
-          <div className={styles.projectRightBox}>
-            <div
-              className={styles.projectTitle}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              PASSION
-            </div>
-            <div
-              className={styles.projectTxt}
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              Building homes is not just a business—it is integral to who we
-              are. We desire to create thriving spaces and communities that we
-              can be proud of, and this ethos permeates every level of our
-              organization.
-            </div>
-            <div className={styles.projectImgBox}>
+          </Col>
+        </Row>
+        <Row className={styles.projectRowBox}>
+          <Col style={{ padding: "0px" }} md="4" lg="4">
+            <div className={`${styles.projectImgBox} ${styles.leftVerImg}`}>
               <Image
-                src="/images/about-project-img4.svg"
-                width={585}
-                height={425}
+                src="/images/about-project-img3.svg"
+                width={456}
+                height={590}
                 layout="responsive"
                 priority={true}
               />
             </div>
-          </div>
-        </Col>
-      </Row>
-      <Row className={styles.projectRowBox}>
-        <Col style={{ padding: "0px" }} md="4" lg="4">
-          <div className={`${styles.projectImgBox} ${styles.leftVerImg}`}>
-            <Image
-              src="/images/about-project-img3.svg"
-              width={456}
-              height={590}
-              layout="responsive"
-              priority={true}
-            />
-          </div>
-          <div className={styles.quoteMobile}>
-            <div
-              className={styles.headingQuoteTxt}
-              data-aos="zoom-in-up"
-              data-aos-delay="150"
-            >
-              “Attention to detail is the key to success of projects. From site
-              selection, design details, to construction management, we go above
-              and beyond on every detail, with future residences’ needs in
-              mind.”
+            <div className={styles.quoteMobile}>
+              <div
+                className={styles.headingQuoteTxt}
+                data-aos="zoom-in-up"
+                data-aos-delay="150"
+              >
+                “Attention to detail is the key to success of projects. From site
+            selection, design details, to construction management, we go above and
+            beyond on every detail, with future residences’ needs in mind.”
+              </div>
+              <div
+                className={styles.headingQuoteName}
+                data-aos="zoom-in-up"
+                data-aos-delay="150"
+              >
+                — Michael Jin, <br />
+                Cofounder Director Operations
+              </div>
             </div>
-            <div
-              className={styles.headingQuoteName}
-              data-aos="zoom-in-up"
-              data-aos-delay="150"
-            >
-              — Michael Jin, <br /> <span>Cofounder Director Operations</span>
+          </Col>
+          <Col
+            style={{ padding: "0px" }}
+            md="7"
+            lg="7"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div className={styles.projectTitle}>PARTNERSHIP</div>
+            <div className={styles.projectTxt}>
+              Cooperation is an integral factor in the success of our projects. We
+              build our relationships on a solid foundation of trust, respect, and
+              collaboration in order to forge authentic, enduring connections.
             </div>
-          </div>
-        </Col>
-        <Col
-          style={{ padding: "0px" }}
-          md="7"
-          lg="7"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          <div className={styles.projectTitle}>PARTNERSHIP</div>
-          <div className={styles.projectTxt}>
-            Cooperation is an integral factor in the success of our projects. We
-            build our relationships on a solid foundation of trust, respect, and
-            collaboration in order to forge authentic, enduring connections.
-          </div>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </div>
       <div className={styles.bottomQuoteWrapper}>
         <div className={styles.quoteDesk}>
           <div
@@ -243,8 +409,8 @@ function Project(): JSX.Element {
             data-aos-delay="150"
           >
             “Attention to detail is the key to success of projects. From site
-            selection, design details, to construction management, we go above and
-            beyond on every detail, with future residences’ needs in mind.”
+          selection, design details, to construction management, we go above and
+          beyond on every detail, with future residences’ needs in mind.”
           </div>
           <div
             className={styles.headingQuoteName}
