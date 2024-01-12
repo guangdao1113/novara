@@ -24,12 +24,7 @@
 }
 .firstCol {
   display: inline-flex;
-  /* flex-wrap: wrap; */
   justify-content: left;
-  /* overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap; */
-    /* cursor: pointer; */
 }
 .postImg {
   margin-left: 20px;
@@ -56,9 +51,6 @@
   }
   .firstCol {
     overflow: scroll;
-    /* overflow-y: hidden; 
-    white-space: nowrap;
-    cursor: pointer; */
   }
   .firstCol:after {
       border-bottom: 3px solid black;

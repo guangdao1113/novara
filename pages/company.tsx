@@ -79,17 +79,14 @@ function Heading(): JSX.Element {
               data-aos="zoom-in-up"
               data-aos-delay="150"
             >
-              “Attention to detail is the key to success of projects. From site
-              selection, design details, to construction management, we go above
-              and beyond on every detail, with future residences’ needs in
-              mind.”
+              “Our mission is simple: maintain high quality standard to each individual project, as if build each unit for our own living.”
             </div>
             <div
               className={styles.headingQuoteName}
               data-aos="zoom-in-up"
               data-aos-delay="150"
             >
-              — Michael Jin, <br /> <span>Cofounder Director Operations</span>
+              — Michael Jin, <br /> <span>Joseph Gao, cofounder CEO</span>
             </div>
           </div>
         </Col>
@@ -106,16 +103,14 @@ function Project(): JSX.Element {
           data-aos="zoom-in-up"
           data-aos-delay="150"
         >
-          “Attention to detail is the key to success of projects. From site
-          selection, design details, to construction management, we go above and
-          beyond on every detail, with future residences’ needs in mind.”
+          “Our mission is simple: maintain high quality standard to each individual project, as if build each unit for our own living.”
         </div>
         <div
           className={styles.headingQuoteName}
           data-aos="zoom-in-up"
           data-aos-delay="150"
         >
-          — Michael Jin, Cofounder Director Operations
+          — Joseph Gao, cofounder CEO
         </div>
       </div>
       <Row className={styles.projectRowBox}>
@@ -211,16 +206,17 @@ function Project(): JSX.Element {
               data-aos="zoom-in-up"
               data-aos-delay="150"
             >
-              “We ensure our projects are financially viable and bring value to
-              our customers.”
+              “Attention to detail is the key to success of projects. From site
+              selection, design details, to construction management, we go above
+              and beyond on every detail, with future residences’ needs in
+              mind.”
             </div>
             <div
               className={styles.headingQuoteName}
               data-aos="zoom-in-up"
               data-aos-delay="150"
             >
-              — Nancy Jin, <br />
-              Cofounder Director Finance
+              — Michael Jin, <br /> <span>Cofounder Director Operations</span>
             </div>
           </div>
         </Col>
@@ -239,29 +235,32 @@ function Project(): JSX.Element {
           </div>
         </Col>
       </Row>
+      <div className={styles.bottomQuoteWrapper}>
+        <div className={styles.quoteDesk}>
+          <div
+            className={styles.headingQuoteTxt}
+            data-aos="zoom-in-up"
+            data-aos-delay="150"
+          >
+            “Attention to detail is the key to success of projects. From site
+            selection, design details, to construction management, we go above and
+            beyond on every detail, with future residences’ needs in mind.”
+          </div>
+          <div
+            className={styles.headingQuoteName}
+            data-aos="zoom-in-up"
+            data-aos-delay="150"
+          >
+            — Michael Jin, Cofounder Director Operations
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 function Info(): JSX.Element {
   return (
     <div className={styles.infoContainer}>
-      <div className={styles.quoteDesk}>
-        <div
-          className={styles.headingQuoteTxt}
-          data-aos="zoom-in-up"
-          data-aos-delay="150"
-        >
-          “We ensure our projects are financially viable and bring value to our
-          customers.”
-        </div>
-        <div
-          className={styles.headingQuoteName}
-          data-aos="zoom-in-up"
-          data-aos-delay="150"
-        >
-          — Nancy Jin, Cofounder Director Finance
-        </div>
-      </div>
       <div className={styles.infoBox}>
         <Row className={styles.infoRow}>
           <Col md="5" xl="4" data-aos="fade-right" data-aos-delay="150">
@@ -286,6 +285,43 @@ function Info(): JSX.Element {
           </Col>
         </Row>
       </div>
+      <div className={styles.bottomQuoteWrapper}>
+        <div className={styles.quoteDesk}>
+          <div
+            className={styles.headingQuoteTxt}
+            data-aos="zoom-in-up"
+            data-aos-delay="150"
+          >
+            “We ensure our projects are financially viable and bring value to our
+            customers.”
+          </div>
+          <div
+            className={styles.headingQuoteName}
+            data-aos="zoom-in-up"
+            data-aos-delay="150"
+          >
+            — Nancy Jin, Cofounder Director Finance
+          </div>
+        </div>
+      </div>
+          <div className={styles.quoteMobile}>
+            <div
+              className={styles.headingQuoteTxt}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              “We ensure our projects are financially viable and bring value to
+              our customers.”
+            </div>
+            <div
+              className={styles.headingQuoteName}
+              data-aos="zoom-in-up"
+              data-aos-delay="150"
+            >
+              — Nancy Jin, <br />
+              Cofounder Director Finance
+            </div>
+          </div>
     </div>
   );
 }

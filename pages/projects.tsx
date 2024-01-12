@@ -13,7 +13,6 @@ import arrowDark from "@/btn-arrow-white.png";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
 import FootBnr from "../components/footBnr";
-import Instagram from "../components/instagram"
 import Footer from "../components/footer";
 
 function CurrentProjects(): JSX.Element {
@@ -44,7 +43,7 @@ function CurrentProjects(): JSX.Element {
 
           <div className={styles.headingTxt}>ASHLYN AT CAMBIE PARK</div>
           <div className={styles.headingPara}>
-            A refined collection of 23 townhomes coming to sought-after Cambie
+            A refined collection of 21 townhomes coming to sought-after Cambie
             area in West side Vancouver.
           </div>
           <button className={styles.projectTextBoxBtn}>

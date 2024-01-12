@@ -1,8 +1,7 @@
 import React from "react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState} from "react";
 import styles from "../styles/Home.module.css";
 import HeroBanner from "components/heroBanner";
-// import overlay from "@/index-overlay.svg";
 import homeImage from "@/home-img.jpg";
 import homeMobile from "@/home-img-mobile.jpg";
 import homeContact from "@/home-contact.svg";
@@ -14,12 +13,11 @@ import resIntroPic from "@/Residences_Intro-pic.jpg";
 import resIntroPicDark from "@/Residences_Intro-pic-dark.jpg";
 import Instagram from "../components/instagram"
 import FootBnr from "../components/footBnr";
+import Footer from "../components/footer"
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// interface BnrPropsType {
-//   bnrImg: string | StaticImageData;
-// }
+
 function Heading(): JSX.Element {
   return (
     <div id="content" className={styles.headingContainer}>
@@ -319,7 +317,8 @@ export default function Home() {
       <Project />
       <Info />
       <FootBnr imageSrc={footBnrDesk} linkText="Projects" url="projects" />
-      <Instagram />
+      {/* <Instagram /> */}
+      <Footer />
     </div>
   );
 }

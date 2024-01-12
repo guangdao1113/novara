@@ -27,7 +27,6 @@ export default function Header(props: HeaderPropsType): JSX.Element {
   const [isScroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [hidden,setHidden] = useState({
-    // visibility:'hidden',
     opacity:0
   })
 
@@ -56,12 +55,10 @@ export default function Header(props: HeaderPropsType): JSX.Element {
     window.onscroll = () => {
       if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         setHidden({
-          // visibility:'visible',
           opacity:1
         })
       }else {
         setHidden({
-          // visibility:'hidden',
           opacity:0
         })
       }
@@ -168,7 +165,7 @@ export default function Header(props: HeaderPropsType): JSX.Element {
                   })}
                 </Nav>
                 <div>
-                  <div className={styles.socialIcons}>
+                  {/* <div className={styles.socialIcons}>
                     <Link href="/">
                       <Image
                         src="/images/facebook-copy-white.png"
@@ -201,7 +198,7 @@ export default function Header(props: HeaderPropsType): JSX.Element {
                         alt="wechat"
                       />
                     </Link>
-                  </div>
+                  </div> */}
                   <div>
                     <div className={styles.footerTextBox}>
                       <div className={styles.footerText}>
@@ -214,7 +211,7 @@ export default function Header(props: HeaderPropsType): JSX.Element {
                         TERMS & PRIVACY &nbsp;|&nbsp;
                         <Link href="https://www.alabcreative.com/">
                           <a target="_blank" className={styles.footerText}>
-                            SITE BY ALab Creative
+                            SITE BY ALAB CREATIVE
                           </a>
                         </Link>
                       </div>

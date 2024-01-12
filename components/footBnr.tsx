@@ -34,7 +34,6 @@ function LinkBanner({ imageSrc, linkText, url }: FooterPropsType): JSX.Element {
     }
 
     // make footerBnr sticky
-    //console.log(footbnrNode.current.parentElement)
     footbnrNode.current.parentElement.style.position = "sticky";
     footbnrNode.current.parentElement.style.top = "80px";
   }, []);

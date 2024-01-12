@@ -74,7 +74,7 @@ export default function About() {
       <Heading />
       <Info />
       <Contact />
-      <Instagram/>
+      {/* <Instagram/> */}
       <Footer/>
     </div>
   );

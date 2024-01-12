@@ -31,10 +31,10 @@ const CustomForm = ({ status, message, onValidated }:CustomFormPropsType) => {;
   },[status])
 
   const clearForm = () => {
-    const contactForm = document.getElementById(
-      "emailSubscribe"
-    ) as HTMLFormElement;
-    contactForm.reset();
+    setFormData({
+      ...formData,
+      email: ""
+    });
   }
 
   const handleSubmit = (e) => {
@@ -49,7 +49,7 @@ const CustomForm = ({ status, message, onValidated }:CustomFormPropsType) => {;
 }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)} id="emailSubscribe"> 
+    <form onSubmit={(e) => handleSubmit(e)}> 
       <div className={styles.signupHeading}>SIGN UP FOR NEWS AND UPDATES</div>
       <div className={styles.inputContainer}>
         <input
@@ -87,9 +87,9 @@ const CustomForm = ({ status, message, onValidated }:CustomFormPropsType) => {;
 };
 
 const EmailMailchimpFormContainer = () => {
-  const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&amp;id=c250b296eb&amp;f_id=00290ce4f0`;
-
-  // const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}&amp;id=c250b296eb&amp;f_id=00290ce4f0`;
+  //const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&amp;id=c250b296eb&amp;f_id=00290ce4f0`;
+  const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}&amp;id=${process.env.NEXT_PUBLIC_MAILCHIMP_AMP_ID}&amp;f_id=${process.env.NEXT_PUBLIC_MAILCHIMP_AMP_F_ID}`;
+  
     return (
         <div className="mc__form-container">
             <MailchimpSubscribe

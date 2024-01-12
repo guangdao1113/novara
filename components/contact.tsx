@@ -120,7 +120,6 @@ function CustomForm({
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 需要所有的值不然会报 can not convert null or undefined to object的错误
     formData.email &&
       formData.firstName &&
       formData.lastName &&
@@ -259,44 +258,6 @@ function CustomForm({
                 IndicatorSeparator: () => null,
               }}
             />
-            {/* <select
-              id="mce-source"
-              name="hearUs"
-              className={styles.registerSelect}
-              onChange={changeSelectHandler}
-              // styles={{ opacity: this.state.someValidationError ? "0.5" : "1"}}
-            >
-              <option
-                className={styles.registerOption}
-                value=""
-                selected
-                disabled
-                hidden
-              >
-                Select
-              </option>
-              <option
-                className={styles.registerOption}
-                value="Friends and Family"
-              >
-                Friends and Family
-              </option>
-              <option className={styles.registerOption} value="Realtor">
-                Realtor
-              </option>
-              <option
-                className={styles.registerOption}
-                value="Signage / Walk by / Drive by"
-              >
-                Signage / Walk by / Drive by
-              </option>
-              <option className={styles.registerOption} value="Online Search">
-                Online Search
-              </option>
-              <option className={styles.registerOption} value="Social Media">
-                Social Media
-              </option>
-            </select> */}
             <RealtorCheckbox realtorHandler={realtorHandler} />
             <div className={styles.allowContactBox}>
               <input
@@ -341,7 +302,6 @@ function CustomForm({
 }
 function Register(): JSX.Element {
   const postUrl = `${process.env.NEXT_PUBLIC_MAILCHIMP_ACTION_URL}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U_VALUE}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID_VALUE}`;
-  //const postUrl = `https://yahoo.us13.list-manage.com/subscribe/post?u=56a5a6faefa46b019dbd969e7&id=c250b296eb`;
   return (
     <div className={styles.cusFormContainer}>
       <MailChimpSubscribe

@@ -1,4 +1,4 @@
-import React, { useState, useRef,MutableRefObject  } from "react";
+import React, { useState} from "react";
 import { useEffect } from "react";
 import EmailMailchimpFormContainer from "./emailSubscribe"
 import { Row, Col } from "react-bootstrap";
@@ -61,7 +61,7 @@ export default function Footer(): JSX.Element {
           // display: flex;
           // flex-direction: row;
           // justify-content: flex-start;
-          padding-top: 27px;
+          // padding-top: 27px;
           font-family: "Gotham-Book";
           font-size: 11.5px;
           line-height: 15px;
@@ -117,7 +117,7 @@ export default function Footer(): JSX.Element {
           .footer-text-box {
             font-size: clamp(7px, 0.6vw, 12px);
             line-height: clamp(9px, 0.5vw, 15px);
-            padding-top: clamp(5px,0.7vw,27px);
+            // padding-top: clamp(5px,0.7vw,27px);
           }
         }
         @media (max-width: 1500px) {
@@ -239,7 +239,7 @@ export default function Footer(): JSX.Element {
                 </Col>
                 <Col md="12" lg="3" xl="4" style={{padding:0}}>
                   <div>
-                    <div className="footer-heading">SOCIAL</div>
+                    {/* <div className="footer-heading">SOCIAL</div>
                     <div className="socialIcons">
                       <div className="footer-link">
                         <a href="/">
@@ -285,7 +285,7 @@ export default function Footer(): JSX.Element {
                           />
                         </a>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="footer-text-box">
                       <div className="">
                         © 2024 NOVARA PROPERTIES.{""}
@@ -294,7 +294,7 @@ export default function Footer(): JSX.Element {
                       {/* <div className="footer-text footer-spacer"></div> */}
                         <Link href="https://www.alabcreative.com/">
                           <a target="_blank" className="alabcreative">
-                            <div>SITE BY ALab Creative </div>
+                            <div>SITE BY ALAB CREATIVE </div>
                           </a>
                         </Link>
                       </div>
@@ -334,7 +334,7 @@ export default function Footer(): JSX.Element {
           </div>
         </div>
         <div className="social-container">
-          <div className={styles.socialIcons}>
+          {/* <div className={styles.socialIcons}>
             <Link href="/">
               <Image
                 src="/images/facebook-copy-white.png"
@@ -383,7 +383,7 @@ export default function Footer(): JSX.Element {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="footer-logo">
           <Link href="/">

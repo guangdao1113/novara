@@ -30,15 +30,21 @@
   outline: none;
   background:transparent;
 }
-.emailInput:autofill {
+.emailInput:-webkit-autofill,
+.emailInput:-webkit-autofill:hover, 
+.emailInput:-webkit-autofill:focus, 
+.emailInput:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: rgba(214,195,164,0.5) !important;
+}
+/* .emailInput:autofill {
   outline: none;
   background:transparent!important;
 }
 .emailInput:-webkit-autofill {
   outline: none;
   background:transparent!important;
-
-}
+} */
 .emailInput::placeholder {
   color: #D6C3A4;
   opacity: 0.5;
