@@ -38,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
         <div>{children}</div>
       </div>
     );
-  } else {
+  } else if (router.pathname === "/projects") {
     return (
       <div className={styles.otherPages}>
         {/* <div style={{ overflowX: "hidden" }} className={styles.otherPages}> */}
@@ -49,6 +49,86 @@ export default function Layout({ children }: LayoutProps) {
             href="/images/socialIcons/Novara-webicon.png"
           />
           <meta name="description" content="ASHLYN AT CAMBIE PARK." />
+        </Head>
+        <Header logo={whiteLogo} homeLogo="" navbarLink={styles.navbarLink} />
+        <div>{children}</div>
+        {/* <Footer /> */}
+      </div>
+    );
+  } else if (router.pathname === "/company") {
+    return (
+      <div className={styles.otherPages}>
+        {/* <div style={{ overflowX: "hidden" }} className={styles.otherPages}> */}
+        <Head>
+          <title>Company | NOVARA PROPERTIES</title>
+          <link
+            rel="shortcut icon"
+            href="/images/socialIcons/Novara-webicon.png"
+          />
+          <meta
+            name="description"
+            content="We build high quality homes that suit your lifestyle, that bring you peace and joy."
+          />
+        </Head>
+        <Header logo={whiteLogo} homeLogo="" navbarLink={styles.navbarLink} />
+        <div>{children}</div>
+        {/* <Footer /> */}
+      </div>
+    );
+  } else if (router.pathname === "/approach") {
+    return (
+      <div className={styles.otherPages}>
+        {/* <div style={{ overflowX: "hidden" }} className={styles.otherPages}> */}
+        <Head>
+          <title>Approach | NOVARA PROPERTIES</title>
+          <link
+            rel="shortcut icon"
+            href="/images/socialIcons/Novara-webicon.png"
+          />
+          <meta
+            name="description"
+            content="We remain deeply committed to our environmental and social responsibilities as home designers. Novara invests in sustainable projects that prioritize quality of life for families and enhance the well-being of the local community. We advocate for the homeowner every step of the way, even after completion."
+          />
+        </Head>
+        <Header logo={whiteLogo} homeLogo="" navbarLink={styles.navbarLink} />
+        <div>{children}</div>
+        {/* <Footer /> */}
+      </div>
+    );
+  } else if (router.pathname === "/community") {
+    return (
+      <div className={styles.otherPages}>
+        {/* <div style={{ overflowX: "hidden" }} className={styles.otherPages}> */}
+        <Head>
+          <title>Community | NOVARA PROPERTIES</title>
+          <link
+            rel="shortcut icon"
+            href="/images/socialIcons/Novara-webicon.png"
+          />
+          <meta
+            name="description"
+            content="Our concept of service involves caring for our neighbors, communities, and cities, enriching people’s lives. We strive to reflect this in not only our relationships but also in how we approach our work."
+          />
+        </Head>
+        <Header logo={whiteLogo} homeLogo="" navbarLink={styles.navbarLink} />
+        <div>{children}</div>
+        {/* <Footer /> */}
+      </div>
+    );
+  } else {
+    return (
+      <div className={styles.otherPages}>
+        {/* <div style={{ overflowX: "hidden" }} className={styles.otherPages}> */}
+        <Head>
+          <title>Contact | NOVARA PROPERTIES</title>
+          <link
+            rel="shortcut icon"
+            href="/images/socialIcons/Novara-webicon.png"
+          />
+          <meta
+            name="description"
+            content="215 - 515 WEST PENDER STREET, VANCOUVER BC V6B 6H5"
+          />
         </Head>
         <Header logo={whiteLogo} homeLogo="" navbarLink={styles.navbarLink} />
         <div>{children}</div>
