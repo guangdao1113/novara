@@ -26,9 +26,9 @@ export default function Header(props: HeaderPropsType): JSX.Element {
   ];
   const [isScroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [hidden,setHidden] = useState({
-    opacity:0
-  })
+  const [hidden, setHidden] = useState({
+    opacity: 0,
+  });
 
   const changeHeaderStyle = () => {
     if (typeof window !== "undefined" && window.scrollY >= 80) {
@@ -37,10 +37,10 @@ export default function Header(props: HeaderPropsType): JSX.Element {
       setScroll(false);
     }
   };
-  
+
   const scrolltotop = () => {
     window.scrollTo(0, 0);
-  }
+  };
   useEffect(() => {
     AOS.init({
       offset: 0,
@@ -53,16 +53,19 @@ export default function Header(props: HeaderPropsType): JSX.Element {
     });
 
     window.onscroll = () => {
-      if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
         setHidden({
-          opacity:1
-        })
-      }else {
+          opacity: 1,
+        });
+      } else {
         setHidden({
-          opacity:0
-        })
+          opacity: 0,
+        });
       }
-    }
+    };
 
     window.addEventListener("scroll", changeHeaderStyle);
     return () => window.removeEventListener("scroll", changeHeaderStyle);
@@ -131,11 +134,15 @@ export default function Header(props: HeaderPropsType): JSX.Element {
               aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
               placement="end"
               className={styles.navCollapse}
+              // show={show}
             >
               <Offcanvas.Header closeButton className={styles.offcanvasBtn}>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
                   <Link href="/">
-                    <button className={styles.headerLogoBtn}>
+                    <button
+                      className={styles.headerLogoBtn}
+                      onClick={() => setToggle(!toggle)}
+                    >
                       <Image
                         src={logo}
                         width={180}
@@ -223,16 +230,21 @@ export default function Header(props: HeaderPropsType): JSX.Element {
           </Navbar>
         </Col>
       </Row>
-        <div className={styles.scrollup} onClick={scrolltotop} style={{
-    opacity:hidden.opacity}}>
-          <Image
-              src={arrow}
-              alt="arrow"
-              width={12.08}
-              height={15.85}
-              layout="fixed"
-            />
-        </div>
+      <div
+        className={styles.scrollup}
+        onClick={scrolltotop}
+        style={{
+          opacity: hidden.opacity,
+        }}
+      >
+        <Image
+          src={arrow}
+          alt="arrow"
+          width={12.08}
+          height={15.85}
+          layout="fixed"
+        />
+      </div>
     </Container>
   );
 }
