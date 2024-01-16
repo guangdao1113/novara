@@ -367,7 +367,7 @@ export default function Footer(): JSX.Element {
                 alt="wechat"
               />
             </Link>
-          </div>
+          </div> */}
           <div>
             <div className={styles.footerTextBox}>
               <div className={styles.footerText}>
@@ -378,12 +378,12 @@ export default function Footer(): JSX.Element {
                 TERMS & PRIVACY &nbsp;|&nbsp;
                 <Link href="https://www.alabcreative.com/">
                   <a target="_blank" className={styles.alabcreative}>
-                    SITE BY ALab Creative
+                    SITE BY ALAB CREATIVE
                   </a>
                 </Link>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
         <div className="footer-logo">
           <Link href="/">
