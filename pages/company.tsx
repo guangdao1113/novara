@@ -429,7 +429,7 @@ function Info(): JSX.Element {
     <div className={styles.infoContainer}>
       <div className={styles.infoBox}>
         <Row className={styles.infoRow}>
-          <Col md="5" xl="4" data-aos="fade-right" data-aos-delay="150" style={{padding:0}}>
+          <Col md="5" xl="4" data-aos="fade-right" data-aos-delay="150">
             <div className={styles.infoQuoteTitle}>OUR TEAM</div>
             <div className={styles.infoQuotePara}>
               We are an eclectic family from all different walks of life and
@@ -440,7 +440,7 @@ function Info(): JSX.Element {
               developments and other creative projects to fruition.
             </div>
           </Col>
-          <Col className={styles.infoRightImg} md="6" lg="6" style={{padding:0}}>
+          <Col className={styles.infoRightImg} md="6" lg="6">
             <Image
               src="/images/about-info-img2.jpg"
               width={736}
